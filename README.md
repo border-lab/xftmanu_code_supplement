@@ -1,6 +1,6 @@
-## Code supplement for "Simple models of non-random mating and environmental transmission bias standard human genetics statistical methods."
+### Code supplement for "Simple models of non-random mating and environmental transmission bias standard human genetics statistical methods."
 
-### Manifest
+#### Manifest
 - `ascertainment_sims.py`: family GWAS simulations with ascertainment
 - `ey_sim.py`: education years case study simulation
 - `general_simulations.py`: primary simulations incorporating xAM, VT, and/or GxE
