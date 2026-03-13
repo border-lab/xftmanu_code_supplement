@@ -1,4 +1,6 @@
 import os
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 NUMTHREAD = str(1)
 os.environ["NUMBA_NUM_THREADS"] = '1'
 os.environ["OMP_NUM_THREADS"] = NUMTHREAD
