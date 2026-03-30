@@ -1,0 +1,6 @@
+"dataset","threshold","n_dims"
+"UKB","90%",8
+"UKB","95%",14
+"NHIRD","90%",7
+"NHIRD","95%",8
+"UKB","sig_0.05",22

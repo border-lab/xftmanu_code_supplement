@@ -1,0 +1,145 @@
+"N","kpheno","m_causal","gen","variable","value","type","kpheno_label","m_causal_label"
+50000,2,8000,5,"ex_on_target",100,"On target","2",8000
+1e+05,2,8000,5,"ex_on_target",454,"On target","2",8000
+2e+05,2,8000,5,"ex_on_target",1302,"On target","2",8000
+4e+05,2,8000,5,"ex_on_target",2655,"On target","2",8000
+8e+05,2,8000,5,"ex_on_target",3966,"On target","2",8000
+1600000,2,8000,5,"ex_on_target",4966,"On target","2",8000
+3200000,2,8000,5,"ex_on_target",5621,"On target","2",8000
+6400000,2,8000,5,"ex_on_target",6390,"On target","2",8000
+50000,2,4000,5,"ex_on_target",249,"On target","2",4000
+1e+05,2,4000,5,"ex_on_target",693,"On target","2",4000
+2e+05,2,4000,5,"ex_on_target",1358,"On target","2",4000
+4e+05,2,4000,5,"ex_on_target",1914,"On target","2",4000
+8e+05,2,4000,5,"ex_on_target",2526,"On target","2",4000
+1600000,2,4000,5,"ex_on_target",2906,"On target","2",4000
+3200000,2,4000,5,"ex_on_target",3234,"On target","2",4000
+6400000,2,4000,5,"ex_on_target",3437,"On target","2",4000
+50000,2,2000,5,"ex_on_target",347,"On target","2",2000
+1e+05,2,2000,5,"ex_on_target",627,"On target","2",2000
+2e+05,2,2000,5,"ex_on_target",955,"On target","2",2000
+4e+05,2,2000,5,"ex_on_target",1229,"On target","2",2000
+8e+05,2,2000,5,"ex_on_target",1447,"On target","2",2000
+1600000,2,2000,5,"ex_on_target",1585,"On target","2",2000
+3200000,2,2000,5,"ex_on_target",1715,"On target","2",2000
+6400000,2,2000,5,"ex_on_target",1803,"On target","2",2000
+50000,5,8000,5,"ex_on_target",111,"On target","5",8000
+1e+05,5,8000,5,"ex_on_target",524,"On target","5",8000
+2e+05,5,8000,5,"ex_on_target",1447,"On target","5",8000
+4e+05,5,8000,5,"ex_on_target",2638,"On target","5",8000
+8e+05,5,8000,5,"ex_on_target",3820,"On target","5",8000
+1600000,5,8000,5,"ex_on_target",4999,"On target","5",8000
+3200000,5,8000,5,"ex_on_target",5889,"On target","5",8000
+6400000,5,8000,5,"ex_on_target",6501,"On target","5",8000
+50000,5,4000,5,"ex_on_target",262,"On target","5",4000
+1e+05,5,4000,5,"ex_on_target",727,"On target","5",4000
+2e+05,5,4000,5,"ex_on_target",1386,"On target","5",4000
+4e+05,5,4000,5,"ex_on_target",1967,"On target","5",4000
+8e+05,5,4000,5,"ex_on_target",2467,"On target","5",4000
+1600000,5,4000,5,"ex_on_target",2910,"On target","5",4000
+3200000,5,4000,5,"ex_on_target",3249,"On target","5",4000
+6400000,5,4000,5,"ex_on_target",3438,"On target","5",4000
+50000,5,2000,5,"ex_on_target",363,"On target","5",2000
+1e+05,5,2000,5,"ex_on_target",676,"On target","5",2000
+2e+05,5,2000,5,"ex_on_target",1006,"On target","5",2000
+4e+05,5,2000,5,"ex_on_target",1254,"On target","5",2000
+8e+05,5,2000,5,"ex_on_target",1456,"On target","5",2000
+1600000,5,2000,5,"ex_on_target",1602,"On target","5",2000
+3200000,5,2000,5,"ex_on_target",1711,"On target","5",2000
+6400000,5,2000,5,"ex_on_target",1809,"On target","5",2000
+50000,2,8000,5,"ex_off_target",1,"Off target","2",8000
+1e+05,2,8000,5,"ex_off_target",1,"Off target","2",8000
+2e+05,2,8000,5,"ex_off_target",1,"Off target","2",8000
+4e+05,2,8000,5,"ex_off_target",1,"Off target","2",8000
+8e+05,2,8000,5,"ex_off_target",1,"Off target","2",8000
+1600000,2,8000,5,"ex_off_target",3,"Off target","2",8000
+3200000,2,8000,5,"ex_off_target",38,"Off target","2",8000
+6400000,2,8000,5,"ex_off_target",251,"Off target","2",8000
+50000,2,4000,5,"ex_off_target",1,"Off target","2",4000
+1e+05,2,4000,5,"ex_off_target",1,"Off target","2",4000
+2e+05,2,4000,5,"ex_off_target",1,"Off target","2",4000
+4e+05,2,4000,5,"ex_off_target",1,"Off target","2",4000
+8e+05,2,4000,5,"ex_off_target",2,"Off target","2",4000
+1600000,2,4000,5,"ex_off_target",19,"Off target","2",4000
+3200000,2,4000,5,"ex_off_target",122,"Off target","2",4000
+6400000,2,4000,5,"ex_off_target",457,"Off target","2",4000
+50000,2,2000,5,"ex_off_target",1,"Off target","2",2000
+1e+05,2,2000,5,"ex_off_target",1,"Off target","2",2000
+2e+05,2,2000,5,"ex_off_target",1,"Off target","2",2000
+4e+05,2,2000,5,"ex_off_target",1,"Off target","2",2000
+8e+05,2,2000,5,"ex_off_target",9,"Off target","2",2000
+1600000,2,2000,5,"ex_off_target",65,"Off target","2",2000
+3200000,2,2000,5,"ex_off_target",227,"Off target","2",2000
+6400000,2,2000,5,"ex_off_target",503,"Off target","2",2000
+50000,5,8000,5,"ex_off_target",1,"Off target","5",8000
+1e+05,5,8000,5,"ex_off_target",1,"Off target","5",8000
+2e+05,5,8000,5,"ex_off_target",1,"Off target","5",8000
+4e+05,5,8000,5,"ex_off_target",1,"Off target","5",8000
+8e+05,5,8000,5,"ex_off_target",4,"Off target","5",8000
+1600000,5,8000,5,"ex_off_target",49,"Off target","5",8000
+3200000,5,8000,5,"ex_off_target",546,"Off target","5",8000
+6400000,5,8000,5,"ex_off_target",2565,"Off target","5",8000
+50000,5,4000,5,"ex_off_target",1,"Off target","5",4000
+1e+05,5,4000,5,"ex_off_target",1,"Off target","5",4000
+2e+05,5,4000,5,"ex_off_target",1,"Off target","5",4000
+4e+05,5,4000,5,"ex_off_target",3,"Off target","5",4000
+8e+05,5,4000,5,"ex_off_target",38,"Off target","5",4000
+1600000,5,4000,5,"ex_off_target",260,"Off target","5",4000
+3200000,5,4000,5,"ex_off_target",1101,"Off target","5",4000
+6400000,5,4000,5,"ex_off_target",3364,"Off target","5",4000
+50000,5,2000,5,"ex_off_target",1,"Off target","5",2000
+1e+05,5,2000,5,"ex_off_target",1,"Off target","5",2000
+2e+05,5,2000,5,"ex_off_target",2,"Off target","5",2000
+4e+05,5,2000,5,"ex_off_target",12,"Off target","5",2000
+8e+05,5,2000,5,"ex_off_target",137,"Off target","5",2000
+1600000,5,2000,5,"ex_off_target",611,"Off target","5",2000
+3200000,5,2000,5,"ex_off_target",1630,"Off target","5",2000
+6400000,5,2000,5,"ex_off_target",2809,"Off target","5",2000
+50000,2,8000,5,"ex_FP",1,"Conventional false positives","2",8000
+1e+05,2,8000,5,"ex_FP",1,"Conventional false positives","2",8000
+2e+05,2,8000,5,"ex_FP",1,"Conventional false positives","2",8000
+4e+05,2,8000,5,"ex_FP",1,"Conventional false positives","2",8000
+8e+05,2,8000,5,"ex_FP",1,"Conventional false positives","2",8000
+1600000,2,8000,5,"ex_FP",1,"Conventional false positives","2",8000
+3200000,2,8000,5,"ex_FP",1,"Conventional false positives","2",8000
+6400000,2,8000,5,"ex_FP",1,"Conventional false positives","2",8000
+50000,2,4000,5,"ex_FP",1,"Conventional false positives","2",4000
+1e+05,2,4000,5,"ex_FP",1,"Conventional false positives","2",4000
+2e+05,2,4000,5,"ex_FP",1,"Conventional false positives","2",4000
+4e+05,2,4000,5,"ex_FP",1,"Conventional false positives","2",4000
+8e+05,2,4000,5,"ex_FP",1,"Conventional false positives","2",4000
+1600000,2,4000,5,"ex_FP",1,"Conventional false positives","2",4000
+3200000,2,4000,5,"ex_FP",1,"Conventional false positives","2",4000
+6400000,2,4000,5,"ex_FP",1,"Conventional false positives","2",4000
+50000,2,2000,5,"ex_FP",1,"Conventional false positives","2",2000
+1e+05,2,2000,5,"ex_FP",1,"Conventional false positives","2",2000
+2e+05,2,2000,5,"ex_FP",1,"Conventional false positives","2",2000
+4e+05,2,2000,5,"ex_FP",1,"Conventional false positives","2",2000
+8e+05,2,2000,5,"ex_FP",1,"Conventional false positives","2",2000
+1600000,2,2000,5,"ex_FP",1,"Conventional false positives","2",2000
+3200000,2,2000,5,"ex_FP",1,"Conventional false positives","2",2000
+6400000,2,2000,5,"ex_FP",1,"Conventional false positives","2",2000
+50000,5,8000,5,"ex_FP",1,"Conventional false positives","5",8000
+1e+05,5,8000,5,"ex_FP",1,"Conventional false positives","5",8000
+2e+05,5,8000,5,"ex_FP",1,"Conventional false positives","5",8000
+4e+05,5,8000,5,"ex_FP",1,"Conventional false positives","5",8000
+8e+05,5,8000,5,"ex_FP",1,"Conventional false positives","5",8000
+1600000,5,8000,5,"ex_FP",1,"Conventional false positives","5",8000
+3200000,5,8000,5,"ex_FP",1,"Conventional false positives","5",8000
+6400000,5,8000,5,"ex_FP",1,"Conventional false positives","5",8000
+50000,5,4000,5,"ex_FP",1,"Conventional false positives","5",4000
+1e+05,5,4000,5,"ex_FP",1,"Conventional false positives","5",4000
+2e+05,5,4000,5,"ex_FP",1,"Conventional false positives","5",4000
+4e+05,5,4000,5,"ex_FP",1,"Conventional false positives","5",4000
+8e+05,5,4000,5,"ex_FP",1,"Conventional false positives","5",4000
+1600000,5,4000,5,"ex_FP",1,"Conventional false positives","5",4000
+3200000,5,4000,5,"ex_FP",1,"Conventional false positives","5",4000
+6400000,5,4000,5,"ex_FP",1,"Conventional false positives","5",4000
+50000,5,2000,5,"ex_FP",1,"Conventional false positives","5",2000
+1e+05,5,2000,5,"ex_FP",1,"Conventional false positives","5",2000
+2e+05,5,2000,5,"ex_FP",1,"Conventional false positives","5",2000
+4e+05,5,2000,5,"ex_FP",1,"Conventional false positives","5",2000
+8e+05,5,2000,5,"ex_FP",1,"Conventional false positives","5",2000
+1600000,5,2000,5,"ex_FP",1,"Conventional false positives","5",2000
+3200000,5,2000,5,"ex_FP",1,"Conventional false positives","5",2000
+6400000,5,2000,5,"ex_FP",1,"Conventional false positives","5",2000

@@ -1,0 +1,2401 @@
+"gen","scenario","seed","gwas_type","fpr"
+0,"RM",1,"Population GWAS",0.0510625
+1,"RM",1,"Population GWAS",0.0498125
+2,"RM",1,"Population GWAS",0.047375
+3,"RM",1,"Population GWAS",0.05275
+4,"RM",1,"Population GWAS",0.047125
+5,"RM",1,"Population GWAS",0.050375
+0,"RM + VT (5%)",1,"Population GWAS",0.0489375
+1,"RM + VT (5%)",1,"Population GWAS",0.04975
+2,"RM + VT (5%)",1,"Population GWAS",0.054625
+3,"RM + VT (5%)",1,"Population GWAS",0.0513125
+4,"RM + VT (5%)",1,"Population GWAS",0.0505
+5,"RM + VT (5%)",1,"Population GWAS",0.054125
+0,"5xAM",1,"Population GWAS",0.0498125
+1,"5xAM",1,"Population GWAS",0.0483125
+2,"5xAM",1,"Population GWAS",0.0495
+3,"5xAM",1,"Population GWAS",0.048875
+4,"5xAM",1,"Population GWAS",0.05525
+5,"5xAM",1,"Population GWAS",0.05
+0,"5xAM + VT (5%)",1,"Population GWAS",0.048125
+1,"5xAM + VT (5%)",1,"Population GWAS",0.0549375
+2,"5xAM + VT (5%)",1,"Population GWAS",0.0684375
+3,"5xAM + VT (5%)",1,"Population GWAS",0.0631875
+4,"5xAM + VT (5%)",1,"Population GWAS",0.069625
+5,"5xAM + VT (5%)",1,"Population GWAS",0.0709375
+0,"RM",10,"Population GWAS",0.049625
+1,"RM",10,"Population GWAS",0.0513125
+2,"RM",10,"Population GWAS",0.0515
+3,"RM",10,"Population GWAS",0.0495
+4,"RM",10,"Population GWAS",0.049625
+5,"RM",10,"Population GWAS",0.0495625
+0,"RM + VT (5%)",10,"Population GWAS",0.04925
+1,"RM + VT (5%)",10,"Population GWAS",0.052375
+2,"RM + VT (5%)",10,"Population GWAS",0.0529375
+3,"RM + VT (5%)",10,"Population GWAS",0.0545
+4,"RM + VT (5%)",10,"Population GWAS",0.0528125
+5,"RM + VT (5%)",10,"Population GWAS",0.052625
+0,"5xAM",10,"Population GWAS",0.0488125
+1,"5xAM",10,"Population GWAS",0.0490625
+2,"5xAM",10,"Population GWAS",0.0511875
+3,"5xAM",10,"Population GWAS",0.0501875
+4,"5xAM",10,"Population GWAS",0.050375
+5,"5xAM",10,"Population GWAS",0.0506875
+0,"5xAM + VT (5%)",10,"Population GWAS",0.0498125
+1,"5xAM + VT (5%)",10,"Population GWAS",0.0584375
+2,"5xAM + VT (5%)",10,"Population GWAS",0.061125
+3,"5xAM + VT (5%)",10,"Population GWAS",0.0649375
+4,"5xAM + VT (5%)",10,"Population GWAS",0.0661875
+5,"5xAM + VT (5%)",10,"Population GWAS",0.0695
+0,"RM",11,"Population GWAS",0.050625
+1,"RM",11,"Population GWAS",0.051125
+2,"RM",11,"Population GWAS",0.046625
+3,"RM",11,"Population GWAS",0.0506875
+4,"RM",11,"Population GWAS",0.048375
+5,"RM",11,"Population GWAS",0.046875
+0,"RM + VT (5%)",11,"Population GWAS",0.0518125
+1,"RM + VT (5%)",11,"Population GWAS",0.048375
+2,"RM + VT (5%)",11,"Population GWAS",0.0518125
+3,"RM + VT (5%)",11,"Population GWAS",0.0549375
+4,"RM + VT (5%)",11,"Population GWAS",0.053125
+5,"RM + VT (5%)",11,"Population GWAS",0.0530625
+0,"5xAM",11,"Population GWAS",0.0505
+1,"5xAM",11,"Population GWAS",0.0465625
+2,"5xAM",11,"Population GWAS",0.055375
+3,"5xAM",11,"Population GWAS",0.0490625
+4,"5xAM",11,"Population GWAS",0.05025
+5,"5xAM",11,"Population GWAS",0.0504375
+0,"5xAM + VT (5%)",11,"Population GWAS",0.0465
+1,"5xAM + VT (5%)",11,"Population GWAS",0.053
+2,"5xAM + VT (5%)",11,"Population GWAS",0.0615
+3,"5xAM + VT (5%)",11,"Population GWAS",0.0680625
+4,"5xAM + VT (5%)",11,"Population GWAS",0.066625
+5,"5xAM + VT (5%)",11,"Population GWAS",0.06925
+0,"RM",12,"Population GWAS",0.0490625
+1,"RM",12,"Population GWAS",0.048125
+2,"RM",12,"Population GWAS",0.0500625
+3,"RM",12,"Population GWAS",0.049875
+4,"RM",12,"Population GWAS",0.0480625
+5,"RM",12,"Population GWAS",0.0473125
+0,"RM + VT (5%)",12,"Population GWAS",0.0496875
+1,"RM + VT (5%)",12,"Population GWAS",0.049875
+2,"RM + VT (5%)",12,"Population GWAS",0.05225
+3,"RM + VT (5%)",12,"Population GWAS",0.054
+4,"RM + VT (5%)",12,"Population GWAS",0.052875
+5,"RM + VT (5%)",12,"Population GWAS",0.052375
+0,"5xAM",12,"Population GWAS",0.04725
+1,"5xAM",12,"Population GWAS",0.0495
+2,"5xAM",12,"Population GWAS",0.047875
+3,"5xAM",12,"Population GWAS",0.0504375
+4,"5xAM",12,"Population GWAS",0.05175
+5,"5xAM",12,"Population GWAS",0.0513125
+0,"5xAM + VT (5%)",12,"Population GWAS",0.0504375
+1,"5xAM + VT (5%)",12,"Population GWAS",0.058125
+2,"5xAM + VT (5%)",12,"Population GWAS",0.06175
+3,"5xAM + VT (5%)",12,"Population GWAS",0.067625
+4,"5xAM + VT (5%)",12,"Population GWAS",0.0669375
+5,"5xAM + VT (5%)",12,"Population GWAS",0.0691875
+0,"RM",13,"Population GWAS",0.053625
+1,"RM",13,"Population GWAS",0.049875
+2,"RM",13,"Population GWAS",0.05
+3,"RM",13,"Population GWAS",0.04775
+4,"RM",13,"Population GWAS",0.0488125
+5,"RM",13,"Population GWAS",0.0508125
+0,"RM + VT (5%)",13,"Population GWAS",0.049875
+1,"RM + VT (5%)",13,"Population GWAS",0.0538125
+2,"RM + VT (5%)",13,"Population GWAS",0.0523125
+3,"RM + VT (5%)",13,"Population GWAS",0.05325
+4,"RM + VT (5%)",13,"Population GWAS",0.0523125
+5,"RM + VT (5%)",13,"Population GWAS",0.052625
+0,"5xAM",13,"Population GWAS",0.050375
+1,"5xAM",13,"Population GWAS",0.0496875
+2,"5xAM",13,"Population GWAS",0.05025
+3,"5xAM",13,"Population GWAS",0.048375
+4,"5xAM",13,"Population GWAS",0.051875
+5,"5xAM",13,"Population GWAS",0.0523125
+0,"5xAM + VT (5%)",13,"Population GWAS",0.0488125
+1,"5xAM + VT (5%)",13,"Population GWAS",0.056
+2,"5xAM + VT (5%)",13,"Population GWAS",0.063625
+3,"5xAM + VT (5%)",13,"Population GWAS",0.065125
+4,"5xAM + VT (5%)",13,"Population GWAS",0.071875
+5,"5xAM + VT (5%)",13,"Population GWAS",0.0720625
+0,"RM",14,"Population GWAS",0.051
+1,"RM",14,"Population GWAS",0.052125
+2,"RM",14,"Population GWAS",0.0476875
+3,"RM",14,"Population GWAS",0.05125
+4,"RM",14,"Population GWAS",0.051
+5,"RM",14,"Population GWAS",0.0514375
+0,"RM + VT (5%)",14,"Population GWAS",0.050625
+1,"RM + VT (5%)",14,"Population GWAS",0.049125
+2,"RM + VT (5%)",14,"Population GWAS",0.055125
+3,"RM + VT (5%)",14,"Population GWAS",0.0506875
+4,"RM + VT (5%)",14,"Population GWAS",0.0504375
+5,"RM + VT (5%)",14,"Population GWAS",0.0534375
+0,"5xAM",14,"Population GWAS",0.0516875
+1,"5xAM",14,"Population GWAS",0.0475625
+2,"5xAM",14,"Population GWAS",0.05025
+3,"5xAM",14,"Population GWAS",0.0525625
+4,"5xAM",14,"Population GWAS",0.0536875
+5,"5xAM",14,"Population GWAS",0.0535
+0,"5xAM + VT (5%)",14,"Population GWAS",0.0484375
+1,"5xAM + VT (5%)",14,"Population GWAS",0.054125
+2,"5xAM + VT (5%)",14,"Population GWAS",0.06
+3,"5xAM + VT (5%)",14,"Population GWAS",0.0679375
+4,"5xAM + VT (5%)",14,"Population GWAS",0.0680625
+5,"5xAM + VT (5%)",14,"Population GWAS",0.0705625
+0,"RM",15,"Population GWAS",0.048125
+1,"RM",15,"Population GWAS",0.0526875
+2,"RM",15,"Population GWAS",0.048375
+3,"RM",15,"Population GWAS",0.0476875
+4,"RM",15,"Population GWAS",0.050625
+5,"RM",15,"Population GWAS",0.0489375
+0,"RM + VT (5%)",15,"Population GWAS",0.0495
+1,"RM + VT (5%)",15,"Population GWAS",0.056625
+2,"RM + VT (5%)",15,"Population GWAS",0.0526875
+3,"RM + VT (5%)",15,"Population GWAS",0.0485625
+4,"RM + VT (5%)",15,"Population GWAS",0.05675
+5,"RM + VT (5%)",15,"Population GWAS",0.053
+0,"5xAM",15,"Population GWAS",0.04875
+1,"5xAM",15,"Population GWAS",0.050875
+2,"5xAM",15,"Population GWAS",0.0474375
+3,"5xAM",15,"Population GWAS",0.049375
+4,"5xAM",15,"Population GWAS",0.054
+5,"5xAM",15,"Population GWAS",0.054125
+0,"5xAM + VT (5%)",15,"Population GWAS",0.0513125
+1,"5xAM + VT (5%)",15,"Population GWAS",0.0530625
+2,"5xAM + VT (5%)",15,"Population GWAS",0.061
+3,"5xAM + VT (5%)",15,"Population GWAS",0.066875
+4,"5xAM + VT (5%)",15,"Population GWAS",0.0673125
+5,"5xAM + VT (5%)",15,"Population GWAS",0.0695625
+0,"RM",16,"Population GWAS",0.049875
+1,"RM",16,"Population GWAS",0.0469375
+2,"RM",16,"Population GWAS",0.0481875
+3,"RM",16,"Population GWAS",0.0504375
+4,"RM",16,"Population GWAS",0.048625
+5,"RM",16,"Population GWAS",0.0516875
+0,"RM + VT (5%)",16,"Population GWAS",0.05
+1,"RM + VT (5%)",16,"Population GWAS",0.056125
+2,"RM + VT (5%)",16,"Population GWAS",0.0505625
+3,"RM + VT (5%)",16,"Population GWAS",0.0526875
+4,"RM + VT (5%)",16,"Population GWAS",0.053125
+5,"RM + VT (5%)",16,"Population GWAS",0.0524375
+0,"5xAM",16,"Population GWAS",0.047875
+1,"5xAM",16,"Population GWAS",0.0516875
+2,"5xAM",16,"Population GWAS",0.0503125
+3,"5xAM",16,"Population GWAS",0.0525625
+4,"5xAM",16,"Population GWAS",0.05075
+5,"5xAM",16,"Population GWAS",0.0494375
+0,"5xAM + VT (5%)",16,"Population GWAS",0.053625
+1,"5xAM + VT (5%)",16,"Population GWAS",0.0539375
+2,"5xAM + VT (5%)",16,"Population GWAS",0.062375
+3,"5xAM + VT (5%)",16,"Population GWAS",0.0633125
+4,"5xAM + VT (5%)",16,"Population GWAS",0.070625
+5,"5xAM + VT (5%)",16,"Population GWAS",0.066875
+0,"RM",17,"Population GWAS",0.0496875
+1,"RM",17,"Population GWAS",0.0510625
+2,"RM",17,"Population GWAS",0.05
+3,"RM",17,"Population GWAS",0.0491875
+4,"RM",17,"Population GWAS",0.054125
+5,"RM",17,"Population GWAS",0.049125
+0,"RM + VT (5%)",17,"Population GWAS",0.047125
+1,"RM + VT (5%)",17,"Population GWAS",0.0535625
+2,"RM + VT (5%)",17,"Population GWAS",0.053375
+3,"RM + VT (5%)",17,"Population GWAS",0.0509375
+4,"RM + VT (5%)",17,"Population GWAS",0.0529375
+5,"RM + VT (5%)",17,"Population GWAS",0.050875
+0,"5xAM",17,"Population GWAS",0.052375
+1,"5xAM",17,"Population GWAS",0.047625
+2,"5xAM",17,"Population GWAS",0.0510625
+3,"5xAM",17,"Population GWAS",0.0526875
+4,"5xAM",17,"Population GWAS",0.0523125
+5,"5xAM",17,"Population GWAS",0.053125
+0,"5xAM + VT (5%)",17,"Population GWAS",0.0509375
+1,"5xAM + VT (5%)",17,"Population GWAS",0.0548125
+2,"5xAM + VT (5%)",17,"Population GWAS",0.058875
+3,"5xAM + VT (5%)",17,"Population GWAS",0.0673125
+4,"5xAM + VT (5%)",17,"Population GWAS",0.06875
+5,"5xAM + VT (5%)",17,"Population GWAS",0.0755
+0,"RM",18,"Population GWAS",0.047875
+1,"RM",18,"Population GWAS",0.047875
+2,"RM",18,"Population GWAS",0.0495
+3,"RM",18,"Population GWAS",0.048625
+4,"RM",18,"Population GWAS",0.04975
+5,"RM",18,"Population GWAS",0.048125
+0,"RM + VT (5%)",18,"Population GWAS",0.049
+1,"RM + VT (5%)",18,"Population GWAS",0.04825
+2,"RM + VT (5%)",18,"Population GWAS",0.05175
+3,"RM + VT (5%)",18,"Population GWAS",0.0515625
+4,"RM + VT (5%)",18,"Population GWAS",0.05
+5,"RM + VT (5%)",18,"Population GWAS",0.0538125
+0,"5xAM",18,"Population GWAS",0.0506875
+1,"5xAM",18,"Population GWAS",0.0521875
+2,"5xAM",18,"Population GWAS",0.049875
+3,"5xAM",18,"Population GWAS",0.0514375
+4,"5xAM",18,"Population GWAS",0.0513125
+5,"5xAM",18,"Population GWAS",0.051125
+0,"5xAM + VT (5%)",18,"Population GWAS",0.053375
+1,"5xAM + VT (5%)",18,"Population GWAS",0.0554375
+2,"5xAM + VT (5%)",18,"Population GWAS",0.0590625
+3,"5xAM + VT (5%)",18,"Population GWAS",0.06725
+4,"5xAM + VT (5%)",18,"Population GWAS",0.0708125
+5,"5xAM + VT (5%)",18,"Population GWAS",0.067375
+0,"RM",19,"Population GWAS",0.049625
+1,"RM",19,"Population GWAS",0.0496875
+2,"RM",19,"Population GWAS",0.0503125
+3,"RM",19,"Population GWAS",0.0506875
+4,"RM",19,"Population GWAS",0.0498125
+5,"RM",19,"Population GWAS",0.049875
+0,"RM + VT (5%)",19,"Population GWAS",0.0478125
+1,"RM + VT (5%)",19,"Population GWAS",0.050125
+2,"RM + VT (5%)",19,"Population GWAS",0.0546875
+3,"RM + VT (5%)",19,"Population GWAS",0.0505
+4,"RM + VT (5%)",19,"Population GWAS",0.0545
+5,"RM + VT (5%)",19,"Population GWAS",0.0514375
+0,"5xAM",19,"Population GWAS",0.0475
+1,"5xAM",19,"Population GWAS",0.0506875
+2,"5xAM",19,"Population GWAS",0.0524375
+3,"5xAM",19,"Population GWAS",0.051875
+4,"5xAM",19,"Population GWAS",0.0505
+5,"5xAM",19,"Population GWAS",0.0515
+0,"5xAM + VT (5%)",19,"Population GWAS",0.0515625
+1,"5xAM + VT (5%)",19,"Population GWAS",0.0534375
+2,"5xAM + VT (5%)",19,"Population GWAS",0.061625
+3,"5xAM + VT (5%)",19,"Population GWAS",0.06525
+4,"5xAM + VT (5%)",19,"Population GWAS",0.0705
+5,"5xAM + VT (5%)",19,"Population GWAS",0.0733125
+0,"RM",2,"Population GWAS",0.050375
+1,"RM",2,"Population GWAS",0.0464375
+2,"RM",2,"Population GWAS",0.049375
+3,"RM",2,"Population GWAS",0.049875
+4,"RM",2,"Population GWAS",0.0485625
+5,"RM",2,"Population GWAS",0.050375
+0,"RM + VT (5%)",2,"Population GWAS",0.049
+1,"RM + VT (5%)",2,"Population GWAS",0.0519375
+2,"RM + VT (5%)",2,"Population GWAS",0.0534375
+3,"RM + VT (5%)",2,"Population GWAS",0.05125
+4,"RM + VT (5%)",2,"Population GWAS",0.0531875
+5,"RM + VT (5%)",2,"Population GWAS",0.057125
+0,"5xAM",2,"Population GWAS",0.0481875
+1,"5xAM",2,"Population GWAS",0.0493125
+2,"5xAM",2,"Population GWAS",0.051375
+3,"5xAM",2,"Population GWAS",0.05125
+4,"5xAM",2,"Population GWAS",0.0508125
+5,"5xAM",2,"Population GWAS",0.0535625
+0,"5xAM + VT (5%)",2,"Population GWAS",0.048875
+1,"5xAM + VT (5%)",2,"Population GWAS",0.057625
+2,"5xAM + VT (5%)",2,"Population GWAS",0.0615625
+3,"5xAM + VT (5%)",2,"Population GWAS",0.06625
+4,"5xAM + VT (5%)",2,"Population GWAS",0.0666875
+5,"5xAM + VT (5%)",2,"Population GWAS",0.0715625
+0,"RM",20,"Population GWAS",0.04775
+1,"RM",20,"Population GWAS",0.0494375
+2,"RM",20,"Population GWAS",0.0460625
+3,"RM",20,"Population GWAS",0.049375
+4,"RM",20,"Population GWAS",0.0510625
+5,"RM",20,"Population GWAS",0.0511875
+0,"RM + VT (5%)",20,"Population GWAS",0.050125
+1,"RM + VT (5%)",20,"Population GWAS",0.051375
+2,"RM + VT (5%)",20,"Population GWAS",0.0525
+3,"RM + VT (5%)",20,"Population GWAS",0.0520625
+4,"RM + VT (5%)",20,"Population GWAS",0.0548125
+5,"RM + VT (5%)",20,"Population GWAS",0.05375
+0,"5xAM",20,"Population GWAS",0.0511875
+1,"5xAM",20,"Population GWAS",0.0489375
+2,"5xAM",20,"Population GWAS",0.0495
+3,"5xAM",20,"Population GWAS",0.0495
+4,"5xAM",20,"Population GWAS",0.050375
+5,"5xAM",20,"Population GWAS",0.0515625
+0,"5xAM + VT (5%)",20,"Population GWAS",0.05
+1,"5xAM + VT (5%)",20,"Population GWAS",0.055375
+2,"5xAM + VT (5%)",20,"Population GWAS",0.060625
+3,"5xAM + VT (5%)",20,"Population GWAS",0.068375
+4,"5xAM + VT (5%)",20,"Population GWAS",0.0655
+5,"5xAM + VT (5%)",20,"Population GWAS",0.0721875
+0,"RM",21,"Population GWAS",0.053875
+1,"RM",21,"Population GWAS",0.050375
+2,"RM",21,"Population GWAS",0.0503125
+3,"RM",21,"Population GWAS",0.04675
+4,"RM",21,"Population GWAS",0.0515625
+5,"RM",21,"Population GWAS",0.0488125
+0,"RM + VT (5%)",21,"Population GWAS",0.048375
+1,"RM + VT (5%)",21,"Population GWAS",0.05425
+2,"RM + VT (5%)",21,"Population GWAS",0.0513125
+3,"RM + VT (5%)",21,"Population GWAS",0.0509375
+4,"RM + VT (5%)",21,"Population GWAS",0.052625
+5,"RM + VT (5%)",21,"Population GWAS",0.052125
+0,"5xAM",21,"Population GWAS",0.04975
+1,"5xAM",21,"Population GWAS",0.05075
+2,"5xAM",21,"Population GWAS",0.050125
+3,"5xAM",21,"Population GWAS",0.05225
+4,"5xAM",21,"Population GWAS",0.0519375
+5,"5xAM",21,"Population GWAS",0.0475625
+0,"5xAM + VT (5%)",21,"Population GWAS",0.0515625
+1,"5xAM + VT (5%)",21,"Population GWAS",0.057625
+2,"5xAM + VT (5%)",21,"Population GWAS",0.062375
+3,"5xAM + VT (5%)",21,"Population GWAS",0.0693125
+4,"5xAM + VT (5%)",21,"Population GWAS",0.068125
+5,"5xAM + VT (5%)",21,"Population GWAS",0.068375
+0,"RM",22,"Population GWAS",0.0503125
+1,"RM",22,"Population GWAS",0.0489375
+2,"RM",22,"Population GWAS",0.051375
+3,"RM",22,"Population GWAS",0.0488125
+4,"RM",22,"Population GWAS",0.0495
+5,"RM",22,"Population GWAS",0.0519375
+0,"RM + VT (5%)",22,"Population GWAS",0.050625
+1,"RM + VT (5%)",22,"Population GWAS",0.050875
+2,"RM + VT (5%)",22,"Population GWAS",0.0515
+3,"RM + VT (5%)",22,"Population GWAS",0.0496875
+4,"RM + VT (5%)",22,"Population GWAS",0.0529375
+5,"RM + VT (5%)",22,"Population GWAS",0.0540625
+0,"5xAM",22,"Population GWAS",0.0505
+1,"5xAM",22,"Population GWAS",0.0506875
+2,"5xAM",22,"Population GWAS",0.04975
+3,"5xAM",22,"Population GWAS",0.049875
+4,"5xAM",22,"Population GWAS",0.050125
+5,"5xAM",22,"Population GWAS",0.048625
+0,"5xAM + VT (5%)",22,"Population GWAS",0.0529375
+1,"5xAM + VT (5%)",22,"Population GWAS",0.05525
+2,"5xAM + VT (5%)",22,"Population GWAS",0.062375
+3,"5xAM + VT (5%)",22,"Population GWAS",0.0676875
+4,"5xAM + VT (5%)",22,"Population GWAS",0.0678125
+5,"5xAM + VT (5%)",22,"Population GWAS",0.0713125
+0,"RM",23,"Population GWAS",0.054375
+1,"RM",23,"Population GWAS",0.0499375
+2,"RM",23,"Population GWAS",0.0529375
+3,"RM",23,"Population GWAS",0.0511875
+4,"RM",23,"Population GWAS",0.0479375
+5,"RM",23,"Population GWAS",0.0511875
+0,"RM + VT (5%)",23,"Population GWAS",0.0495625
+1,"RM + VT (5%)",23,"Population GWAS",0.0515
+2,"RM + VT (5%)",23,"Population GWAS",0.0541875
+3,"RM + VT (5%)",23,"Population GWAS",0.05325
+4,"RM + VT (5%)",23,"Population GWAS",0.05175
+5,"RM + VT (5%)",23,"Population GWAS",0.0548125
+0,"5xAM",23,"Population GWAS",0.0518125
+1,"5xAM",23,"Population GWAS",0.050375
+2,"5xAM",23,"Population GWAS",0.05
+3,"5xAM",23,"Population GWAS",0.0508125
+4,"5xAM",23,"Population GWAS",0.0516875
+5,"5xAM",23,"Population GWAS",0.0509375
+0,"5xAM + VT (5%)",23,"Population GWAS",0.0499375
+1,"5xAM + VT (5%)",23,"Population GWAS",0.0551875
+2,"5xAM + VT (5%)",23,"Population GWAS",0.0651875
+3,"5xAM + VT (5%)",23,"Population GWAS",0.068125
+4,"5xAM + VT (5%)",23,"Population GWAS",0.0680625
+5,"5xAM + VT (5%)",23,"Population GWAS",0.0719375
+0,"RM",24,"Population GWAS",0.0509375
+1,"RM",24,"Population GWAS",0.0496875
+2,"RM",24,"Population GWAS",0.0531875
+3,"RM",24,"Population GWAS",0.0524375
+4,"RM",24,"Population GWAS",0.0498125
+5,"RM",24,"Population GWAS",0.0504375
+0,"RM + VT (5%)",24,"Population GWAS",0.0488125
+1,"RM + VT (5%)",24,"Population GWAS",0.0554375
+2,"RM + VT (5%)",24,"Population GWAS",0.0509375
+3,"RM + VT (5%)",24,"Population GWAS",0.052125
+4,"RM + VT (5%)",24,"Population GWAS",0.0519375
+5,"RM + VT (5%)",24,"Population GWAS",0.055375
+0,"5xAM",24,"Population GWAS",0.0493125
+1,"5xAM",24,"Population GWAS",0.046625
+2,"5xAM",24,"Population GWAS",0.04825
+3,"5xAM",24,"Population GWAS",0.048125
+4,"5xAM",24,"Population GWAS",0.0508125
+5,"5xAM",24,"Population GWAS",0.0548125
+0,"5xAM + VT (5%)",24,"Population GWAS",0.0493125
+1,"5xAM + VT (5%)",24,"Population GWAS",0.052
+2,"5xAM + VT (5%)",24,"Population GWAS",0.0608125
+3,"5xAM + VT (5%)",24,"Population GWAS",0.0651875
+4,"5xAM + VT (5%)",24,"Population GWAS",0.0683125
+5,"5xAM + VT (5%)",24,"Population GWAS",0.0665
+0,"RM",25,"Population GWAS",0.04975
+1,"RM",25,"Population GWAS",0.0470625
+2,"RM",25,"Population GWAS",0.05
+3,"RM",25,"Population GWAS",0.051875
+4,"RM",25,"Population GWAS",0.0495625
+5,"RM",25,"Population GWAS",0.048
+0,"RM + VT (5%)",25,"Population GWAS",0.047625
+1,"RM + VT (5%)",25,"Population GWAS",0.049125
+2,"RM + VT (5%)",25,"Population GWAS",0.0498125
+3,"RM + VT (5%)",25,"Population GWAS",0.0546875
+4,"RM + VT (5%)",25,"Population GWAS",0.053375
+5,"RM + VT (5%)",25,"Population GWAS",0.0521875
+0,"5xAM",25,"Population GWAS",0.051375
+1,"5xAM",25,"Population GWAS",0.0515625
+2,"5xAM",25,"Population GWAS",0.0533125
+3,"5xAM",25,"Population GWAS",0.0521875
+4,"5xAM",25,"Population GWAS",0.0511875
+5,"5xAM",25,"Population GWAS",0.052125
+0,"5xAM + VT (5%)",25,"Population GWAS",0.0496875
+1,"5xAM + VT (5%)",25,"Population GWAS",0.0570625
+2,"5xAM + VT (5%)",25,"Population GWAS",0.0618125
+3,"5xAM + VT (5%)",25,"Population GWAS",0.0650625
+4,"5xAM + VT (5%)",25,"Population GWAS",0.0698125
+5,"5xAM + VT (5%)",25,"Population GWAS",0.07075
+0,"RM",26,"Population GWAS",0.0493125
+1,"RM",26,"Population GWAS",0.047875
+2,"RM",26,"Population GWAS",0.051
+3,"RM",26,"Population GWAS",0.0500625
+4,"RM",26,"Population GWAS",0.050125
+5,"RM",26,"Population GWAS",0.0508125
+0,"RM + VT (5%)",26,"Population GWAS",0.0499375
+1,"RM + VT (5%)",26,"Population GWAS",0.0494375
+2,"RM + VT (5%)",26,"Population GWAS",0.0499375
+3,"RM + VT (5%)",26,"Population GWAS",0.0525625
+4,"RM + VT (5%)",26,"Population GWAS",0.0554375
+5,"RM + VT (5%)",26,"Population GWAS",0.053125
+0,"5xAM",26,"Population GWAS",0.0473125
+1,"5xAM",26,"Population GWAS",0.050375
+2,"5xAM",26,"Population GWAS",0.052
+3,"5xAM",26,"Population GWAS",0.0515
+4,"5xAM",26,"Population GWAS",0.0515
+5,"5xAM",26,"Population GWAS",0.051625
+0,"5xAM + VT (5%)",26,"Population GWAS",0.051125
+1,"5xAM + VT (5%)",26,"Population GWAS",0.0550625
+2,"5xAM + VT (5%)",26,"Population GWAS",0.0613125
+3,"5xAM + VT (5%)",26,"Population GWAS",0.06375
+4,"5xAM + VT (5%)",26,"Population GWAS",0.068625
+5,"5xAM + VT (5%)",26,"Population GWAS",0.0670625
+0,"RM",27,"Population GWAS",0.0486875
+1,"RM",27,"Population GWAS",0.0498125
+2,"RM",27,"Population GWAS",0.050375
+3,"RM",27,"Population GWAS",0.0531875
+4,"RM",27,"Population GWAS",0.04825
+5,"RM",27,"Population GWAS",0.04875
+0,"RM + VT (5%)",27,"Population GWAS",0.0528125
+1,"RM + VT (5%)",27,"Population GWAS",0.0525625
+2,"RM + VT (5%)",27,"Population GWAS",0.0516875
+3,"RM + VT (5%)",27,"Population GWAS",0.0504375
+4,"RM + VT (5%)",27,"Population GWAS",0.0515625
+5,"RM + VT (5%)",27,"Population GWAS",0.0545625
+0,"5xAM",27,"Population GWAS",0.051125
+1,"5xAM",27,"Population GWAS",0.051
+2,"5xAM",27,"Population GWAS",0.0493125
+3,"5xAM",27,"Population GWAS",0.052625
+4,"5xAM",27,"Population GWAS",0.0536875
+5,"5xAM",27,"Population GWAS",0.0508125
+0,"5xAM + VT (5%)",27,"Population GWAS",0.049125
+1,"5xAM + VT (5%)",27,"Population GWAS",0.0549375
+2,"5xAM + VT (5%)",27,"Population GWAS",0.06025
+3,"5xAM + VT (5%)",27,"Population GWAS",0.0680625
+4,"5xAM + VT (5%)",27,"Population GWAS",0.0723125
+5,"5xAM + VT (5%)",27,"Population GWAS",0.0746875
+0,"RM",28,"Population GWAS",0.0505
+1,"RM",28,"Population GWAS",0.0488125
+2,"RM",28,"Population GWAS",0.05175
+3,"RM",28,"Population GWAS",0.0494375
+4,"RM",28,"Population GWAS",0.0495625
+5,"RM",28,"Population GWAS",0.052
+0,"RM + VT (5%)",28,"Population GWAS",0.0468125
+1,"RM + VT (5%)",28,"Population GWAS",0.053875
+2,"RM + VT (5%)",28,"Population GWAS",0.0544375
+3,"RM + VT (5%)",28,"Population GWAS",0.0500625
+4,"RM + VT (5%)",28,"Population GWAS",0.0530625
+5,"RM + VT (5%)",28,"Population GWAS",0.0538125
+0,"5xAM",28,"Population GWAS",0.0498125
+1,"5xAM",28,"Population GWAS",0.0505625
+2,"5xAM",28,"Population GWAS",0.0503125
+3,"5xAM",28,"Population GWAS",0.0515625
+4,"5xAM",28,"Population GWAS",0.0504375
+5,"5xAM",28,"Population GWAS",0.0531875
+0,"5xAM + VT (5%)",28,"Population GWAS",0.05075
+1,"5xAM + VT (5%)",28,"Population GWAS",0.057125
+2,"5xAM + VT (5%)",28,"Population GWAS",0.060375
+3,"5xAM + VT (5%)",28,"Population GWAS",0.06275
+4,"5xAM + VT (5%)",28,"Population GWAS",0.0698125
+5,"5xAM + VT (5%)",28,"Population GWAS",0.0700625
+0,"RM",29,"Population GWAS",0.0505
+1,"RM",29,"Population GWAS",0.0505
+2,"RM",29,"Population GWAS",0.0506875
+3,"RM",29,"Population GWAS",0.051125
+4,"RM",29,"Population GWAS",0.0534375
+5,"RM",29,"Population GWAS",0.0516875
+0,"RM + VT (5%)",29,"Population GWAS",0.048875
+1,"RM + VT (5%)",29,"Population GWAS",0.0526875
+2,"RM + VT (5%)",29,"Population GWAS",0.055375
+3,"RM + VT (5%)",29,"Population GWAS",0.0506875
+4,"RM + VT (5%)",29,"Population GWAS",0.0511875
+5,"RM + VT (5%)",29,"Population GWAS",0.0554375
+0,"5xAM",29,"Population GWAS",0.0513125
+1,"5xAM",29,"Population GWAS",0.0516875
+2,"5xAM",29,"Population GWAS",0.0503125
+3,"5xAM",29,"Population GWAS",0.0543125
+4,"5xAM",29,"Population GWAS",0.0530625
+5,"5xAM",29,"Population GWAS",0.0519375
+0,"5xAM + VT (5%)",29,"Population GWAS",0.04925
+1,"5xAM + VT (5%)",29,"Population GWAS",0.0544375
+2,"5xAM + VT (5%)",29,"Population GWAS",0.063875
+3,"5xAM + VT (5%)",29,"Population GWAS",0.0661875
+4,"5xAM + VT (5%)",29,"Population GWAS",0.0716875
+5,"5xAM + VT (5%)",29,"Population GWAS",0.0703125
+0,"RM",3,"Population GWAS",0.0494375
+1,"RM",3,"Population GWAS",0.0481875
+2,"RM",3,"Population GWAS",0.051625
+3,"RM",3,"Population GWAS",0.0525625
+4,"RM",3,"Population GWAS",0.0473125
+5,"RM",3,"Population GWAS",0.0519375
+0,"RM + VT (5%)",3,"Population GWAS",0.0494375
+1,"RM + VT (5%)",3,"Population GWAS",0.05275
+2,"RM + VT (5%)",3,"Population GWAS",0.0538125
+3,"RM + VT (5%)",3,"Population GWAS",0.054
+4,"RM + VT (5%)",3,"Population GWAS",0.057875
+5,"RM + VT (5%)",3,"Population GWAS",0.0503125
+0,"5xAM",3,"Population GWAS",0.0489375
+1,"5xAM",3,"Population GWAS",0.0503125
+2,"5xAM",3,"Population GWAS",0.048625
+3,"5xAM",3,"Population GWAS",0.0504375
+4,"5xAM",3,"Population GWAS",0.053625
+5,"5xAM",3,"Population GWAS",0.0528125
+0,"5xAM + VT (5%)",3,"Population GWAS",0.0480625
+1,"5xAM + VT (5%)",3,"Population GWAS",0.0565625
+2,"5xAM + VT (5%)",3,"Population GWAS",0.0620625
+3,"5xAM + VT (5%)",3,"Population GWAS",0.067375
+4,"5xAM + VT (5%)",3,"Population GWAS",0.0726875
+5,"5xAM + VT (5%)",3,"Population GWAS",0.0691875
+0,"RM",30,"Population GWAS",0.049
+1,"RM",30,"Population GWAS",0.0518125
+2,"RM",30,"Population GWAS",0.0476875
+3,"RM",30,"Population GWAS",0.04675
+4,"RM",30,"Population GWAS",0.0506875
+5,"RM",30,"Population GWAS",0.0475625
+0,"RM + VT (5%)",30,"Population GWAS",0.05075
+1,"RM + VT (5%)",30,"Population GWAS",0.0511875
+2,"RM + VT (5%)",30,"Population GWAS",0.052125
+3,"RM + VT (5%)",30,"Population GWAS",0.053
+4,"RM + VT (5%)",30,"Population GWAS",0.0521875
+5,"RM + VT (5%)",30,"Population GWAS",0.0535625
+0,"5xAM",30,"Population GWAS",0.04925
+1,"5xAM",30,"Population GWAS",0.04825
+2,"5xAM",30,"Population GWAS",0.0489375
+3,"5xAM",30,"Population GWAS",0.053
+4,"5xAM",30,"Population GWAS",0.0525
+5,"5xAM",30,"Population GWAS",0.046875
+0,"5xAM + VT (5%)",30,"Population GWAS",0.0468125
+1,"5xAM + VT (5%)",30,"Population GWAS",0.056875
+2,"5xAM + VT (5%)",30,"Population GWAS",0.060625
+3,"5xAM + VT (5%)",30,"Population GWAS",0.06225
+4,"5xAM + VT (5%)",30,"Population GWAS",0.066875
+5,"5xAM + VT (5%)",30,"Population GWAS",0.0705
+0,"RM",31,"Population GWAS",0.049375
+1,"RM",31,"Population GWAS",0.0478125
+2,"RM",31,"Population GWAS",0.05075
+3,"RM",31,"Population GWAS",0.051125
+4,"RM",31,"Population GWAS",0.0505625
+5,"RM",31,"Population GWAS",0.048
+0,"RM + VT (5%)",31,"Population GWAS",0.0553125
+1,"RM + VT (5%)",31,"Population GWAS",0.05175
+2,"RM + VT (5%)",31,"Population GWAS",0.0513125
+3,"RM + VT (5%)",31,"Population GWAS",0.053125
+4,"RM + VT (5%)",31,"Population GWAS",0.055875
+5,"RM + VT (5%)",31,"Population GWAS",0.052875
+0,"5xAM",31,"Population GWAS",0.0488125
+1,"5xAM",31,"Population GWAS",0.051
+2,"5xAM",31,"Population GWAS",0.0449375
+3,"5xAM",31,"Population GWAS",0.050125
+4,"5xAM",31,"Population GWAS",0.053375
+5,"5xAM",31,"Population GWAS",0.0528125
+0,"5xAM + VT (5%)",31,"Population GWAS",0.0496875
+1,"5xAM + VT (5%)",31,"Population GWAS",0.0575
+2,"5xAM + VT (5%)",31,"Population GWAS",0.063
+3,"5xAM + VT (5%)",31,"Population GWAS",0.0640625
+4,"5xAM + VT (5%)",31,"Population GWAS",0.0708125
+5,"5xAM + VT (5%)",31,"Population GWAS",0.0730625
+0,"RM",32,"Population GWAS",0.047125
+1,"RM",32,"Population GWAS",0.0505625
+2,"RM",32,"Population GWAS",0.0483125
+3,"RM",32,"Population GWAS",0.0503125
+4,"RM",32,"Population GWAS",0.04825
+5,"RM",32,"Population GWAS",0.050875
+0,"RM + VT (5%)",32,"Population GWAS",0.0518125
+1,"RM + VT (5%)",32,"Population GWAS",0.0565
+2,"RM + VT (5%)",32,"Population GWAS",0.0485625
+3,"RM + VT (5%)",32,"Population GWAS",0.049875
+4,"RM + VT (5%)",32,"Population GWAS",0.05075
+5,"RM + VT (5%)",32,"Population GWAS",0.05125
+0,"5xAM",32,"Population GWAS",0.051375
+1,"5xAM",32,"Population GWAS",0.0511875
+2,"5xAM",32,"Population GWAS",0.048
+3,"5xAM",32,"Population GWAS",0.0493125
+4,"5xAM",32,"Population GWAS",0.0494375
+5,"5xAM",32,"Population GWAS",0.0499375
+0,"5xAM + VT (5%)",32,"Population GWAS",0.0458125
+1,"5xAM + VT (5%)",32,"Population GWAS",0.0541875
+2,"5xAM + VT (5%)",32,"Population GWAS",0.0591875
+3,"5xAM + VT (5%)",32,"Population GWAS",0.0674375
+4,"5xAM + VT (5%)",32,"Population GWAS",0.0691875
+5,"5xAM + VT (5%)",32,"Population GWAS",0.071875
+0,"RM",33,"Population GWAS",0.0483125
+1,"RM",33,"Population GWAS",0.05075
+2,"RM",33,"Population GWAS",0.0491875
+3,"RM",33,"Population GWAS",0.04725
+4,"RM",33,"Population GWAS",0.0525625
+5,"RM",33,"Population GWAS",0.0518125
+0,"RM + VT (5%)",33,"Population GWAS",0.049875
+1,"RM + VT (5%)",33,"Population GWAS",0.05275
+2,"RM + VT (5%)",33,"Population GWAS",0.053625
+3,"RM + VT (5%)",33,"Population GWAS",0.052375
+4,"RM + VT (5%)",33,"Population GWAS",0.05275
+5,"RM + VT (5%)",33,"Population GWAS",0.0561875
+0,"5xAM",33,"Population GWAS",0.0540625
+1,"5xAM",33,"Population GWAS",0.0485625
+2,"5xAM",33,"Population GWAS",0.05225
+3,"5xAM",33,"Population GWAS",0.051375
+4,"5xAM",33,"Population GWAS",0.052125
+5,"5xAM",33,"Population GWAS",0.05225
+0,"5xAM + VT (5%)",33,"Population GWAS",0.0481875
+1,"5xAM + VT (5%)",33,"Population GWAS",0.0581875
+2,"5xAM + VT (5%)",33,"Population GWAS",0.0595625
+3,"5xAM + VT (5%)",33,"Population GWAS",0.067625
+4,"5xAM + VT (5%)",33,"Population GWAS",0.06925
+5,"5xAM + VT (5%)",33,"Population GWAS",0.0693125
+0,"RM",34,"Population GWAS",0.0476875
+1,"RM",34,"Population GWAS",0.0511875
+2,"RM",34,"Population GWAS",0.0503125
+3,"RM",34,"Population GWAS",0.0498125
+4,"RM",34,"Population GWAS",0.051375
+5,"RM",34,"Population GWAS",0.05075
+0,"RM + VT (5%)",34,"Population GWAS",0.0496875
+1,"RM + VT (5%)",34,"Population GWAS",0.0505625
+2,"RM + VT (5%)",34,"Population GWAS",0.052375
+3,"RM + VT (5%)",34,"Population GWAS",0.056375
+4,"RM + VT (5%)",34,"Population GWAS",0.0525625
+5,"RM + VT (5%)",34,"Population GWAS",0.0521875
+0,"5xAM",34,"Population GWAS",0.0479375
+1,"5xAM",34,"Population GWAS",0.05375
+2,"5xAM",34,"Population GWAS",0.0516875
+3,"5xAM",34,"Population GWAS",0.0516875
+4,"5xAM",34,"Population GWAS",0.049625
+5,"5xAM",34,"Population GWAS",0.05075
+0,"5xAM + VT (5%)",34,"Population GWAS",0.052
+1,"5xAM + VT (5%)",34,"Population GWAS",0.053875
+2,"5xAM + VT (5%)",34,"Population GWAS",0.0634375
+3,"5xAM + VT (5%)",34,"Population GWAS",0.06275
+4,"5xAM + VT (5%)",34,"Population GWAS",0.06675
+5,"5xAM + VT (5%)",34,"Population GWAS",0.0733125
+0,"RM",35,"Population GWAS",0.0505625
+1,"RM",35,"Population GWAS",0.0489375
+2,"RM",35,"Population GWAS",0.0474375
+3,"RM",35,"Population GWAS",0.050875
+4,"RM",35,"Population GWAS",0.0515
+5,"RM",35,"Population GWAS",0.050375
+0,"RM + VT (5%)",35,"Population GWAS",0.051375
+1,"RM + VT (5%)",35,"Population GWAS",0.051125
+2,"RM + VT (5%)",35,"Population GWAS",0.052375
+3,"RM + VT (5%)",35,"Population GWAS",0.05375
+4,"RM + VT (5%)",35,"Population GWAS",0.0538125
+5,"RM + VT (5%)",35,"Population GWAS",0.0515
+0,"5xAM",35,"Population GWAS",0.05425
+1,"5xAM",35,"Population GWAS",0.0534375
+2,"5xAM",35,"Population GWAS",0.0490625
+3,"5xAM",35,"Population GWAS",0.04925
+4,"5xAM",35,"Population GWAS",0.049375
+5,"5xAM",35,"Population GWAS",0.0506875
+0,"5xAM + VT (5%)",35,"Population GWAS",0.050875
+1,"5xAM + VT (5%)",35,"Population GWAS",0.0564375
+2,"5xAM + VT (5%)",35,"Population GWAS",0.0601875
+3,"5xAM + VT (5%)",35,"Population GWAS",0.064625
+4,"5xAM + VT (5%)",35,"Population GWAS",0.0718125
+5,"5xAM + VT (5%)",35,"Population GWAS",0.0709375
+0,"RM",36,"Population GWAS",0.045
+1,"RM",36,"Population GWAS",0.051125
+2,"RM",36,"Population GWAS",0.048875
+3,"RM",36,"Population GWAS",0.050125
+4,"RM",36,"Population GWAS",0.0515
+5,"RM",36,"Population GWAS",0.0519375
+0,"RM + VT (5%)",36,"Population GWAS",0.054
+1,"RM + VT (5%)",36,"Population GWAS",0.049875
+2,"RM + VT (5%)",36,"Population GWAS",0.052
+3,"RM + VT (5%)",36,"Population GWAS",0.0570625
+4,"RM + VT (5%)",36,"Population GWAS",0.0526875
+5,"RM + VT (5%)",36,"Population GWAS",0.0525625
+0,"5xAM",36,"Population GWAS",0.046875
+1,"5xAM",36,"Population GWAS",0.0509375
+2,"5xAM",36,"Population GWAS",0.04775
+3,"5xAM",36,"Population GWAS",0.0498125
+4,"5xAM",36,"Population GWAS",0.04975
+5,"5xAM",36,"Population GWAS",0.0496875
+0,"5xAM + VT (5%)",36,"Population GWAS",0.0496875
+1,"5xAM + VT (5%)",36,"Population GWAS",0.057375
+2,"5xAM + VT (5%)",36,"Population GWAS",0.061625
+3,"5xAM + VT (5%)",36,"Population GWAS",0.066
+4,"5xAM + VT (5%)",36,"Population GWAS",0.06375
+5,"5xAM + VT (5%)",36,"Population GWAS",0.0676875
+0,"RM",37,"Population GWAS",0.051625
+1,"RM",37,"Population GWAS",0.0534375
+2,"RM",37,"Population GWAS",0.0518125
+3,"RM",37,"Population GWAS",0.0519375
+4,"RM",37,"Population GWAS",0.0494375
+5,"RM",37,"Population GWAS",0.0485625
+0,"RM + VT (5%)",37,"Population GWAS",0.0476875
+1,"RM + VT (5%)",37,"Population GWAS",0.0509375
+2,"RM + VT (5%)",37,"Population GWAS",0.0504375
+3,"RM + VT (5%)",37,"Population GWAS",0.0521875
+4,"RM + VT (5%)",37,"Population GWAS",0.0521875
+5,"RM + VT (5%)",37,"Population GWAS",0.053
+0,"5xAM",37,"Population GWAS",0.0500625
+1,"5xAM",37,"Population GWAS",0.0520625
+2,"5xAM",37,"Population GWAS",0.0555
+3,"5xAM",37,"Population GWAS",0.0511875
+4,"5xAM",37,"Population GWAS",0.0496875
+5,"5xAM",37,"Population GWAS",0.0530625
+0,"5xAM + VT (5%)",37,"Population GWAS",0.05375
+1,"5xAM + VT (5%)",37,"Population GWAS",0.0521875
+2,"5xAM + VT (5%)",37,"Population GWAS",0.0596875
+3,"5xAM + VT (5%)",37,"Population GWAS",0.06575
+4,"5xAM + VT (5%)",37,"Population GWAS",0.0721875
+5,"5xAM + VT (5%)",37,"Population GWAS",0.0770625
+0,"RM",38,"Population GWAS",0.0488125
+1,"RM",38,"Population GWAS",0.0509375
+2,"RM",38,"Population GWAS",0.051
+3,"RM",38,"Population GWAS",0.05
+4,"RM",38,"Population GWAS",0.0519375
+5,"RM",38,"Population GWAS",0.052
+0,"RM + VT (5%)",38,"Population GWAS",0.051125
+1,"RM + VT (5%)",38,"Population GWAS",0.055
+2,"RM + VT (5%)",38,"Population GWAS",0.05075
+3,"RM + VT (5%)",38,"Population GWAS",0.05225
+4,"RM + VT (5%)",38,"Population GWAS",0.05125
+5,"RM + VT (5%)",38,"Population GWAS",0.052125
+0,"5xAM",38,"Population GWAS",0.0495625
+1,"5xAM",38,"Population GWAS",0.051625
+2,"5xAM",38,"Population GWAS",0.0488125
+3,"5xAM",38,"Population GWAS",0.050375
+4,"5xAM",38,"Population GWAS",0.0485
+5,"5xAM",38,"Population GWAS",0.053
+0,"5xAM + VT (5%)",38,"Population GWAS",0.05125
+1,"5xAM + VT (5%)",38,"Population GWAS",0.0560625
+2,"5xAM + VT (5%)",38,"Population GWAS",0.065625
+3,"5xAM + VT (5%)",38,"Population GWAS",0.0635
+4,"5xAM + VT (5%)",38,"Population GWAS",0.0654375
+5,"5xAM + VT (5%)",38,"Population GWAS",0.06825
+0,"RM",39,"Population GWAS",0.047875
+1,"RM",39,"Population GWAS",0.050625
+2,"RM",39,"Population GWAS",0.0481875
+3,"RM",39,"Population GWAS",0.050125
+4,"RM",39,"Population GWAS",0.0484375
+5,"RM",39,"Population GWAS",0.0506875
+0,"RM + VT (5%)",39,"Population GWAS",0.0486875
+1,"RM + VT (5%)",39,"Population GWAS",0.0510625
+2,"RM + VT (5%)",39,"Population GWAS",0.0525625
+3,"RM + VT (5%)",39,"Population GWAS",0.052625
+4,"RM + VT (5%)",39,"Population GWAS",0.050125
+5,"RM + VT (5%)",39,"Population GWAS",0.0530625
+0,"5xAM",39,"Population GWAS",0.04975
+1,"5xAM",39,"Population GWAS",0.052125
+2,"5xAM",39,"Population GWAS",0.0495625
+3,"5xAM",39,"Population GWAS",0.0521875
+4,"5xAM",39,"Population GWAS",0.053375
+5,"5xAM",39,"Population GWAS",0.0526875
+0,"5xAM + VT (5%)",39,"Population GWAS",0.0501875
+1,"5xAM + VT (5%)",39,"Population GWAS",0.0540625
+2,"5xAM + VT (5%)",39,"Population GWAS",0.06425
+3,"5xAM + VT (5%)",39,"Population GWAS",0.06575
+4,"5xAM + VT (5%)",39,"Population GWAS",0.0689375
+5,"5xAM + VT (5%)",39,"Population GWAS",0.0709375
+0,"RM",4,"Population GWAS",0.0510625
+1,"RM",4,"Population GWAS",0.049625
+2,"RM",4,"Population GWAS",0.049875
+3,"RM",4,"Population GWAS",0.049375
+4,"RM",4,"Population GWAS",0.0481875
+5,"RM",4,"Population GWAS",0.0485
+0,"RM + VT (5%)",4,"Population GWAS",0.0515
+1,"RM + VT (5%)",4,"Population GWAS",0.0496875
+2,"RM + VT (5%)",4,"Population GWAS",0.0526875
+3,"RM + VT (5%)",4,"Population GWAS",0.0530625
+4,"RM + VT (5%)",4,"Population GWAS",0.054375
+5,"RM + VT (5%)",4,"Population GWAS",0.0534375
+0,"5xAM",4,"Population GWAS",0.048625
+1,"5xAM",4,"Population GWAS",0.0496875
+2,"5xAM",4,"Population GWAS",0.049625
+3,"5xAM",4,"Population GWAS",0.0529375
+4,"5xAM",4,"Population GWAS",0.049875
+5,"5xAM",4,"Population GWAS",0.052125
+0,"5xAM + VT (5%)",4,"Population GWAS",0.0521875
+1,"5xAM + VT (5%)",4,"Population GWAS",0.056375
+2,"5xAM + VT (5%)",4,"Population GWAS",0.061
+3,"5xAM + VT (5%)",4,"Population GWAS",0.0644375
+4,"5xAM + VT (5%)",4,"Population GWAS",0.0694375
+5,"5xAM + VT (5%)",4,"Population GWAS",0.066875
+0,"RM",40,"Population GWAS",0.0503125
+1,"RM",40,"Population GWAS",0.0500625
+2,"RM",40,"Population GWAS",0.0499375
+3,"RM",40,"Population GWAS",0.050375
+4,"RM",40,"Population GWAS",0.0526875
+5,"RM",40,"Population GWAS",0.0481875
+0,"RM + VT (5%)",40,"Population GWAS",0.0500625
+1,"RM + VT (5%)",40,"Population GWAS",0.04775
+2,"RM + VT (5%)",40,"Population GWAS",0.053625
+3,"RM + VT (5%)",40,"Population GWAS",0.0541875
+4,"RM + VT (5%)",40,"Population GWAS",0.0509375
+5,"RM + VT (5%)",40,"Population GWAS",0.052875
+0,"5xAM",40,"Population GWAS",0.0513125
+1,"5xAM",40,"Population GWAS",0.0536875
+2,"5xAM",40,"Population GWAS",0.049375
+3,"5xAM",40,"Population GWAS",0.0511875
+4,"5xAM",40,"Population GWAS",0.049
+5,"5xAM",40,"Population GWAS",0.0525
+0,"5xAM + VT (5%)",40,"Population GWAS",0.0515
+1,"5xAM + VT (5%)",40,"Population GWAS",0.053125
+2,"5xAM + VT (5%)",40,"Population GWAS",0.062625
+3,"5xAM + VT (5%)",40,"Population GWAS",0.069875
+4,"5xAM + VT (5%)",40,"Population GWAS",0.0689375
+5,"5xAM + VT (5%)",40,"Population GWAS",0.0755
+0,"RM",41,"Population GWAS",0.053
+1,"RM",41,"Population GWAS",0.048625
+2,"RM",41,"Population GWAS",0.0515625
+3,"RM",41,"Population GWAS",0.047
+4,"RM",41,"Population GWAS",0.0511875
+5,"RM",41,"Population GWAS",0.0498125
+0,"RM + VT (5%)",41,"Population GWAS",0.049625
+1,"RM + VT (5%)",41,"Population GWAS",0.0511875
+2,"RM + VT (5%)",41,"Population GWAS",0.0523125
+3,"RM + VT (5%)",41,"Population GWAS",0.0525625
+4,"RM + VT (5%)",41,"Population GWAS",0.053875
+5,"RM + VT (5%)",41,"Population GWAS",0.053125
+0,"5xAM",41,"Population GWAS",0.05175
+1,"5xAM",41,"Population GWAS",0.052
+2,"5xAM",41,"Population GWAS",0.0500625
+3,"5xAM",41,"Population GWAS",0.050125
+4,"5xAM",41,"Population GWAS",0.0506875
+5,"5xAM",41,"Population GWAS",0.0545625
+0,"5xAM + VT (5%)",41,"Population GWAS",0.0515
+1,"5xAM + VT (5%)",41,"Population GWAS",0.057375
+2,"5xAM + VT (5%)",41,"Population GWAS",0.0635
+3,"5xAM + VT (5%)",41,"Population GWAS",0.068
+4,"5xAM + VT (5%)",41,"Population GWAS",0.070375
+5,"5xAM + VT (5%)",41,"Population GWAS",0.073875
+0,"RM",42,"Population GWAS",0.045625
+1,"RM",42,"Population GWAS",0.0498125
+2,"RM",42,"Population GWAS",0.046125
+3,"RM",42,"Population GWAS",0.0480625
+4,"RM",42,"Population GWAS",0.04925
+5,"RM",42,"Population GWAS",0.050375
+0,"RM + VT (5%)",42,"Population GWAS",0.049375
+1,"RM + VT (5%)",42,"Population GWAS",0.0528125
+2,"RM + VT (5%)",42,"Population GWAS",0.052875
+3,"RM + VT (5%)",42,"Population GWAS",0.054875
+4,"RM + VT (5%)",42,"Population GWAS",0.0548125
+5,"RM + VT (5%)",42,"Population GWAS",0.0529375
+0,"5xAM",42,"Population GWAS",0.0489375
+1,"5xAM",42,"Population GWAS",0.0506875
+2,"5xAM",42,"Population GWAS",0.0510625
+3,"5xAM",42,"Population GWAS",0.0521875
+4,"5xAM",42,"Population GWAS",0.0521875
+5,"5xAM",42,"Population GWAS",0.0488125
+0,"5xAM + VT (5%)",42,"Population GWAS",0.0495
+1,"5xAM + VT (5%)",42,"Population GWAS",0.051125
+2,"5xAM + VT (5%)",42,"Population GWAS",0.0621875
+3,"5xAM + VT (5%)",42,"Population GWAS",0.0674375
+4,"5xAM + VT (5%)",42,"Population GWAS",0.0701875
+5,"5xAM + VT (5%)",42,"Population GWAS",0.0685
+0,"RM",43,"Population GWAS",0.049875
+1,"RM",43,"Population GWAS",0.0504375
+2,"RM",43,"Population GWAS",0.0478125
+3,"RM",43,"Population GWAS",0.0525
+4,"RM",43,"Population GWAS",0.0508125
+5,"RM",43,"Population GWAS",0.047625
+0,"RM + VT (5%)",43,"Population GWAS",0.04875
+1,"RM + VT (5%)",43,"Population GWAS",0.0473125
+2,"RM + VT (5%)",43,"Population GWAS",0.05025
+3,"RM + VT (5%)",43,"Population GWAS",0.05425
+4,"RM + VT (5%)",43,"Population GWAS",0.05275
+5,"RM + VT (5%)",43,"Population GWAS",0.05175
+0,"5xAM",43,"Population GWAS",0.051625
+1,"5xAM",43,"Population GWAS",0.0538125
+2,"5xAM",43,"Population GWAS",0.0525
+3,"5xAM",43,"Population GWAS",0.05025
+4,"5xAM",43,"Population GWAS",0.0500625
+5,"5xAM",43,"Population GWAS",0.0509375
+0,"5xAM + VT (5%)",43,"Population GWAS",0.0499375
+1,"5xAM + VT (5%)",43,"Population GWAS",0.0564375
+2,"5xAM + VT (5%)",43,"Population GWAS",0.0618125
+3,"5xAM + VT (5%)",43,"Population GWAS",0.069125
+4,"5xAM + VT (5%)",43,"Population GWAS",0.0683125
+5,"5xAM + VT (5%)",43,"Population GWAS",0.0711875
+0,"RM",44,"Population GWAS",0.0513125
+1,"RM",44,"Population GWAS",0.0503125
+2,"RM",44,"Population GWAS",0.048
+3,"RM",44,"Population GWAS",0.0526875
+4,"RM",44,"Population GWAS",0.05275
+5,"RM",44,"Population GWAS",0.0470625
+0,"RM + VT (5%)",44,"Population GWAS",0.05375
+1,"RM + VT (5%)",44,"Population GWAS",0.04975
+2,"RM + VT (5%)",44,"Population GWAS",0.053125
+3,"RM + VT (5%)",44,"Population GWAS",0.05325
+4,"RM + VT (5%)",44,"Population GWAS",0.051375
+5,"RM + VT (5%)",44,"Population GWAS",0.05225
+0,"5xAM",44,"Population GWAS",0.04625
+1,"5xAM",44,"Population GWAS",0.0506875
+2,"5xAM",44,"Population GWAS",0.052625
+3,"5xAM",44,"Population GWAS",0.0505625
+4,"5xAM",44,"Population GWAS",0.052125
+5,"5xAM",44,"Population GWAS",0.0538125
+0,"5xAM + VT (5%)",44,"Population GWAS",0.050625
+1,"5xAM + VT (5%)",44,"Population GWAS",0.052375
+2,"5xAM + VT (5%)",44,"Population GWAS",0.0609375
+3,"5xAM + VT (5%)",44,"Population GWAS",0.067375
+4,"5xAM + VT (5%)",44,"Population GWAS",0.0691875
+5,"5xAM + VT (5%)",44,"Population GWAS",0.06875
+0,"RM",45,"Population GWAS",0.050125
+1,"RM",45,"Population GWAS",0.05325
+2,"RM",45,"Population GWAS",0.0525
+3,"RM",45,"Population GWAS",0.051
+4,"RM",45,"Population GWAS",0.0501875
+5,"RM",45,"Population GWAS",0.0521875
+0,"RM + VT (5%)",45,"Population GWAS",0.049
+1,"RM + VT (5%)",45,"Population GWAS",0.0515
+2,"RM + VT (5%)",45,"Population GWAS",0.0520625
+3,"RM + VT (5%)",45,"Population GWAS",0.0523125
+4,"RM + VT (5%)",45,"Population GWAS",0.0530625
+5,"RM + VT (5%)",45,"Population GWAS",0.0530625
+0,"5xAM",45,"Population GWAS",0.0496875
+1,"5xAM",45,"Population GWAS",0.051125
+2,"5xAM",45,"Population GWAS",0.0486875
+3,"5xAM",45,"Population GWAS",0.051125
+4,"5xAM",45,"Population GWAS",0.0529375
+5,"5xAM",45,"Population GWAS",0.05075
+0,"5xAM + VT (5%)",45,"Population GWAS",0.0504375
+1,"5xAM + VT (5%)",45,"Population GWAS",0.0549375
+2,"5xAM + VT (5%)",45,"Population GWAS",0.061
+3,"5xAM + VT (5%)",45,"Population GWAS",0.0634375
+4,"5xAM + VT (5%)",45,"Population GWAS",0.066875
+5,"5xAM + VT (5%)",45,"Population GWAS",0.0715
+0,"RM",46,"Population GWAS",0.049875
+1,"RM",46,"Population GWAS",0.0503125
+2,"RM",46,"Population GWAS",0.0505
+3,"RM",46,"Population GWAS",0.0474375
+4,"RM",46,"Population GWAS",0.0483125
+5,"RM",46,"Population GWAS",0.0465
+0,"RM + VT (5%)",46,"Population GWAS",0.0460625
+1,"RM + VT (5%)",46,"Population GWAS",0.048625
+2,"RM + VT (5%)",46,"Population GWAS",0.053125
+3,"RM + VT (5%)",46,"Population GWAS",0.0548125
+4,"RM + VT (5%)",46,"Population GWAS",0.05325
+5,"RM + VT (5%)",46,"Population GWAS",0.0508125
+0,"5xAM",46,"Population GWAS",0.050875
+1,"5xAM",46,"Population GWAS",0.0531875
+2,"5xAM",46,"Population GWAS",0.0496875
+3,"5xAM",46,"Population GWAS",0.04975
+4,"5xAM",46,"Population GWAS",0.051125
+5,"5xAM",46,"Population GWAS",0.0513125
+0,"5xAM + VT (5%)",46,"Population GWAS",0.0498125
+1,"5xAM + VT (5%)",46,"Population GWAS",0.0561875
+2,"5xAM + VT (5%)",46,"Population GWAS",0.061375
+3,"5xAM + VT (5%)",46,"Population GWAS",0.0689375
+4,"5xAM + VT (5%)",46,"Population GWAS",0.067875
+5,"5xAM + VT (5%)",46,"Population GWAS",0.07225
+0,"RM",47,"Population GWAS",0.050375
+1,"RM",47,"Population GWAS",0.052375
+2,"RM",47,"Population GWAS",0.04775
+3,"RM",47,"Population GWAS",0.0480625
+4,"RM",47,"Population GWAS",0.04925
+5,"RM",47,"Population GWAS",0.04725
+0,"RM + VT (5%)",47,"Population GWAS",0.050375
+1,"RM + VT (5%)",47,"Population GWAS",0.0515625
+2,"RM + VT (5%)",47,"Population GWAS",0.0525625
+3,"RM + VT (5%)",47,"Population GWAS",0.05425
+4,"RM + VT (5%)",47,"Population GWAS",0.053125
+5,"RM + VT (5%)",47,"Population GWAS",0.0541875
+0,"5xAM",47,"Population GWAS",0.048375
+1,"5xAM",47,"Population GWAS",0.0475
+2,"5xAM",47,"Population GWAS",0.04925
+3,"5xAM",47,"Population GWAS",0.0505625
+4,"5xAM",47,"Population GWAS",0.04975
+5,"5xAM",47,"Population GWAS",0.0521875
+0,"5xAM + VT (5%)",47,"Population GWAS",0.05075
+1,"5xAM + VT (5%)",47,"Population GWAS",0.0566875
+2,"5xAM + VT (5%)",47,"Population GWAS",0.0635625
+3,"5xAM + VT (5%)",47,"Population GWAS",0.0654375
+4,"5xAM + VT (5%)",47,"Population GWAS",0.070125
+5,"5xAM + VT (5%)",47,"Population GWAS",0.0690625
+0,"RM",48,"Population GWAS",0.0504375
+1,"RM",48,"Population GWAS",0.0491875
+2,"RM",48,"Population GWAS",0.0525
+3,"RM",48,"Population GWAS",0.05125
+4,"RM",48,"Population GWAS",0.048625
+5,"RM",48,"Population GWAS",0.052125
+0,"RM + VT (5%)",48,"Population GWAS",0.0506875
+1,"RM + VT (5%)",48,"Population GWAS",0.0498125
+2,"RM + VT (5%)",48,"Population GWAS",0.051375
+3,"RM + VT (5%)",48,"Population GWAS",0.0471875
+4,"RM + VT (5%)",48,"Population GWAS",0.0526875
+5,"RM + VT (5%)",48,"Population GWAS",0.0495625
+0,"5xAM",48,"Population GWAS",0.05025
+1,"5xAM",48,"Population GWAS",0.05
+2,"5xAM",48,"Population GWAS",0.0526875
+3,"5xAM",48,"Population GWAS",0.052875
+4,"5xAM",48,"Population GWAS",0.052875
+5,"5xAM",48,"Population GWAS",0.0493125
+0,"5xAM + VT (5%)",48,"Population GWAS",0.051
+1,"5xAM + VT (5%)",48,"Population GWAS",0.0555
+2,"5xAM + VT (5%)",48,"Population GWAS",0.058625
+3,"5xAM + VT (5%)",48,"Population GWAS",0.0654375
+4,"5xAM + VT (5%)",48,"Population GWAS",0.065625
+5,"5xAM + VT (5%)",48,"Population GWAS",0.070875
+0,"RM",49,"Population GWAS",0.0510625
+1,"RM",49,"Population GWAS",0.051375
+2,"RM",49,"Population GWAS",0.0510625
+3,"RM",49,"Population GWAS",0.05425
+4,"RM",49,"Population GWAS",0.05225
+5,"RM",49,"Population GWAS",0.0496875
+0,"RM + VT (5%)",49,"Population GWAS",0.05025
+1,"RM + VT (5%)",49,"Population GWAS",0.0488125
+2,"RM + VT (5%)",49,"Population GWAS",0.050625
+3,"RM + VT (5%)",49,"Population GWAS",0.0501875
+4,"RM + VT (5%)",49,"Population GWAS",0.050875
+5,"RM + VT (5%)",49,"Population GWAS",0.0545
+0,"5xAM",49,"Population GWAS",0.0525625
+1,"5xAM",49,"Population GWAS",0.049125
+2,"5xAM",49,"Population GWAS",0.0498125
+3,"5xAM",49,"Population GWAS",0.053875
+4,"5xAM",49,"Population GWAS",0.055125
+5,"5xAM",49,"Population GWAS",0.0494375
+0,"5xAM + VT (5%)",49,"Population GWAS",0.049625
+1,"5xAM + VT (5%)",49,"Population GWAS",0.0524375
+2,"5xAM + VT (5%)",49,"Population GWAS",0.0605
+3,"5xAM + VT (5%)",49,"Population GWAS",0.063125
+4,"5xAM + VT (5%)",49,"Population GWAS",0.072125
+5,"5xAM + VT (5%)",49,"Population GWAS",0.0675625
+0,"RM",5,"Population GWAS",0.04875
+1,"RM",5,"Population GWAS",0.05
+2,"RM",5,"Population GWAS",0.05175
+3,"RM",5,"Population GWAS",0.05175
+4,"RM",5,"Population GWAS",0.048375
+5,"RM",5,"Population GWAS",0.0484375
+0,"RM + VT (5%)",5,"Population GWAS",0.049
+1,"RM + VT (5%)",5,"Population GWAS",0.051
+2,"RM + VT (5%)",5,"Population GWAS",0.050375
+3,"RM + VT (5%)",5,"Population GWAS",0.0513125
+4,"RM + VT (5%)",5,"Population GWAS",0.0565
+5,"RM + VT (5%)",5,"Population GWAS",0.0541875
+0,"5xAM",5,"Population GWAS",0.0506875
+1,"5xAM",5,"Population GWAS",0.0498125
+2,"5xAM",5,"Population GWAS",0.0505
+3,"5xAM",5,"Population GWAS",0.052375
+4,"5xAM",5,"Population GWAS",0.0478125
+5,"5xAM",5,"Population GWAS",0.0515
+0,"5xAM + VT (5%)",5,"Population GWAS",0.0528125
+1,"5xAM + VT (5%)",5,"Population GWAS",0.05575
+2,"5xAM + VT (5%)",5,"Population GWAS",0.06025
+3,"5xAM + VT (5%)",5,"Population GWAS",0.066375
+4,"5xAM + VT (5%)",5,"Population GWAS",0.0668125
+5,"5xAM + VT (5%)",5,"Population GWAS",0.0693125
+0,"RM",50,"Population GWAS",0.0504375
+1,"RM",50,"Population GWAS",0.049125
+2,"RM",50,"Population GWAS",0.0475625
+3,"RM",50,"Population GWAS",0.05025
+4,"RM",50,"Population GWAS",0.0505
+5,"RM",50,"Population GWAS",0.050375
+0,"RM + VT (5%)",50,"Population GWAS",0.0495625
+1,"RM + VT (5%)",50,"Population GWAS",0.0509375
+2,"RM + VT (5%)",50,"Population GWAS",0.051625
+3,"RM + VT (5%)",50,"Population GWAS",0.052625
+4,"RM + VT (5%)",50,"Population GWAS",0.0549375
+5,"RM + VT (5%)",50,"Population GWAS",0.054
+0,"5xAM",50,"Population GWAS",0.0475625
+1,"5xAM",50,"Population GWAS",0.04925
+2,"5xAM",50,"Population GWAS",0.051875
+3,"5xAM",50,"Population GWAS",0.0525625
+4,"5xAM",50,"Population GWAS",0.0500625
+5,"5xAM",50,"Population GWAS",0.0490625
+0,"5xAM + VT (5%)",50,"Population GWAS",0.0508125
+1,"5xAM + VT (5%)",50,"Population GWAS",0.0546875
+2,"5xAM + VT (5%)",50,"Population GWAS",0.0658125
+3,"5xAM + VT (5%)",50,"Population GWAS",0.06825
+4,"5xAM + VT (5%)",50,"Population GWAS",0.065875
+5,"5xAM + VT (5%)",50,"Population GWAS",0.0729375
+0,"RM",6,"Population GWAS",0.0506875
+1,"RM",6,"Population GWAS",0.0495
+2,"RM",6,"Population GWAS",0.048875
+3,"RM",6,"Population GWAS",0.0513125
+4,"RM",6,"Population GWAS",0.05
+5,"RM",6,"Population GWAS",0.05
+0,"RM + VT (5%)",6,"Population GWAS",0.05
+1,"RM + VT (5%)",6,"Population GWAS",0.048625
+2,"RM + VT (5%)",6,"Population GWAS",0.0489375
+3,"RM + VT (5%)",6,"Population GWAS",0.0525
+4,"RM + VT (5%)",6,"Population GWAS",0.052875
+5,"RM + VT (5%)",6,"Population GWAS",0.0539375
+0,"5xAM",6,"Population GWAS",0.0475625
+1,"5xAM",6,"Population GWAS",0.05
+2,"5xAM",6,"Population GWAS",0.052375
+3,"5xAM",6,"Population GWAS",0.0471875
+4,"5xAM",6,"Population GWAS",0.051625
+5,"5xAM",6,"Population GWAS",0.0506875
+0,"5xAM + VT (5%)",6,"Population GWAS",0.0523125
+1,"5xAM + VT (5%)",6,"Population GWAS",0.0531875
+2,"5xAM + VT (5%)",6,"Population GWAS",0.0645
+3,"5xAM + VT (5%)",6,"Population GWAS",0.06475
+4,"5xAM + VT (5%)",6,"Population GWAS",0.069125
+5,"5xAM + VT (5%)",6,"Population GWAS",0.0688125
+0,"RM",7,"Population GWAS",0.0501875
+1,"RM",7,"Population GWAS",0.0519375
+2,"RM",7,"Population GWAS",0.0498125
+3,"RM",7,"Population GWAS",0.049125
+4,"RM",7,"Population GWAS",0.0520625
+5,"RM",7,"Population GWAS",0.05175
+0,"RM + VT (5%)",7,"Population GWAS",0.0483125
+1,"RM + VT (5%)",7,"Population GWAS",0.0514375
+2,"RM + VT (5%)",7,"Population GWAS",0.05575
+3,"RM + VT (5%)",7,"Population GWAS",0.05275
+4,"RM + VT (5%)",7,"Population GWAS",0.051125
+5,"RM + VT (5%)",7,"Population GWAS",0.0546875
+0,"5xAM",7,"Population GWAS",0.0525625
+1,"5xAM",7,"Population GWAS",0.0514375
+2,"5xAM",7,"Population GWAS",0.0489375
+3,"5xAM",7,"Population GWAS",0.046875
+4,"5xAM",7,"Population GWAS",0.052625
+5,"5xAM",7,"Population GWAS",0.0505625
+0,"5xAM + VT (5%)",7,"Population GWAS",0.0506875
+1,"5xAM + VT (5%)",7,"Population GWAS",0.057125
+2,"5xAM + VT (5%)",7,"Population GWAS",0.0644375
+3,"5xAM + VT (5%)",7,"Population GWAS",0.06425
+4,"5xAM + VT (5%)",7,"Population GWAS",0.068125
+5,"5xAM + VT (5%)",7,"Population GWAS",0.0681875
+0,"RM",8,"Population GWAS",0.052125
+1,"RM",8,"Population GWAS",0.0534375
+2,"RM",8,"Population GWAS",0.0485
+3,"RM",8,"Population GWAS",0.050125
+4,"RM",8,"Population GWAS",0.047125
+5,"RM",8,"Population GWAS",0.052375
+0,"RM + VT (5%)",8,"Population GWAS",0.049625
+1,"RM + VT (5%)",8,"Population GWAS",0.0500625
+2,"RM + VT (5%)",8,"Population GWAS",0.0535
+3,"RM + VT (5%)",8,"Population GWAS",0.0534375
+4,"RM + VT (5%)",8,"Population GWAS",0.051375
+5,"RM + VT (5%)",8,"Population GWAS",0.0523125
+0,"5xAM",8,"Population GWAS",0.0510625
+1,"5xAM",8,"Population GWAS",0.0519375
+2,"5xAM",8,"Population GWAS",0.049
+3,"5xAM",8,"Population GWAS",0.052
+4,"5xAM",8,"Population GWAS",0.048
+5,"5xAM",8,"Population GWAS",0.053
+0,"5xAM + VT (5%)",8,"Population GWAS",0.04725
+1,"5xAM + VT (5%)",8,"Population GWAS",0.0561875
+2,"5xAM + VT (5%)",8,"Population GWAS",0.060375
+3,"5xAM + VT (5%)",8,"Population GWAS",0.0656875
+4,"5xAM + VT (5%)",8,"Population GWAS",0.0680625
+5,"5xAM + VT (5%)",8,"Population GWAS",0.0734375
+0,"RM",9,"Population GWAS",0.049375
+1,"RM",9,"Population GWAS",0.0475625
+2,"RM",9,"Population GWAS",0.05
+3,"RM",9,"Population GWAS",0.050125
+4,"RM",9,"Population GWAS",0.04975
+5,"RM",9,"Population GWAS",0.0499375
+0,"RM + VT (5%)",9,"Population GWAS",0.049875
+1,"RM + VT (5%)",9,"Population GWAS",0.0525
+2,"RM + VT (5%)",9,"Population GWAS",0.0513125
+3,"RM + VT (5%)",9,"Population GWAS",0.0541875
+4,"RM + VT (5%)",9,"Population GWAS",0.0535
+5,"RM + VT (5%)",9,"Population GWAS",0.0506875
+0,"5xAM",9,"Population GWAS",0.048875
+1,"5xAM",9,"Population GWAS",0.05275
+2,"5xAM",9,"Population GWAS",0.0493125
+3,"5xAM",9,"Population GWAS",0.05075
+4,"5xAM",9,"Population GWAS",0.050125
+5,"5xAM",9,"Population GWAS",0.0521875
+0,"5xAM + VT (5%)",9,"Population GWAS",0.0475
+1,"5xAM + VT (5%)",9,"Population GWAS",0.055875
+2,"5xAM + VT (5%)",9,"Population GWAS",0.0658125
+3,"5xAM + VT (5%)",9,"Population GWAS",0.06925
+4,"5xAM + VT (5%)",9,"Population GWAS",0.067125
+5,"5xAM + VT (5%)",9,"Population GWAS",0.0695
+0,"RM",1,"Sibling GWAS",0.0506875
+1,"RM",1,"Sibling GWAS",0.0518125
+2,"RM",1,"Sibling GWAS",0.049625
+3,"RM",1,"Sibling GWAS",0.0500625
+4,"RM",1,"Sibling GWAS",0.047875
+5,"RM",1,"Sibling GWAS",0.0504375
+0,"RM + VT (5%)",1,"Sibling GWAS",0.052375
+1,"RM + VT (5%)",1,"Sibling GWAS",0.04875
+2,"RM + VT (5%)",1,"Sibling GWAS",0.04925
+3,"RM + VT (5%)",1,"Sibling GWAS",0.050375
+4,"RM + VT (5%)",1,"Sibling GWAS",0.0495
+5,"RM + VT (5%)",1,"Sibling GWAS",0.052125
+0,"5xAM",1,"Sibling GWAS",0.0496875
+1,"5xAM",1,"Sibling GWAS",0.049875
+2,"5xAM",1,"Sibling GWAS",0.0494375
+3,"5xAM",1,"Sibling GWAS",0.05475
+4,"5xAM",1,"Sibling GWAS",0.0525
+5,"5xAM",1,"Sibling GWAS",0.047875
+0,"5xAM + VT (5%)",1,"Sibling GWAS",0.0521875
+1,"5xAM + VT (5%)",1,"Sibling GWAS",0.0479375
+2,"5xAM + VT (5%)",1,"Sibling GWAS",0.046625
+3,"5xAM + VT (5%)",1,"Sibling GWAS",0.04925
+4,"5xAM + VT (5%)",1,"Sibling GWAS",0.0509375
+5,"5xAM + VT (5%)",1,"Sibling GWAS",0.050875
+0,"RM",10,"Sibling GWAS",0.0479375
+1,"RM",10,"Sibling GWAS",0.0474375
+2,"RM",10,"Sibling GWAS",0.049125
+3,"RM",10,"Sibling GWAS",0.0486875
+4,"RM",10,"Sibling GWAS",0.050375
+5,"RM",10,"Sibling GWAS",0.0503125
+0,"RM + VT (5%)",10,"Sibling GWAS",0.0470625
+1,"RM + VT (5%)",10,"Sibling GWAS",0.048625
+2,"RM + VT (5%)",10,"Sibling GWAS",0.0478125
+3,"RM + VT (5%)",10,"Sibling GWAS",0.0534375
+4,"RM + VT (5%)",10,"Sibling GWAS",0.04925
+5,"RM + VT (5%)",10,"Sibling GWAS",0.0494375
+0,"5xAM",10,"Sibling GWAS",0.050875
+1,"5xAM",10,"Sibling GWAS",0.0476875
+2,"5xAM",10,"Sibling GWAS",0.0490625
+3,"5xAM",10,"Sibling GWAS",0.0525
+4,"5xAM",10,"Sibling GWAS",0.051875
+5,"5xAM",10,"Sibling GWAS",0.0496875
+0,"5xAM + VT (5%)",10,"Sibling GWAS",0.048875
+1,"5xAM + VT (5%)",10,"Sibling GWAS",0.0516875
+2,"5xAM + VT (5%)",10,"Sibling GWAS",0.0469375
+3,"5xAM + VT (5%)",10,"Sibling GWAS",0.0496875
+4,"5xAM + VT (5%)",10,"Sibling GWAS",0.05125
+5,"5xAM + VT (5%)",10,"Sibling GWAS",0.050375
+0,"RM",11,"Sibling GWAS",0.0510625
+1,"RM",11,"Sibling GWAS",0.049
+2,"RM",11,"Sibling GWAS",0.0524375
+3,"RM",11,"Sibling GWAS",0.0520625
+4,"RM",11,"Sibling GWAS",0.05
+5,"RM",11,"Sibling GWAS",0.0455
+0,"RM + VT (5%)",11,"Sibling GWAS",0.05025
+1,"RM + VT (5%)",11,"Sibling GWAS",0.05
+2,"RM + VT (5%)",11,"Sibling GWAS",0.0525
+3,"RM + VT (5%)",11,"Sibling GWAS",0.049625
+4,"RM + VT (5%)",11,"Sibling GWAS",0.049125
+5,"RM + VT (5%)",11,"Sibling GWAS",0.0499375
+0,"5xAM",11,"Sibling GWAS",0.0470625
+1,"5xAM",11,"Sibling GWAS",0.04825
+2,"5xAM",11,"Sibling GWAS",0.049875
+3,"5xAM",11,"Sibling GWAS",0.05075
+4,"5xAM",11,"Sibling GWAS",0.0468125
+5,"5xAM",11,"Sibling GWAS",0.050625
+0,"5xAM + VT (5%)",11,"Sibling GWAS",0.04875
+1,"5xAM + VT (5%)",11,"Sibling GWAS",0.0505
+2,"5xAM + VT (5%)",11,"Sibling GWAS",0.052375
+3,"5xAM + VT (5%)",11,"Sibling GWAS",0.0488125
+4,"5xAM + VT (5%)",11,"Sibling GWAS",0.0496875
+5,"5xAM + VT (5%)",11,"Sibling GWAS",0.0469375
+0,"RM",12,"Sibling GWAS",0.0514375
+1,"RM",12,"Sibling GWAS",0.0479375
+2,"RM",12,"Sibling GWAS",0.0480625
+3,"RM",12,"Sibling GWAS",0.0489375
+4,"RM",12,"Sibling GWAS",0.0491875
+5,"RM",12,"Sibling GWAS",0.04925
+0,"RM + VT (5%)",12,"Sibling GWAS",0.049625
+1,"RM + VT (5%)",12,"Sibling GWAS",0.0514375
+2,"RM + VT (5%)",12,"Sibling GWAS",0.0495
+3,"RM + VT (5%)",12,"Sibling GWAS",0.0506875
+4,"RM + VT (5%)",12,"Sibling GWAS",0.0495
+5,"RM + VT (5%)",12,"Sibling GWAS",0.050625
+0,"5xAM",12,"Sibling GWAS",0.0514375
+1,"5xAM",12,"Sibling GWAS",0.0515625
+2,"5xAM",12,"Sibling GWAS",0.0485625
+3,"5xAM",12,"Sibling GWAS",0.05475
+4,"5xAM",12,"Sibling GWAS",0.048125
+5,"5xAM",12,"Sibling GWAS",0.0496875
+0,"5xAM + VT (5%)",12,"Sibling GWAS",0.0480625
+1,"5xAM + VT (5%)",12,"Sibling GWAS",0.0486875
+2,"5xAM + VT (5%)",12,"Sibling GWAS",0.0484375
+3,"5xAM + VT (5%)",12,"Sibling GWAS",0.0486875
+4,"5xAM + VT (5%)",12,"Sibling GWAS",0.046625
+5,"5xAM + VT (5%)",12,"Sibling GWAS",0.0513125
+0,"RM",13,"Sibling GWAS",0.0489375
+1,"RM",13,"Sibling GWAS",0.0515625
+2,"RM",13,"Sibling GWAS",0.051375
+3,"RM",13,"Sibling GWAS",0.0521875
+4,"RM",13,"Sibling GWAS",0.0495625
+5,"RM",13,"Sibling GWAS",0.046875
+0,"RM + VT (5%)",13,"Sibling GWAS",0.051375
+1,"RM + VT (5%)",13,"Sibling GWAS",0.051
+2,"RM + VT (5%)",13,"Sibling GWAS",0.0501875
+3,"RM + VT (5%)",13,"Sibling GWAS",0.05075
+4,"RM + VT (5%)",13,"Sibling GWAS",0.0463125
+5,"RM + VT (5%)",13,"Sibling GWAS",0.04925
+0,"5xAM",13,"Sibling GWAS",0.0440625
+1,"5xAM",13,"Sibling GWAS",0.048875
+2,"5xAM",13,"Sibling GWAS",0.0499375
+3,"5xAM",13,"Sibling GWAS",0.0478125
+4,"5xAM",13,"Sibling GWAS",0.050875
+5,"5xAM",13,"Sibling GWAS",0.0505625
+0,"5xAM + VT (5%)",13,"Sibling GWAS",0.0515
+1,"5xAM + VT (5%)",13,"Sibling GWAS",0.0474375
+2,"5xAM + VT (5%)",13,"Sibling GWAS",0.050125
+3,"5xAM + VT (5%)",13,"Sibling GWAS",0.0496875
+4,"5xAM + VT (5%)",13,"Sibling GWAS",0.0518125
+5,"5xAM + VT (5%)",13,"Sibling GWAS",0.049
+0,"RM",14,"Sibling GWAS",0.049125
+1,"RM",14,"Sibling GWAS",0.0496875
+2,"RM",14,"Sibling GWAS",0.05075
+3,"RM",14,"Sibling GWAS",0.0536875
+4,"RM",14,"Sibling GWAS",0.050625
+5,"RM",14,"Sibling GWAS",0.0494375
+0,"RM + VT (5%)",14,"Sibling GWAS",0.0510625
+1,"RM + VT (5%)",14,"Sibling GWAS",0.0504375
+2,"RM + VT (5%)",14,"Sibling GWAS",0.0531875
+3,"RM + VT (5%)",14,"Sibling GWAS",0.050625
+4,"RM + VT (5%)",14,"Sibling GWAS",0.050125
+5,"RM + VT (5%)",14,"Sibling GWAS",0.04725
+0,"5xAM",14,"Sibling GWAS",0.05025
+1,"5xAM",14,"Sibling GWAS",0.049625
+2,"5xAM",14,"Sibling GWAS",0.0515625
+3,"5xAM",14,"Sibling GWAS",0.0520625
+4,"5xAM",14,"Sibling GWAS",0.04825
+5,"5xAM",14,"Sibling GWAS",0.0525625
+0,"5xAM + VT (5%)",14,"Sibling GWAS",0.0498125
+1,"5xAM + VT (5%)",14,"Sibling GWAS",0.0490625
+2,"5xAM + VT (5%)",14,"Sibling GWAS",0.049375
+3,"5xAM + VT (5%)",14,"Sibling GWAS",0.05
+4,"5xAM + VT (5%)",14,"Sibling GWAS",0.054625
+5,"5xAM + VT (5%)",14,"Sibling GWAS",0.0500625
+0,"RM",15,"Sibling GWAS",0.045125
+1,"RM",15,"Sibling GWAS",0.0506875
+2,"RM",15,"Sibling GWAS",0.047375
+3,"RM",15,"Sibling GWAS",0.04875
+4,"RM",15,"Sibling GWAS",0.04875
+5,"RM",15,"Sibling GWAS",0.049875
+0,"RM + VT (5%)",15,"Sibling GWAS",0.0526875
+1,"RM + VT (5%)",15,"Sibling GWAS",0.04975
+2,"RM + VT (5%)",15,"Sibling GWAS",0.052875
+3,"RM + VT (5%)",15,"Sibling GWAS",0.0483125
+4,"RM + VT (5%)",15,"Sibling GWAS",0.0510625
+5,"RM + VT (5%)",15,"Sibling GWAS",0.0521875
+0,"5xAM",15,"Sibling GWAS",0.048125
+1,"5xAM",15,"Sibling GWAS",0.05
+2,"5xAM",15,"Sibling GWAS",0.0480625
+3,"5xAM",15,"Sibling GWAS",0.049875
+4,"5xAM",15,"Sibling GWAS",0.05025
+5,"5xAM",15,"Sibling GWAS",0.051875
+0,"5xAM + VT (5%)",15,"Sibling GWAS",0.0505
+1,"5xAM + VT (5%)",15,"Sibling GWAS",0.050875
+2,"5xAM + VT (5%)",15,"Sibling GWAS",0.045875
+3,"5xAM + VT (5%)",15,"Sibling GWAS",0.05025
+4,"5xAM + VT (5%)",15,"Sibling GWAS",0.05175
+5,"5xAM + VT (5%)",15,"Sibling GWAS",0.0470625
+0,"RM",16,"Sibling GWAS",0.0520625
+1,"RM",16,"Sibling GWAS",0.0493125
+2,"RM",16,"Sibling GWAS",0.050125
+3,"RM",16,"Sibling GWAS",0.0485625
+4,"RM",16,"Sibling GWAS",0.04875
+5,"RM",16,"Sibling GWAS",0.051125
+0,"RM + VT (5%)",16,"Sibling GWAS",0.0523125
+1,"RM + VT (5%)",16,"Sibling GWAS",0.0516875
+2,"RM + VT (5%)",16,"Sibling GWAS",0.052375
+3,"RM + VT (5%)",16,"Sibling GWAS",0.0515625
+4,"RM + VT (5%)",16,"Sibling GWAS",0.050875
+5,"RM + VT (5%)",16,"Sibling GWAS",0.053375
+0,"5xAM",16,"Sibling GWAS",0.047375
+1,"5xAM",16,"Sibling GWAS",0.048
+2,"5xAM",16,"Sibling GWAS",0.050375
+3,"5xAM",16,"Sibling GWAS",0.0494375
+4,"5xAM",16,"Sibling GWAS",0.0478125
+5,"5xAM",16,"Sibling GWAS",0.0476875
+0,"5xAM + VT (5%)",16,"Sibling GWAS",0.0465625
+1,"5xAM + VT (5%)",16,"Sibling GWAS",0.0471875
+2,"5xAM + VT (5%)",16,"Sibling GWAS",0.0501875
+3,"5xAM + VT (5%)",16,"Sibling GWAS",0.0513125
+4,"5xAM + VT (5%)",16,"Sibling GWAS",0.0494375
+5,"5xAM + VT (5%)",16,"Sibling GWAS",0.05
+0,"RM",17,"Sibling GWAS",0.0516875
+1,"RM",17,"Sibling GWAS",0.04975
+2,"RM",17,"Sibling GWAS",0.051125
+3,"RM",17,"Sibling GWAS",0.051875
+4,"RM",17,"Sibling GWAS",0.0515
+5,"RM",17,"Sibling GWAS",0.052125
+0,"RM + VT (5%)",17,"Sibling GWAS",0.0495
+1,"RM + VT (5%)",17,"Sibling GWAS",0.051375
+2,"RM + VT (5%)",17,"Sibling GWAS",0.0475
+3,"RM + VT (5%)",17,"Sibling GWAS",0.0511875
+4,"RM + VT (5%)",17,"Sibling GWAS",0.0540625
+5,"RM + VT (5%)",17,"Sibling GWAS",0.049875
+0,"5xAM",17,"Sibling GWAS",0.0513125
+1,"5xAM",17,"Sibling GWAS",0.047375
+2,"5xAM",17,"Sibling GWAS",0.0491875
+3,"5xAM",17,"Sibling GWAS",0.0485
+4,"5xAM",17,"Sibling GWAS",0.049375
+5,"5xAM",17,"Sibling GWAS",0.05025
+0,"5xAM + VT (5%)",17,"Sibling GWAS",0.0493125
+1,"5xAM + VT (5%)",17,"Sibling GWAS",0.050875
+2,"5xAM + VT (5%)",17,"Sibling GWAS",0.051625
+3,"5xAM + VT (5%)",17,"Sibling GWAS",0.0528125
+4,"5xAM + VT (5%)",17,"Sibling GWAS",0.048625
+5,"5xAM + VT (5%)",17,"Sibling GWAS",0.0533125
+0,"RM",18,"Sibling GWAS",0.05225
+1,"RM",18,"Sibling GWAS",0.0513125
+2,"RM",18,"Sibling GWAS",0.0499375
+3,"RM",18,"Sibling GWAS",0.04925
+4,"RM",18,"Sibling GWAS",0.0511875
+5,"RM",18,"Sibling GWAS",0.05075
+0,"RM + VT (5%)",18,"Sibling GWAS",0.049375
+1,"RM + VT (5%)",18,"Sibling GWAS",0.0486875
+2,"RM + VT (5%)",18,"Sibling GWAS",0.04875
+3,"RM + VT (5%)",18,"Sibling GWAS",0.055625
+4,"RM + VT (5%)",18,"Sibling GWAS",0.0493125
+5,"RM + VT (5%)",18,"Sibling GWAS",0.048875
+0,"5xAM",18,"Sibling GWAS",0.0511875
+1,"5xAM",18,"Sibling GWAS",0.0469375
+2,"5xAM",18,"Sibling GWAS",0.0478125
+3,"5xAM",18,"Sibling GWAS",0.052125
+4,"5xAM",18,"Sibling GWAS",0.051375
+5,"5xAM",18,"Sibling GWAS",0.0495
+0,"5xAM + VT (5%)",18,"Sibling GWAS",0.051375
+1,"5xAM + VT (5%)",18,"Sibling GWAS",0.0495
+2,"5xAM + VT (5%)",18,"Sibling GWAS",0.050375
+3,"5xAM + VT (5%)",18,"Sibling GWAS",0.0521875
+4,"5xAM + VT (5%)",18,"Sibling GWAS",0.0498125
+5,"5xAM + VT (5%)",18,"Sibling GWAS",0.04925
+0,"RM",19,"Sibling GWAS",0.050625
+1,"RM",19,"Sibling GWAS",0.0510625
+2,"RM",19,"Sibling GWAS",0.0509375
+3,"RM",19,"Sibling GWAS",0.049125
+4,"RM",19,"Sibling GWAS",0.0493125
+5,"RM",19,"Sibling GWAS",0.0476875
+0,"RM + VT (5%)",19,"Sibling GWAS",0.0526875
+1,"RM + VT (5%)",19,"Sibling GWAS",0.05225
+2,"RM + VT (5%)",19,"Sibling GWAS",0.0499375
+3,"RM + VT (5%)",19,"Sibling GWAS",0.0486875
+4,"RM + VT (5%)",19,"Sibling GWAS",0.04975
+5,"RM + VT (5%)",19,"Sibling GWAS",0.047125
+0,"5xAM",19,"Sibling GWAS",0.0510625
+1,"5xAM",19,"Sibling GWAS",0.0501875
+2,"5xAM",19,"Sibling GWAS",0.050125
+3,"5xAM",19,"Sibling GWAS",0.052125
+4,"5xAM",19,"Sibling GWAS",0.0486875
+5,"5xAM",19,"Sibling GWAS",0.0491875
+0,"5xAM + VT (5%)",19,"Sibling GWAS",0.049125
+1,"5xAM + VT (5%)",19,"Sibling GWAS",0.04825
+2,"5xAM + VT (5%)",19,"Sibling GWAS",0.04875
+3,"5xAM + VT (5%)",19,"Sibling GWAS",0.0508125
+4,"5xAM + VT (5%)",19,"Sibling GWAS",0.0496875
+5,"5xAM + VT (5%)",19,"Sibling GWAS",0.05025
+0,"RM",2,"Sibling GWAS",0.051125
+1,"RM",2,"Sibling GWAS",0.0459375
+2,"RM",2,"Sibling GWAS",0.0510625
+3,"RM",2,"Sibling GWAS",0.0525625
+4,"RM",2,"Sibling GWAS",0.05275
+5,"RM",2,"Sibling GWAS",0.0486875
+0,"RM + VT (5%)",2,"Sibling GWAS",0.047875
+1,"RM + VT (5%)",2,"Sibling GWAS",0.049
+2,"RM + VT (5%)",2,"Sibling GWAS",0.051125
+3,"RM + VT (5%)",2,"Sibling GWAS",0.0511875
+4,"RM + VT (5%)",2,"Sibling GWAS",0.049625
+5,"RM + VT (5%)",2,"Sibling GWAS",0.0485625
+0,"5xAM",2,"Sibling GWAS",0.0515
+1,"5xAM",2,"Sibling GWAS",0.047625
+2,"5xAM",2,"Sibling GWAS",0.0511875
+3,"5xAM",2,"Sibling GWAS",0.049625
+4,"5xAM",2,"Sibling GWAS",0.0478125
+5,"5xAM",2,"Sibling GWAS",0.0493125
+0,"5xAM + VT (5%)",2,"Sibling GWAS",0.0480625
+1,"5xAM + VT (5%)",2,"Sibling GWAS",0.0504375
+2,"5xAM + VT (5%)",2,"Sibling GWAS",0.0525
+3,"5xAM + VT (5%)",2,"Sibling GWAS",0.051125
+4,"5xAM + VT (5%)",2,"Sibling GWAS",0.0508125
+5,"5xAM + VT (5%)",2,"Sibling GWAS",0.052
+0,"RM",20,"Sibling GWAS",0.0513125
+1,"RM",20,"Sibling GWAS",0.0480625
+2,"RM",20,"Sibling GWAS",0.04925
+3,"RM",20,"Sibling GWAS",0.04625
+4,"RM",20,"Sibling GWAS",0.0521875
+5,"RM",20,"Sibling GWAS",0.04925
+0,"RM + VT (5%)",20,"Sibling GWAS",0.049375
+1,"RM + VT (5%)",20,"Sibling GWAS",0.0496875
+2,"RM + VT (5%)",20,"Sibling GWAS",0.052375
+3,"RM + VT (5%)",20,"Sibling GWAS",0.0480625
+4,"RM + VT (5%)",20,"Sibling GWAS",0.05225
+5,"RM + VT (5%)",20,"Sibling GWAS",0.0505625
+0,"5xAM",20,"Sibling GWAS",0.0509375
+1,"5xAM",20,"Sibling GWAS",0.0466875
+2,"5xAM",20,"Sibling GWAS",0.0533125
+3,"5xAM",20,"Sibling GWAS",0.0509375
+4,"5xAM",20,"Sibling GWAS",0.0498125
+5,"5xAM",20,"Sibling GWAS",0.0466875
+0,"5xAM + VT (5%)",20,"Sibling GWAS",0.0484375
+1,"5xAM + VT (5%)",20,"Sibling GWAS",0.0515
+2,"5xAM + VT (5%)",20,"Sibling GWAS",0.048
+3,"5xAM + VT (5%)",20,"Sibling GWAS",0.0509375
+4,"5xAM + VT (5%)",20,"Sibling GWAS",0.050625
+5,"5xAM + VT (5%)",20,"Sibling GWAS",0.0498125
+0,"RM",21,"Sibling GWAS",0.051625
+1,"RM",21,"Sibling GWAS",0.048
+2,"RM",21,"Sibling GWAS",0.049625
+3,"RM",21,"Sibling GWAS",0.05125
+4,"RM",21,"Sibling GWAS",0.0518125
+5,"RM",21,"Sibling GWAS",0.052125
+0,"RM + VT (5%)",21,"Sibling GWAS",0.0511875
+1,"RM + VT (5%)",21,"Sibling GWAS",0.048625
+2,"RM + VT (5%)",21,"Sibling GWAS",0.0506875
+3,"RM + VT (5%)",21,"Sibling GWAS",0.0480625
+4,"RM + VT (5%)",21,"Sibling GWAS",0.0470625
+5,"RM + VT (5%)",21,"Sibling GWAS",0.0496875
+0,"5xAM",21,"Sibling GWAS",0.0499375
+1,"5xAM",21,"Sibling GWAS",0.0520625
+2,"5xAM",21,"Sibling GWAS",0.0495625
+3,"5xAM",21,"Sibling GWAS",0.0491875
+4,"5xAM",21,"Sibling GWAS",0.0499375
+5,"5xAM",21,"Sibling GWAS",0.05
+0,"5xAM + VT (5%)",21,"Sibling GWAS",0.0498125
+1,"5xAM + VT (5%)",21,"Sibling GWAS",0.047
+2,"5xAM + VT (5%)",21,"Sibling GWAS",0.0489375
+3,"5xAM + VT (5%)",21,"Sibling GWAS",0.0471875
+4,"5xAM + VT (5%)",21,"Sibling GWAS",0.048125
+5,"5xAM + VT (5%)",21,"Sibling GWAS",0.05
+0,"RM",22,"Sibling GWAS",0.0491875
+1,"RM",22,"Sibling GWAS",0.0488125
+2,"RM",22,"Sibling GWAS",0.0485625
+3,"RM",22,"Sibling GWAS",0.051875
+4,"RM",22,"Sibling GWAS",0.053375
+5,"RM",22,"Sibling GWAS",0.0495625
+0,"RM + VT (5%)",22,"Sibling GWAS",0.0513125
+1,"RM + VT (5%)",22,"Sibling GWAS",0.0526875
+2,"RM + VT (5%)",22,"Sibling GWAS",0.0509375
+3,"RM + VT (5%)",22,"Sibling GWAS",0.049
+4,"RM + VT (5%)",22,"Sibling GWAS",0.050125
+5,"RM + VT (5%)",22,"Sibling GWAS",0.048375
+0,"5xAM",22,"Sibling GWAS",0.050375
+1,"5xAM",22,"Sibling GWAS",0.0539375
+2,"5xAM",22,"Sibling GWAS",0.0489375
+3,"5xAM",22,"Sibling GWAS",0.051375
+4,"5xAM",22,"Sibling GWAS",0.0516875
+5,"5xAM",22,"Sibling GWAS",0.0473125
+0,"5xAM + VT (5%)",22,"Sibling GWAS",0.0490625
+1,"5xAM + VT (5%)",22,"Sibling GWAS",0.05225
+2,"5xAM + VT (5%)",22,"Sibling GWAS",0.0491875
+3,"5xAM + VT (5%)",22,"Sibling GWAS",0.049375
+4,"5xAM + VT (5%)",22,"Sibling GWAS",0.050625
+5,"5xAM + VT (5%)",22,"Sibling GWAS",0.0498125
+0,"RM",23,"Sibling GWAS",0.0521875
+1,"RM",23,"Sibling GWAS",0.048375
+2,"RM",23,"Sibling GWAS",0.0514375
+3,"RM",23,"Sibling GWAS",0.051625
+4,"RM",23,"Sibling GWAS",0.0491875
+5,"RM",23,"Sibling GWAS",0.05175
+0,"RM + VT (5%)",23,"Sibling GWAS",0.0515625
+1,"RM + VT (5%)",23,"Sibling GWAS",0.051
+2,"RM + VT (5%)",23,"Sibling GWAS",0.05025
+3,"RM + VT (5%)",23,"Sibling GWAS",0.049625
+4,"RM + VT (5%)",23,"Sibling GWAS",0.0481875
+5,"RM + VT (5%)",23,"Sibling GWAS",0.0508125
+0,"5xAM",23,"Sibling GWAS",0.04925
+1,"5xAM",23,"Sibling GWAS",0.0525
+2,"5xAM",23,"Sibling GWAS",0.052625
+3,"5xAM",23,"Sibling GWAS",0.04975
+4,"5xAM",23,"Sibling GWAS",0.0485625
+5,"5xAM",23,"Sibling GWAS",0.04925
+0,"5xAM + VT (5%)",23,"Sibling GWAS",0.0484375
+1,"5xAM + VT (5%)",23,"Sibling GWAS",0.051875
+2,"5xAM + VT (5%)",23,"Sibling GWAS",0.048125
+3,"5xAM + VT (5%)",23,"Sibling GWAS",0.0515625
+4,"5xAM + VT (5%)",23,"Sibling GWAS",0.0474375
+5,"5xAM + VT (5%)",23,"Sibling GWAS",0.0483125
+0,"RM",24,"Sibling GWAS",0.0505
+1,"RM",24,"Sibling GWAS",0.047875
+2,"RM",24,"Sibling GWAS",0.0531875
+3,"RM",24,"Sibling GWAS",0.0473125
+4,"RM",24,"Sibling GWAS",0.0485
+5,"RM",24,"Sibling GWAS",0.0490625
+0,"RM + VT (5%)",24,"Sibling GWAS",0.0489375
+1,"RM + VT (5%)",24,"Sibling GWAS",0.049
+2,"RM + VT (5%)",24,"Sibling GWAS",0.049875
+3,"RM + VT (5%)",24,"Sibling GWAS",0.0494375
+4,"RM + VT (5%)",24,"Sibling GWAS",0.052875
+5,"RM + VT (5%)",24,"Sibling GWAS",0.050375
+0,"5xAM",24,"Sibling GWAS",0.0485
+1,"5xAM",24,"Sibling GWAS",0.051375
+2,"5xAM",24,"Sibling GWAS",0.047625
+3,"5xAM",24,"Sibling GWAS",0.052625
+4,"5xAM",24,"Sibling GWAS",0.0531875
+5,"5xAM",24,"Sibling GWAS",0.0525
+0,"5xAM + VT (5%)",24,"Sibling GWAS",0.0508125
+1,"5xAM + VT (5%)",24,"Sibling GWAS",0.052875
+2,"5xAM + VT (5%)",24,"Sibling GWAS",0.0491875
+3,"5xAM + VT (5%)",24,"Sibling GWAS",0.048625
+4,"5xAM + VT (5%)",24,"Sibling GWAS",0.0509375
+5,"5xAM + VT (5%)",24,"Sibling GWAS",0.0520625
+0,"RM",25,"Sibling GWAS",0.0501875
+1,"RM",25,"Sibling GWAS",0.0498125
+2,"RM",25,"Sibling GWAS",0.05025
+3,"RM",25,"Sibling GWAS",0.0499375
+4,"RM",25,"Sibling GWAS",0.04775
+5,"RM",25,"Sibling GWAS",0.051
+0,"RM + VT (5%)",25,"Sibling GWAS",0.0505
+1,"RM + VT (5%)",25,"Sibling GWAS",0.0456875
+2,"RM + VT (5%)",25,"Sibling GWAS",0.0495
+3,"RM + VT (5%)",25,"Sibling GWAS",0.0520625
+4,"RM + VT (5%)",25,"Sibling GWAS",0.0480625
+5,"RM + VT (5%)",25,"Sibling GWAS",0.0524375
+0,"5xAM",25,"Sibling GWAS",0.0545
+1,"5xAM",25,"Sibling GWAS",0.0489375
+2,"5xAM",25,"Sibling GWAS",0.0484375
+3,"5xAM",25,"Sibling GWAS",0.04875
+4,"5xAM",25,"Sibling GWAS",0.052625
+5,"5xAM",25,"Sibling GWAS",0.0474375
+0,"5xAM + VT (5%)",25,"Sibling GWAS",0.051625
+1,"5xAM + VT (5%)",25,"Sibling GWAS",0.049875
+2,"5xAM + VT (5%)",25,"Sibling GWAS",0.0494375
+3,"5xAM + VT (5%)",25,"Sibling GWAS",0.053625
+4,"5xAM + VT (5%)",25,"Sibling GWAS",0.0478125
+5,"5xAM + VT (5%)",25,"Sibling GWAS",0.0485
+0,"RM",26,"Sibling GWAS",0.048625
+1,"RM",26,"Sibling GWAS",0.0515625
+2,"RM",26,"Sibling GWAS",0.0498125
+3,"RM",26,"Sibling GWAS",0.049125
+4,"RM",26,"Sibling GWAS",0.052625
+5,"RM",26,"Sibling GWAS",0.0515
+0,"RM + VT (5%)",26,"Sibling GWAS",0.0488125
+1,"RM + VT (5%)",26,"Sibling GWAS",0.0480625
+2,"RM + VT (5%)",26,"Sibling GWAS",0.051375
+3,"RM + VT (5%)",26,"Sibling GWAS",0.049875
+4,"RM + VT (5%)",26,"Sibling GWAS",0.0513125
+5,"RM + VT (5%)",26,"Sibling GWAS",0.047
+0,"5xAM",26,"Sibling GWAS",0.0490625
+1,"5xAM",26,"Sibling GWAS",0.0476875
+2,"5xAM",26,"Sibling GWAS",0.050375
+3,"5xAM",26,"Sibling GWAS",0.047125
+4,"5xAM",26,"Sibling GWAS",0.0505625
+5,"5xAM",26,"Sibling GWAS",0.048625
+0,"5xAM + VT (5%)",26,"Sibling GWAS",0.0490625
+1,"5xAM + VT (5%)",26,"Sibling GWAS",0.05
+2,"5xAM + VT (5%)",26,"Sibling GWAS",0.047875
+3,"5xAM + VT (5%)",26,"Sibling GWAS",0.0499375
+4,"5xAM + VT (5%)",26,"Sibling GWAS",0.0506875
+5,"5xAM + VT (5%)",26,"Sibling GWAS",0.0521875
+0,"RM",27,"Sibling GWAS",0.0481875
+1,"RM",27,"Sibling GWAS",0.048875
+2,"RM",27,"Sibling GWAS",0.0495
+3,"RM",27,"Sibling GWAS",0.0498125
+4,"RM",27,"Sibling GWAS",0.052375
+5,"RM",27,"Sibling GWAS",0.0485625
+0,"RM + VT (5%)",27,"Sibling GWAS",0.0511875
+1,"RM + VT (5%)",27,"Sibling GWAS",0.051375
+2,"RM + VT (5%)",27,"Sibling GWAS",0.0498125
+3,"RM + VT (5%)",27,"Sibling GWAS",0.0505625
+4,"RM + VT (5%)",27,"Sibling GWAS",0.053875
+5,"RM + VT (5%)",27,"Sibling GWAS",0.0490625
+0,"5xAM",27,"Sibling GWAS",0.05075
+1,"5xAM",27,"Sibling GWAS",0.0519375
+2,"5xAM",27,"Sibling GWAS",0.0505625
+3,"5xAM",27,"Sibling GWAS",0.0506875
+4,"5xAM",27,"Sibling GWAS",0.0488125
+5,"5xAM",27,"Sibling GWAS",0.0493125
+0,"5xAM + VT (5%)",27,"Sibling GWAS",0.052875
+1,"5xAM + VT (5%)",27,"Sibling GWAS",0.053125
+2,"5xAM + VT (5%)",27,"Sibling GWAS",0.049125
+3,"5xAM + VT (5%)",27,"Sibling GWAS",0.0500625
+4,"5xAM + VT (5%)",27,"Sibling GWAS",0.048125
+5,"5xAM + VT (5%)",27,"Sibling GWAS",0.050125
+0,"RM",28,"Sibling GWAS",0.0545
+1,"RM",28,"Sibling GWAS",0.0515625
+2,"RM",28,"Sibling GWAS",0.0498125
+3,"RM",28,"Sibling GWAS",0.0504375
+4,"RM",28,"Sibling GWAS",0.049875
+5,"RM",28,"Sibling GWAS",0.0489375
+0,"RM + VT (5%)",28,"Sibling GWAS",0.0498125
+1,"RM + VT (5%)",28,"Sibling GWAS",0.05
+2,"RM + VT (5%)",28,"Sibling GWAS",0.0508125
+3,"RM + VT (5%)",28,"Sibling GWAS",0.0466875
+4,"RM + VT (5%)",28,"Sibling GWAS",0.050875
+5,"RM + VT (5%)",28,"Sibling GWAS",0.052
+0,"5xAM",28,"Sibling GWAS",0.05
+1,"5xAM",28,"Sibling GWAS",0.049
+2,"5xAM",28,"Sibling GWAS",0.0499375
+3,"5xAM",28,"Sibling GWAS",0.0466875
+4,"5xAM",28,"Sibling GWAS",0.051875
+5,"5xAM",28,"Sibling GWAS",0.0504375
+0,"5xAM + VT (5%)",28,"Sibling GWAS",0.052625
+1,"5xAM + VT (5%)",28,"Sibling GWAS",0.0459375
+2,"5xAM + VT (5%)",28,"Sibling GWAS",0.0498125
+3,"5xAM + VT (5%)",28,"Sibling GWAS",0.0511875
+4,"5xAM + VT (5%)",28,"Sibling GWAS",0.0490625
+5,"5xAM + VT (5%)",28,"Sibling GWAS",0.0496875
+0,"RM",29,"Sibling GWAS",0.0495
+1,"RM",29,"Sibling GWAS",0.0506875
+2,"RM",29,"Sibling GWAS",0.0519375
+3,"RM",29,"Sibling GWAS",0.0516875
+4,"RM",29,"Sibling GWAS",0.050125
+5,"RM",29,"Sibling GWAS",0.048875
+0,"RM + VT (5%)",29,"Sibling GWAS",0.0495625
+1,"RM + VT (5%)",29,"Sibling GWAS",0.048375
+2,"RM + VT (5%)",29,"Sibling GWAS",0.0486875
+3,"RM + VT (5%)",29,"Sibling GWAS",0.053125
+4,"RM + VT (5%)",29,"Sibling GWAS",0.051875
+5,"RM + VT (5%)",29,"Sibling GWAS",0.0498125
+0,"5xAM",29,"Sibling GWAS",0.0505625
+1,"5xAM",29,"Sibling GWAS",0.051125
+2,"5xAM",29,"Sibling GWAS",0.0489375
+3,"5xAM",29,"Sibling GWAS",0.05
+4,"5xAM",29,"Sibling GWAS",0.048875
+5,"5xAM",29,"Sibling GWAS",0.0473125
+0,"5xAM + VT (5%)",29,"Sibling GWAS",0.05
+1,"5xAM + VT (5%)",29,"Sibling GWAS",0.05
+2,"5xAM + VT (5%)",29,"Sibling GWAS",0.0480625
+3,"5xAM + VT (5%)",29,"Sibling GWAS",0.0461875
+4,"5xAM + VT (5%)",29,"Sibling GWAS",0.050125
+5,"5xAM + VT (5%)",29,"Sibling GWAS",0.0521875
+0,"RM",3,"Sibling GWAS",0.047375
+1,"RM",3,"Sibling GWAS",0.051625
+2,"RM",3,"Sibling GWAS",0.047
+3,"RM",3,"Sibling GWAS",0.0495
+4,"RM",3,"Sibling GWAS",0.0515625
+5,"RM",3,"Sibling GWAS",0.0515625
+0,"RM + VT (5%)",3,"Sibling GWAS",0.0486875
+1,"RM + VT (5%)",3,"Sibling GWAS",0.0485625
+2,"RM + VT (5%)",3,"Sibling GWAS",0.049375
+3,"RM + VT (5%)",3,"Sibling GWAS",0.049875
+4,"RM + VT (5%)",3,"Sibling GWAS",0.0499375
+5,"RM + VT (5%)",3,"Sibling GWAS",0.05225
+0,"5xAM",3,"Sibling GWAS",0.049375
+1,"5xAM",3,"Sibling GWAS",0.0463125
+2,"5xAM",3,"Sibling GWAS",0.0498125
+3,"5xAM",3,"Sibling GWAS",0.0518125
+4,"5xAM",3,"Sibling GWAS",0.05125
+5,"5xAM",3,"Sibling GWAS",0.0510625
+0,"5xAM + VT (5%)",3,"Sibling GWAS",0.0496875
+1,"5xAM + VT (5%)",3,"Sibling GWAS",0.052
+2,"5xAM + VT (5%)",3,"Sibling GWAS",0.0465625
+3,"5xAM + VT (5%)",3,"Sibling GWAS",0.0540625
+4,"5xAM + VT (5%)",3,"Sibling GWAS",0.04975
+5,"5xAM + VT (5%)",3,"Sibling GWAS",0.0510625
+0,"RM",30,"Sibling GWAS",0.046875
+1,"RM",30,"Sibling GWAS",0.0493125
+2,"RM",30,"Sibling GWAS",0.051625
+3,"RM",30,"Sibling GWAS",0.0490625
+4,"RM",30,"Sibling GWAS",0.050125
+5,"RM",30,"Sibling GWAS",0.0455
+0,"RM + VT (5%)",30,"Sibling GWAS",0.050375
+1,"RM + VT (5%)",30,"Sibling GWAS",0.0496875
+2,"RM + VT (5%)",30,"Sibling GWAS",0.0476875
+3,"RM + VT (5%)",30,"Sibling GWAS",0.051125
+4,"RM + VT (5%)",30,"Sibling GWAS",0.0495625
+5,"RM + VT (5%)",30,"Sibling GWAS",0.049
+0,"5xAM",30,"Sibling GWAS",0.050625
+1,"5xAM",30,"Sibling GWAS",0.0484375
+2,"5xAM",30,"Sibling GWAS",0.0515625
+3,"5xAM",30,"Sibling GWAS",0.0519375
+4,"5xAM",30,"Sibling GWAS",0.0511875
+5,"5xAM",30,"Sibling GWAS",0.0503125
+0,"5xAM + VT (5%)",30,"Sibling GWAS",0.05075
+1,"5xAM + VT (5%)",30,"Sibling GWAS",0.048125
+2,"5xAM + VT (5%)",30,"Sibling GWAS",0.0518125
+3,"5xAM + VT (5%)",30,"Sibling GWAS",0.0476875
+4,"5xAM + VT (5%)",30,"Sibling GWAS",0.0501875
+5,"5xAM + VT (5%)",30,"Sibling GWAS",0.0480625
+0,"RM",31,"Sibling GWAS",0.0499375
+1,"RM",31,"Sibling GWAS",0.049375
+2,"RM",31,"Sibling GWAS",0.0489375
+3,"RM",31,"Sibling GWAS",0.0495
+4,"RM",31,"Sibling GWAS",0.050625
+5,"RM",31,"Sibling GWAS",0.0510625
+0,"RM + VT (5%)",31,"Sibling GWAS",0.0520625
+1,"RM + VT (5%)",31,"Sibling GWAS",0.0531875
+2,"RM + VT (5%)",31,"Sibling GWAS",0.051875
+3,"RM + VT (5%)",31,"Sibling GWAS",0.0515625
+4,"RM + VT (5%)",31,"Sibling GWAS",0.0503125
+5,"RM + VT (5%)",31,"Sibling GWAS",0.0515
+0,"5xAM",31,"Sibling GWAS",0.049375
+1,"5xAM",31,"Sibling GWAS",0.0485
+2,"5xAM",31,"Sibling GWAS",0.0505625
+3,"5xAM",31,"Sibling GWAS",0.048
+4,"5xAM",31,"Sibling GWAS",0.0515
+5,"5xAM",31,"Sibling GWAS",0.050875
+0,"5xAM + VT (5%)",31,"Sibling GWAS",0.047375
+1,"5xAM + VT (5%)",31,"Sibling GWAS",0.051375
+2,"5xAM + VT (5%)",31,"Sibling GWAS",0.05275
+3,"5xAM + VT (5%)",31,"Sibling GWAS",0.048375
+4,"5xAM + VT (5%)",31,"Sibling GWAS",0.05025
+5,"5xAM + VT (5%)",31,"Sibling GWAS",0.0465
+0,"RM",32,"Sibling GWAS",0.0509375
+1,"RM",32,"Sibling GWAS",0.0520625
+2,"RM",32,"Sibling GWAS",0.048375
+3,"RM",32,"Sibling GWAS",0.0521875
+4,"RM",32,"Sibling GWAS",0.0494375
+5,"RM",32,"Sibling GWAS",0.0518125
+0,"RM + VT (5%)",32,"Sibling GWAS",0.0486875
+1,"RM + VT (5%)",32,"Sibling GWAS",0.0505625
+2,"RM + VT (5%)",32,"Sibling GWAS",0.050875
+3,"RM + VT (5%)",32,"Sibling GWAS",0.05025
+4,"RM + VT (5%)",32,"Sibling GWAS",0.05025
+5,"RM + VT (5%)",32,"Sibling GWAS",0.0498125
+0,"5xAM",32,"Sibling GWAS",0.0505625
+1,"5xAM",32,"Sibling GWAS",0.0478125
+2,"5xAM",32,"Sibling GWAS",0.0474375
+3,"5xAM",32,"Sibling GWAS",0.0503125
+4,"5xAM",32,"Sibling GWAS",0.05075
+5,"5xAM",32,"Sibling GWAS",0.049375
+0,"5xAM + VT (5%)",32,"Sibling GWAS",0.04875
+1,"5xAM + VT (5%)",32,"Sibling GWAS",0.0511875
+2,"5xAM + VT (5%)",32,"Sibling GWAS",0.0489375
+3,"5xAM + VT (5%)",32,"Sibling GWAS",0.0503125
+4,"5xAM + VT (5%)",32,"Sibling GWAS",0.0481875
+5,"5xAM + VT (5%)",32,"Sibling GWAS",0.046375
+0,"RM",33,"Sibling GWAS",0.054
+1,"RM",33,"Sibling GWAS",0.052625
+2,"RM",33,"Sibling GWAS",0.0505625
+3,"RM",33,"Sibling GWAS",0.04925
+4,"RM",33,"Sibling GWAS",0.0500625
+5,"RM",33,"Sibling GWAS",0.0486875
+0,"RM + VT (5%)",33,"Sibling GWAS",0.046875
+1,"RM + VT (5%)",33,"Sibling GWAS",0.05
+2,"RM + VT (5%)",33,"Sibling GWAS",0.0486875
+3,"RM + VT (5%)",33,"Sibling GWAS",0.04675
+4,"RM + VT (5%)",33,"Sibling GWAS",0.048375
+5,"RM + VT (5%)",33,"Sibling GWAS",0.0523125
+0,"5xAM",33,"Sibling GWAS",0.0509375
+1,"5xAM",33,"Sibling GWAS",0.0481875
+2,"5xAM",33,"Sibling GWAS",0.05025
+3,"5xAM",33,"Sibling GWAS",0.0500625
+4,"5xAM",33,"Sibling GWAS",0.050375
+5,"5xAM",33,"Sibling GWAS",0.055
+0,"5xAM + VT (5%)",33,"Sibling GWAS",0.0503125
+1,"5xAM + VT (5%)",33,"Sibling GWAS",0.0505
+2,"5xAM + VT (5%)",33,"Sibling GWAS",0.05075
+3,"5xAM + VT (5%)",33,"Sibling GWAS",0.0521875
+4,"5xAM + VT (5%)",33,"Sibling GWAS",0.051375
+5,"5xAM + VT (5%)",33,"Sibling GWAS",0.0468125
+0,"RM",34,"Sibling GWAS",0.050125
+1,"RM",34,"Sibling GWAS",0.0506875
+2,"RM",34,"Sibling GWAS",0.0491875
+3,"RM",34,"Sibling GWAS",0.0495
+4,"RM",34,"Sibling GWAS",0.0478125
+5,"RM",34,"Sibling GWAS",0.0514375
+0,"RM + VT (5%)",34,"Sibling GWAS",0.05
+1,"RM + VT (5%)",34,"Sibling GWAS",0.05025
+2,"RM + VT (5%)",34,"Sibling GWAS",0.0465
+3,"RM + VT (5%)",34,"Sibling GWAS",0.0515625
+4,"RM + VT (5%)",34,"Sibling GWAS",0.0488125
+5,"RM + VT (5%)",34,"Sibling GWAS",0.0495625
+0,"5xAM",34,"Sibling GWAS",0.0495625
+1,"5xAM",34,"Sibling GWAS",0.0503125
+2,"5xAM",34,"Sibling GWAS",0.050375
+3,"5xAM",34,"Sibling GWAS",0.050125
+4,"5xAM",34,"Sibling GWAS",0.0516875
+5,"5xAM",34,"Sibling GWAS",0.050125
+0,"5xAM + VT (5%)",34,"Sibling GWAS",0.052375
+1,"5xAM + VT (5%)",34,"Sibling GWAS",0.0513125
+2,"5xAM + VT (5%)",34,"Sibling GWAS",0.0515625
+3,"5xAM + VT (5%)",34,"Sibling GWAS",0.0485
+4,"5xAM + VT (5%)",34,"Sibling GWAS",0.0494375
+5,"5xAM + VT (5%)",34,"Sibling GWAS",0.0475
+0,"RM",35,"Sibling GWAS",0.0500625
+1,"RM",35,"Sibling GWAS",0.0490625
+2,"RM",35,"Sibling GWAS",0.04775
+3,"RM",35,"Sibling GWAS",0.0500625
+4,"RM",35,"Sibling GWAS",0.0485
+5,"RM",35,"Sibling GWAS",0.052
+0,"RM + VT (5%)",35,"Sibling GWAS",0.04775
+1,"RM + VT (5%)",35,"Sibling GWAS",0.052
+2,"RM + VT (5%)",35,"Sibling GWAS",0.046125
+3,"RM + VT (5%)",35,"Sibling GWAS",0.04825
+4,"RM + VT (5%)",35,"Sibling GWAS",0.05
+5,"RM + VT (5%)",35,"Sibling GWAS",0.046875
+0,"5xAM",35,"Sibling GWAS",0.0483125
+1,"5xAM",35,"Sibling GWAS",0.050625
+2,"5xAM",35,"Sibling GWAS",0.0476875
+3,"5xAM",35,"Sibling GWAS",0.050875
+4,"5xAM",35,"Sibling GWAS",0.0505625
+5,"5xAM",35,"Sibling GWAS",0.050875
+0,"5xAM + VT (5%)",35,"Sibling GWAS",0.0518125
+1,"5xAM + VT (5%)",35,"Sibling GWAS",0.0505
+2,"5xAM + VT (5%)",35,"Sibling GWAS",0.0510625
+3,"5xAM + VT (5%)",35,"Sibling GWAS",0.051625
+4,"5xAM + VT (5%)",35,"Sibling GWAS",0.0509375
+5,"5xAM + VT (5%)",35,"Sibling GWAS",0.0484375
+0,"RM",36,"Sibling GWAS",0.0516875
+1,"RM",36,"Sibling GWAS",0.0505
+2,"RM",36,"Sibling GWAS",0.048
+3,"RM",36,"Sibling GWAS",0.048375
+4,"RM",36,"Sibling GWAS",0.0523125
+5,"RM",36,"Sibling GWAS",0.0505
+0,"RM + VT (5%)",36,"Sibling GWAS",0.049125
+1,"RM + VT (5%)",36,"Sibling GWAS",0.051125
+2,"RM + VT (5%)",36,"Sibling GWAS",0.051625
+3,"RM + VT (5%)",36,"Sibling GWAS",0.0510625
+4,"RM + VT (5%)",36,"Sibling GWAS",0.0520625
+5,"RM + VT (5%)",36,"Sibling GWAS",0.0513125
+0,"5xAM",36,"Sibling GWAS",0.050625
+1,"5xAM",36,"Sibling GWAS",0.0474375
+2,"5xAM",36,"Sibling GWAS",0.0529375
+3,"5xAM",36,"Sibling GWAS",0.0514375
+4,"5xAM",36,"Sibling GWAS",0.050625
+5,"5xAM",36,"Sibling GWAS",0.0484375
+0,"5xAM + VT (5%)",36,"Sibling GWAS",0.0520625
+1,"5xAM + VT (5%)",36,"Sibling GWAS",0.0526875
+2,"5xAM + VT (5%)",36,"Sibling GWAS",0.04925
+3,"5xAM + VT (5%)",36,"Sibling GWAS",0.049625
+4,"5xAM + VT (5%)",36,"Sibling GWAS",0.0493125
+5,"5xAM + VT (5%)",36,"Sibling GWAS",0.0505625
+0,"RM",37,"Sibling GWAS",0.0490625
+1,"RM",37,"Sibling GWAS",0.04975
+2,"RM",37,"Sibling GWAS",0.0505625
+3,"RM",37,"Sibling GWAS",0.053375
+4,"RM",37,"Sibling GWAS",0.051375
+5,"RM",37,"Sibling GWAS",0.0513125
+0,"RM + VT (5%)",37,"Sibling GWAS",0.049125
+1,"RM + VT (5%)",37,"Sibling GWAS",0.0496875
+2,"RM + VT (5%)",37,"Sibling GWAS",0.04975
+3,"RM + VT (5%)",37,"Sibling GWAS",0.0489375
+4,"RM + VT (5%)",37,"Sibling GWAS",0.0499375
+5,"RM + VT (5%)",37,"Sibling GWAS",0.054375
+0,"5xAM",37,"Sibling GWAS",0.0514375
+1,"5xAM",37,"Sibling GWAS",0.050125
+2,"5xAM",37,"Sibling GWAS",0.0489375
+3,"5xAM",37,"Sibling GWAS",0.04875
+4,"5xAM",37,"Sibling GWAS",0.0500625
+5,"5xAM",37,"Sibling GWAS",0.050875
+0,"5xAM + VT (5%)",37,"Sibling GWAS",0.0498125
+1,"5xAM + VT (5%)",37,"Sibling GWAS",0.0465
+2,"5xAM + VT (5%)",37,"Sibling GWAS",0.052125
+3,"5xAM + VT (5%)",37,"Sibling GWAS",0.0511875
+4,"5xAM + VT (5%)",37,"Sibling GWAS",0.0528125
+5,"5xAM + VT (5%)",37,"Sibling GWAS",0.0505625
+0,"RM",38,"Sibling GWAS",0.04875
+1,"RM",38,"Sibling GWAS",0.0508125
+2,"RM",38,"Sibling GWAS",0.0493125
+3,"RM",38,"Sibling GWAS",0.05275
+4,"RM",38,"Sibling GWAS",0.0526875
+5,"RM",38,"Sibling GWAS",0.0500625
+0,"RM + VT (5%)",38,"Sibling GWAS",0.051625
+1,"RM + VT (5%)",38,"Sibling GWAS",0.0500625
+2,"RM + VT (5%)",38,"Sibling GWAS",0.0470625
+3,"RM + VT (5%)",38,"Sibling GWAS",0.04775
+4,"RM + VT (5%)",38,"Sibling GWAS",0.04675
+5,"RM + VT (5%)",38,"Sibling GWAS",0.0516875
+0,"5xAM",38,"Sibling GWAS",0.0463125
+1,"5xAM",38,"Sibling GWAS",0.0496875
+2,"5xAM",38,"Sibling GWAS",0.051
+3,"5xAM",38,"Sibling GWAS",0.05175
+4,"5xAM",38,"Sibling GWAS",0.0484375
+5,"5xAM",38,"Sibling GWAS",0.0520625
+0,"5xAM + VT (5%)",38,"Sibling GWAS",0.0511875
+1,"5xAM + VT (5%)",38,"Sibling GWAS",0.0510625
+2,"5xAM + VT (5%)",38,"Sibling GWAS",0.04825
+3,"5xAM + VT (5%)",38,"Sibling GWAS",0.050875
+4,"5xAM + VT (5%)",38,"Sibling GWAS",0.0483125
+5,"5xAM + VT (5%)",38,"Sibling GWAS",0.0475
+0,"RM",39,"Sibling GWAS",0.048625
+1,"RM",39,"Sibling GWAS",0.049875
+2,"RM",39,"Sibling GWAS",0.0518125
+3,"RM",39,"Sibling GWAS",0.0521875
+4,"RM",39,"Sibling GWAS",0.053625
+5,"RM",39,"Sibling GWAS",0.04875
+0,"RM + VT (5%)",39,"Sibling GWAS",0.049375
+1,"RM + VT (5%)",39,"Sibling GWAS",0.0491875
+2,"RM + VT (5%)",39,"Sibling GWAS",0.04975
+3,"RM + VT (5%)",39,"Sibling GWAS",0.0491875
+4,"RM + VT (5%)",39,"Sibling GWAS",0.050375
+5,"RM + VT (5%)",39,"Sibling GWAS",0.0495
+0,"5xAM",39,"Sibling GWAS",0.0535
+1,"5xAM",39,"Sibling GWAS",0.051625
+2,"5xAM",39,"Sibling GWAS",0.0508125
+3,"5xAM",39,"Sibling GWAS",0.0510625
+4,"5xAM",39,"Sibling GWAS",0.051375
+5,"5xAM",39,"Sibling GWAS",0.0483125
+0,"5xAM + VT (5%)",39,"Sibling GWAS",0.050125
+1,"5xAM + VT (5%)",39,"Sibling GWAS",0.0508125
+2,"5xAM + VT (5%)",39,"Sibling GWAS",0.0503125
+3,"5xAM + VT (5%)",39,"Sibling GWAS",0.051625
+4,"5xAM + VT (5%)",39,"Sibling GWAS",0.046375
+5,"5xAM + VT (5%)",39,"Sibling GWAS",0.051875
+0,"RM",4,"Sibling GWAS",0.0499375
+1,"RM",4,"Sibling GWAS",0.052625
+2,"RM",4,"Sibling GWAS",0.0479375
+3,"RM",4,"Sibling GWAS",0.05275
+4,"RM",4,"Sibling GWAS",0.04975
+5,"RM",4,"Sibling GWAS",0.051375
+0,"RM + VT (5%)",4,"Sibling GWAS",0.0494375
+1,"RM + VT (5%)",4,"Sibling GWAS",0.0475625
+2,"RM + VT (5%)",4,"Sibling GWAS",0.0484375
+3,"RM + VT (5%)",4,"Sibling GWAS",0.04975
+4,"RM + VT (5%)",4,"Sibling GWAS",0.0481875
+5,"RM + VT (5%)",4,"Sibling GWAS",0.0515
+0,"5xAM",4,"Sibling GWAS",0.051
+1,"5xAM",4,"Sibling GWAS",0.0500625
+2,"5xAM",4,"Sibling GWAS",0.0479375
+3,"5xAM",4,"Sibling GWAS",0.05275
+4,"5xAM",4,"Sibling GWAS",0.04825
+5,"5xAM",4,"Sibling GWAS",0.0493125
+0,"5xAM + VT (5%)",4,"Sibling GWAS",0.051375
+1,"5xAM + VT (5%)",4,"Sibling GWAS",0.050625
+2,"5xAM + VT (5%)",4,"Sibling GWAS",0.0504375
+3,"5xAM + VT (5%)",4,"Sibling GWAS",0.0481875
+4,"5xAM + VT (5%)",4,"Sibling GWAS",0.0488125
+5,"5xAM + VT (5%)",4,"Sibling GWAS",0.0491875
+0,"RM",40,"Sibling GWAS",0.0488125
+1,"RM",40,"Sibling GWAS",0.051375
+2,"RM",40,"Sibling GWAS",0.0498125
+3,"RM",40,"Sibling GWAS",0.0510625
+4,"RM",40,"Sibling GWAS",0.0468125
+5,"RM",40,"Sibling GWAS",0.0476875
+0,"RM + VT (5%)",40,"Sibling GWAS",0.05225
+1,"RM + VT (5%)",40,"Sibling GWAS",0.048875
+2,"RM + VT (5%)",40,"Sibling GWAS",0.0506875
+3,"RM + VT (5%)",40,"Sibling GWAS",0.050375
+4,"RM + VT (5%)",40,"Sibling GWAS",0.0494375
+5,"RM + VT (5%)",40,"Sibling GWAS",0.0471875
+0,"5xAM",40,"Sibling GWAS",0.0485625
+1,"5xAM",40,"Sibling GWAS",0.049125
+2,"5xAM",40,"Sibling GWAS",0.0501875
+3,"5xAM",40,"Sibling GWAS",0.05175
+4,"5xAM",40,"Sibling GWAS",0.049875
+5,"5xAM",40,"Sibling GWAS",0.051125
+0,"5xAM + VT (5%)",40,"Sibling GWAS",0.050375
+1,"5xAM + VT (5%)",40,"Sibling GWAS",0.0521875
+2,"5xAM + VT (5%)",40,"Sibling GWAS",0.047875
+3,"5xAM + VT (5%)",40,"Sibling GWAS",0.049125
+4,"5xAM + VT (5%)",40,"Sibling GWAS",0.0505
+5,"5xAM + VT (5%)",40,"Sibling GWAS",0.0505625
+0,"RM",41,"Sibling GWAS",0.048875
+1,"RM",41,"Sibling GWAS",0.0464375
+2,"RM",41,"Sibling GWAS",0.0506875
+3,"RM",41,"Sibling GWAS",0.0508125
+4,"RM",41,"Sibling GWAS",0.0480625
+5,"RM",41,"Sibling GWAS",0.0515625
+0,"RM + VT (5%)",41,"Sibling GWAS",0.0515
+1,"RM + VT (5%)",41,"Sibling GWAS",0.0491875
+2,"RM + VT (5%)",41,"Sibling GWAS",0.0504375
+3,"RM + VT (5%)",41,"Sibling GWAS",0.0500625
+4,"RM + VT (5%)",41,"Sibling GWAS",0.0489375
+5,"RM + VT (5%)",41,"Sibling GWAS",0.0485625
+0,"5xAM",41,"Sibling GWAS",0.0505
+1,"5xAM",41,"Sibling GWAS",0.051875
+2,"5xAM",41,"Sibling GWAS",0.05
+3,"5xAM",41,"Sibling GWAS",0.050875
+4,"5xAM",41,"Sibling GWAS",0.0535
+5,"5xAM",41,"Sibling GWAS",0.0499375
+0,"5xAM + VT (5%)",41,"Sibling GWAS",0.0495625
+1,"5xAM + VT (5%)",41,"Sibling GWAS",0.0531875
+2,"5xAM + VT (5%)",41,"Sibling GWAS",0.0478125
+3,"5xAM + VT (5%)",41,"Sibling GWAS",0.05125
+4,"5xAM + VT (5%)",41,"Sibling GWAS",0.0523125
+5,"5xAM + VT (5%)",41,"Sibling GWAS",0.0518125
+0,"RM",42,"Sibling GWAS",0.047
+1,"RM",42,"Sibling GWAS",0.0474375
+2,"RM",42,"Sibling GWAS",0.053625
+3,"RM",42,"Sibling GWAS",0.0501875
+4,"RM",42,"Sibling GWAS",0.0524375
+5,"RM",42,"Sibling GWAS",0.0475625
+0,"RM + VT (5%)",42,"Sibling GWAS",0.0484375
+1,"RM + VT (5%)",42,"Sibling GWAS",0.0504375
+2,"RM + VT (5%)",42,"Sibling GWAS",0.0485
+3,"RM + VT (5%)",42,"Sibling GWAS",0.0516875
+4,"RM + VT (5%)",42,"Sibling GWAS",0.048375
+5,"RM + VT (5%)",42,"Sibling GWAS",0.0525
+0,"5xAM",42,"Sibling GWAS",0.0500625
+1,"5xAM",42,"Sibling GWAS",0.0505
+2,"5xAM",42,"Sibling GWAS",0.050625
+3,"5xAM",42,"Sibling GWAS",0.0516875
+4,"5xAM",42,"Sibling GWAS",0.05375
+5,"5xAM",42,"Sibling GWAS",0.04875
+0,"5xAM + VT (5%)",42,"Sibling GWAS",0.050375
+1,"5xAM + VT (5%)",42,"Sibling GWAS",0.0500625
+2,"5xAM + VT (5%)",42,"Sibling GWAS",0.0518125
+3,"5xAM + VT (5%)",42,"Sibling GWAS",0.0478125
+4,"5xAM + VT (5%)",42,"Sibling GWAS",0.05075
+5,"5xAM + VT (5%)",42,"Sibling GWAS",0.0508125
+0,"RM",43,"Sibling GWAS",0.0500625
+1,"RM",43,"Sibling GWAS",0.0474375
+2,"RM",43,"Sibling GWAS",0.0498125
+3,"RM",43,"Sibling GWAS",0.047
+4,"RM",43,"Sibling GWAS",0.04925
+5,"RM",43,"Sibling GWAS",0.05025
+0,"RM + VT (5%)",43,"Sibling GWAS",0.0496875
+1,"RM + VT (5%)",43,"Sibling GWAS",0.0495
+2,"RM + VT (5%)",43,"Sibling GWAS",0.0531875
+3,"RM + VT (5%)",43,"Sibling GWAS",0.049625
+4,"RM + VT (5%)",43,"Sibling GWAS",0.051125
+5,"RM + VT (5%)",43,"Sibling GWAS",0.04875
+0,"5xAM",43,"Sibling GWAS",0.0511875
+1,"5xAM",43,"Sibling GWAS",0.0485
+2,"5xAM",43,"Sibling GWAS",0.0484375
+3,"5xAM",43,"Sibling GWAS",0.0490625
+4,"5xAM",43,"Sibling GWAS",0.0511875
+5,"5xAM",43,"Sibling GWAS",0.050875
+0,"5xAM + VT (5%)",43,"Sibling GWAS",0.049375
+1,"5xAM + VT (5%)",43,"Sibling GWAS",0.048625
+2,"5xAM + VT (5%)",43,"Sibling GWAS",0.048625
+3,"5xAM + VT (5%)",43,"Sibling GWAS",0.04875
+4,"5xAM + VT (5%)",43,"Sibling GWAS",0.049625
+5,"5xAM + VT (5%)",43,"Sibling GWAS",0.050375
+0,"RM",44,"Sibling GWAS",0.0493125
+1,"RM",44,"Sibling GWAS",0.0490625
+2,"RM",44,"Sibling GWAS",0.05
+3,"RM",44,"Sibling GWAS",0.0505
+4,"RM",44,"Sibling GWAS",0.0515
+5,"RM",44,"Sibling GWAS",0.050125
+0,"RM + VT (5%)",44,"Sibling GWAS",0.05075
+1,"RM + VT (5%)",44,"Sibling GWAS",0.0475
+2,"RM + VT (5%)",44,"Sibling GWAS",0.0516875
+3,"RM + VT (5%)",44,"Sibling GWAS",0.0510625
+4,"RM + VT (5%)",44,"Sibling GWAS",0.050125
+5,"RM + VT (5%)",44,"Sibling GWAS",0.04775
+0,"5xAM",44,"Sibling GWAS",0.0499375
+1,"5xAM",44,"Sibling GWAS",0.0515625
+2,"5xAM",44,"Sibling GWAS",0.0510625
+3,"5xAM",44,"Sibling GWAS",0.05
+4,"5xAM",44,"Sibling GWAS",0.04975
+5,"5xAM",44,"Sibling GWAS",0.0524375
+0,"5xAM + VT (5%)",44,"Sibling GWAS",0.0504375
+1,"5xAM + VT (5%)",44,"Sibling GWAS",0.046
+2,"5xAM + VT (5%)",44,"Sibling GWAS",0.053125
+3,"5xAM + VT (5%)",44,"Sibling GWAS",0.0506875
+4,"5xAM + VT (5%)",44,"Sibling GWAS",0.0518125
+5,"5xAM + VT (5%)",44,"Sibling GWAS",0.051125
+0,"RM",45,"Sibling GWAS",0.0501875
+1,"RM",45,"Sibling GWAS",0.0499375
+2,"RM",45,"Sibling GWAS",0.0495
+3,"RM",45,"Sibling GWAS",0.0509375
+4,"RM",45,"Sibling GWAS",0.0516875
+5,"RM",45,"Sibling GWAS",0.0516875
+0,"RM + VT (5%)",45,"Sibling GWAS",0.048875
+1,"RM + VT (5%)",45,"Sibling GWAS",0.0511875
+2,"RM + VT (5%)",45,"Sibling GWAS",0.0484375
+3,"RM + VT (5%)",45,"Sibling GWAS",0.0536875
+4,"RM + VT (5%)",45,"Sibling GWAS",0.049375
+5,"RM + VT (5%)",45,"Sibling GWAS",0.0494375
+0,"5xAM",45,"Sibling GWAS",0.051
+1,"5xAM",45,"Sibling GWAS",0.04975
+2,"5xAM",45,"Sibling GWAS",0.0515
+3,"5xAM",45,"Sibling GWAS",0.0495625
+4,"5xAM",45,"Sibling GWAS",0.05025
+5,"5xAM",45,"Sibling GWAS",0.0496875
+0,"5xAM + VT (5%)",45,"Sibling GWAS",0.0510625
+1,"5xAM + VT (5%)",45,"Sibling GWAS",0.0475625
+2,"5xAM + VT (5%)",45,"Sibling GWAS",0.0515
+3,"5xAM + VT (5%)",45,"Sibling GWAS",0.0496875
+4,"5xAM + VT (5%)",45,"Sibling GWAS",0.05
+5,"5xAM + VT (5%)",45,"Sibling GWAS",0.0503125
+0,"RM",46,"Sibling GWAS",0.0498125
+1,"RM",46,"Sibling GWAS",0.0505
+2,"RM",46,"Sibling GWAS",0.0515625
+3,"RM",46,"Sibling GWAS",0.0498125
+4,"RM",46,"Sibling GWAS",0.046875
+5,"RM",46,"Sibling GWAS",0.04975
+0,"RM + VT (5%)",46,"Sibling GWAS",0.051875
+1,"RM + VT (5%)",46,"Sibling GWAS",0.050875
+2,"RM + VT (5%)",46,"Sibling GWAS",0.0485625
+3,"RM + VT (5%)",46,"Sibling GWAS",0.0460625
+4,"RM + VT (5%)",46,"Sibling GWAS",0.0481875
+5,"RM + VT (5%)",46,"Sibling GWAS",0.0486875
+0,"5xAM",46,"Sibling GWAS",0.0510625
+1,"5xAM",46,"Sibling GWAS",0.0499375
+2,"5xAM",46,"Sibling GWAS",0.0479375
+3,"5xAM",46,"Sibling GWAS",0.05
+4,"5xAM",46,"Sibling GWAS",0.05
+5,"5xAM",46,"Sibling GWAS",0.0506875
+0,"5xAM + VT (5%)",46,"Sibling GWAS",0.0483125
+1,"5xAM + VT (5%)",46,"Sibling GWAS",0.047
+2,"5xAM + VT (5%)",46,"Sibling GWAS",0.050375
+3,"5xAM + VT (5%)",46,"Sibling GWAS",0.0473125
+4,"5xAM + VT (5%)",46,"Sibling GWAS",0.049125
+5,"5xAM + VT (5%)",46,"Sibling GWAS",0.047625
+0,"RM",47,"Sibling GWAS",0.0509375
+1,"RM",47,"Sibling GWAS",0.0503125
+2,"RM",47,"Sibling GWAS",0.050125
+3,"RM",47,"Sibling GWAS",0.053625
+4,"RM",47,"Sibling GWAS",0.0505
+5,"RM",47,"Sibling GWAS",0.0494375
+0,"RM + VT (5%)",47,"Sibling GWAS",0.049375
+1,"RM + VT (5%)",47,"Sibling GWAS",0.0488125
+2,"RM + VT (5%)",47,"Sibling GWAS",0.052625
+3,"RM + VT (5%)",47,"Sibling GWAS",0.04925
+4,"RM + VT (5%)",47,"Sibling GWAS",0.0500625
+5,"RM + VT (5%)",47,"Sibling GWAS",0.0461875
+0,"5xAM",47,"Sibling GWAS",0.0499375
+1,"5xAM",47,"Sibling GWAS",0.0498125
+2,"5xAM",47,"Sibling GWAS",0.0518125
+3,"5xAM",47,"Sibling GWAS",0.0515
+4,"5xAM",47,"Sibling GWAS",0.049125
+5,"5xAM",47,"Sibling GWAS",0.049
+0,"5xAM + VT (5%)",47,"Sibling GWAS",0.05025
+1,"5xAM + VT (5%)",47,"Sibling GWAS",0.0480625
+2,"5xAM + VT (5%)",47,"Sibling GWAS",0.0525
+3,"5xAM + VT (5%)",47,"Sibling GWAS",0.0489375
+4,"5xAM + VT (5%)",47,"Sibling GWAS",0.0496875
+5,"5xAM + VT (5%)",47,"Sibling GWAS",0.04675
+0,"RM",48,"Sibling GWAS",0.0501875
+1,"RM",48,"Sibling GWAS",0.050625
+2,"RM",48,"Sibling GWAS",0.0518125
+3,"RM",48,"Sibling GWAS",0.0503125
+4,"RM",48,"Sibling GWAS",0.047
+5,"RM",48,"Sibling GWAS",0.052125
+0,"RM + VT (5%)",48,"Sibling GWAS",0.0484375
+1,"RM + VT (5%)",48,"Sibling GWAS",0.0478125
+2,"RM + VT (5%)",48,"Sibling GWAS",0.051
+3,"RM + VT (5%)",48,"Sibling GWAS",0.05
+4,"RM + VT (5%)",48,"Sibling GWAS",0.0495
+5,"RM + VT (5%)",48,"Sibling GWAS",0.051125
+0,"5xAM",48,"Sibling GWAS",0.0493125
+1,"5xAM",48,"Sibling GWAS",0.0534375
+2,"5xAM",48,"Sibling GWAS",0.049375
+3,"5xAM",48,"Sibling GWAS",0.0495625
+4,"5xAM",48,"Sibling GWAS",0.0489375
+5,"5xAM",48,"Sibling GWAS",0.0485625
+0,"5xAM + VT (5%)",48,"Sibling GWAS",0.048
+1,"5xAM + VT (5%)",48,"Sibling GWAS",0.0490625
+2,"5xAM + VT (5%)",48,"Sibling GWAS",0.048125
+3,"5xAM + VT (5%)",48,"Sibling GWAS",0.048125
+4,"5xAM + VT (5%)",48,"Sibling GWAS",0.0483125
+5,"5xAM + VT (5%)",48,"Sibling GWAS",0.051
+0,"RM",49,"Sibling GWAS",0.049375
+1,"RM",49,"Sibling GWAS",0.0503125
+2,"RM",49,"Sibling GWAS",0.0501875
+3,"RM",49,"Sibling GWAS",0.051375
+4,"RM",49,"Sibling GWAS",0.050875
+5,"RM",49,"Sibling GWAS",0.051
+0,"RM + VT (5%)",49,"Sibling GWAS",0.0468125
+1,"RM + VT (5%)",49,"Sibling GWAS",0.0504375
+2,"RM + VT (5%)",49,"Sibling GWAS",0.050625
+3,"RM + VT (5%)",49,"Sibling GWAS",0.0499375
+4,"RM + VT (5%)",49,"Sibling GWAS",0.0515
+5,"RM + VT (5%)",49,"Sibling GWAS",0.05275
+0,"5xAM",49,"Sibling GWAS",0.0494375
+1,"5xAM",49,"Sibling GWAS",0.04825
+2,"5xAM",49,"Sibling GWAS",0.0535
+3,"5xAM",49,"Sibling GWAS",0.0500625
+4,"5xAM",49,"Sibling GWAS",0.0499375
+5,"5xAM",49,"Sibling GWAS",0.04825
+0,"5xAM + VT (5%)",49,"Sibling GWAS",0.0491875
+1,"5xAM + VT (5%)",49,"Sibling GWAS",0.050625
+2,"5xAM + VT (5%)",49,"Sibling GWAS",0.0518125
+3,"5xAM + VT (5%)",49,"Sibling GWAS",0.05025
+4,"5xAM + VT (5%)",49,"Sibling GWAS",0.05
+5,"5xAM + VT (5%)",49,"Sibling GWAS",0.049125
+0,"RM",5,"Sibling GWAS",0.05
+1,"RM",5,"Sibling GWAS",0.0546875
+2,"RM",5,"Sibling GWAS",0.0475
+3,"RM",5,"Sibling GWAS",0.0513125
+4,"RM",5,"Sibling GWAS",0.051625
+5,"RM",5,"Sibling GWAS",0.051375
+0,"RM + VT (5%)",5,"Sibling GWAS",0.05025
+1,"RM + VT (5%)",5,"Sibling GWAS",0.051
+2,"RM + VT (5%)",5,"Sibling GWAS",0.0513125
+3,"RM + VT (5%)",5,"Sibling GWAS",0.0516875
+4,"RM + VT (5%)",5,"Sibling GWAS",0.0475
+5,"RM + VT (5%)",5,"Sibling GWAS",0.0474375
+0,"5xAM",5,"Sibling GWAS",0.0485
+1,"5xAM",5,"Sibling GWAS",0.049625
+2,"5xAM",5,"Sibling GWAS",0.0508125
+3,"5xAM",5,"Sibling GWAS",0.048625
+4,"5xAM",5,"Sibling GWAS",0.0536875
+5,"5xAM",5,"Sibling GWAS",0.0503125
+0,"5xAM + VT (5%)",5,"Sibling GWAS",0.051125
+1,"5xAM + VT (5%)",5,"Sibling GWAS",0.0495625
+2,"5xAM + VT (5%)",5,"Sibling GWAS",0.0505
+3,"5xAM + VT (5%)",5,"Sibling GWAS",0.05
+4,"5xAM + VT (5%)",5,"Sibling GWAS",0.0494375
+5,"5xAM + VT (5%)",5,"Sibling GWAS",0.05325
+0,"RM",50,"Sibling GWAS",0.0475625
+1,"RM",50,"Sibling GWAS",0.0514375
+2,"RM",50,"Sibling GWAS",0.0508125
+3,"RM",50,"Sibling GWAS",0.0505
+4,"RM",50,"Sibling GWAS",0.048125
+5,"RM",50,"Sibling GWAS",0.05075
+0,"RM + VT (5%)",50,"Sibling GWAS",0.050375
+1,"RM + VT (5%)",50,"Sibling GWAS",0.052375
+2,"RM + VT (5%)",50,"Sibling GWAS",0.0526875
+3,"RM + VT (5%)",50,"Sibling GWAS",0.047875
+4,"RM + VT (5%)",50,"Sibling GWAS",0.0514375
+5,"RM + VT (5%)",50,"Sibling GWAS",0.051
+0,"5xAM",50,"Sibling GWAS",0.0525625
+1,"5xAM",50,"Sibling GWAS",0.049625
+2,"5xAM",50,"Sibling GWAS",0.0503125
+3,"5xAM",50,"Sibling GWAS",0.05125
+4,"5xAM",50,"Sibling GWAS",0.047375
+5,"5xAM",50,"Sibling GWAS",0.0513125
+0,"5xAM + VT (5%)",50,"Sibling GWAS",0.047625
+1,"5xAM + VT (5%)",50,"Sibling GWAS",0.049625
+2,"5xAM + VT (5%)",50,"Sibling GWAS",0.05175
+3,"5xAM + VT (5%)",50,"Sibling GWAS",0.0519375
+4,"5xAM + VT (5%)",50,"Sibling GWAS",0.0496875
+5,"5xAM + VT (5%)",50,"Sibling GWAS",0.0503125
+0,"RM",6,"Sibling GWAS",0.0515625
+1,"RM",6,"Sibling GWAS",0.0516875
+2,"RM",6,"Sibling GWAS",0.0493125
+3,"RM",6,"Sibling GWAS",0.0509375
+4,"RM",6,"Sibling GWAS",0.0510625
+5,"RM",6,"Sibling GWAS",0.049875
+0,"RM + VT (5%)",6,"Sibling GWAS",0.05025
+1,"RM + VT (5%)",6,"Sibling GWAS",0.0469375
+2,"RM + VT (5%)",6,"Sibling GWAS",0.0485625
+3,"RM + VT (5%)",6,"Sibling GWAS",0.049625
+4,"RM + VT (5%)",6,"Sibling GWAS",0.0515
+5,"RM + VT (5%)",6,"Sibling GWAS",0.0519375
+0,"5xAM",6,"Sibling GWAS",0.052
+1,"5xAM",6,"Sibling GWAS",0.0529375
+2,"5xAM",6,"Sibling GWAS",0.0490625
+3,"5xAM",6,"Sibling GWAS",0.04525
+4,"5xAM",6,"Sibling GWAS",0.051625
+5,"5xAM",6,"Sibling GWAS",0.04925
+0,"5xAM + VT (5%)",6,"Sibling GWAS",0.049
+1,"5xAM + VT (5%)",6,"Sibling GWAS",0.0504375
+2,"5xAM + VT (5%)",6,"Sibling GWAS",0.051375
+3,"5xAM + VT (5%)",6,"Sibling GWAS",0.0500625
+4,"5xAM + VT (5%)",6,"Sibling GWAS",0.0505625
+5,"5xAM + VT (5%)",6,"Sibling GWAS",0.0486875
+0,"RM",7,"Sibling GWAS",0.05175
+1,"RM",7,"Sibling GWAS",0.0495625
+2,"RM",7,"Sibling GWAS",0.0525625
+3,"RM",7,"Sibling GWAS",0.0491875
+4,"RM",7,"Sibling GWAS",0.0495
+5,"RM",7,"Sibling GWAS",0.04825
+0,"RM + VT (5%)",7,"Sibling GWAS",0.048
+1,"RM + VT (5%)",7,"Sibling GWAS",0.0491875
+2,"RM + VT (5%)",7,"Sibling GWAS",0.0525
+3,"RM + VT (5%)",7,"Sibling GWAS",0.05175
+4,"RM + VT (5%)",7,"Sibling GWAS",0.0505625
+5,"RM + VT (5%)",7,"Sibling GWAS",0.0505
+0,"5xAM",7,"Sibling GWAS",0.048
+1,"5xAM",7,"Sibling GWAS",0.0503125
+2,"5xAM",7,"Sibling GWAS",0.0515
+3,"5xAM",7,"Sibling GWAS",0.0509375
+4,"5xAM",7,"Sibling GWAS",0.05075
+5,"5xAM",7,"Sibling GWAS",0.0494375
+0,"5xAM + VT (5%)",7,"Sibling GWAS",0.04775
+1,"5xAM + VT (5%)",7,"Sibling GWAS",0.0485625
+2,"5xAM + VT (5%)",7,"Sibling GWAS",0.0471875
+3,"5xAM + VT (5%)",7,"Sibling GWAS",0.050875
+4,"5xAM + VT (5%)",7,"Sibling GWAS",0.047875
+5,"5xAM + VT (5%)",7,"Sibling GWAS",0.047375
+0,"RM",8,"Sibling GWAS",0.0524375
+1,"RM",8,"Sibling GWAS",0.0515625
+2,"RM",8,"Sibling GWAS",0.04925
+3,"RM",8,"Sibling GWAS",0.0509375
+4,"RM",8,"Sibling GWAS",0.0489375
+5,"RM",8,"Sibling GWAS",0.0475
+0,"RM + VT (5%)",8,"Sibling GWAS",0.045375
+1,"RM + VT (5%)",8,"Sibling GWAS",0.05
+2,"RM + VT (5%)",8,"Sibling GWAS",0.0475625
+3,"RM + VT (5%)",8,"Sibling GWAS",0.0498125
+4,"RM + VT (5%)",8,"Sibling GWAS",0.049
+5,"RM + VT (5%)",8,"Sibling GWAS",0.051625
+0,"5xAM",8,"Sibling GWAS",0.048875
+1,"5xAM",8,"Sibling GWAS",0.0484375
+2,"5xAM",8,"Sibling GWAS",0.051625
+3,"5xAM",8,"Sibling GWAS",0.0466875
+4,"5xAM",8,"Sibling GWAS",0.049375
+5,"5xAM",8,"Sibling GWAS",0.050375
+0,"5xAM + VT (5%)",8,"Sibling GWAS",0.0498125
+1,"5xAM + VT (5%)",8,"Sibling GWAS",0.0486875
+2,"5xAM + VT (5%)",8,"Sibling GWAS",0.0496875
+3,"5xAM + VT (5%)",8,"Sibling GWAS",0.0509375
+4,"5xAM + VT (5%)",8,"Sibling GWAS",0.0470625
+5,"5xAM + VT (5%)",8,"Sibling GWAS",0.0491875
+0,"RM",9,"Sibling GWAS",0.04925
+1,"RM",9,"Sibling GWAS",0.0503125
+2,"RM",9,"Sibling GWAS",0.0494375
+3,"RM",9,"Sibling GWAS",0.051625
+4,"RM",9,"Sibling GWAS",0.049625
+5,"RM",9,"Sibling GWAS",0.0490625
+0,"RM + VT (5%)",9,"Sibling GWAS",0.052
+1,"RM + VT (5%)",9,"Sibling GWAS",0.0486875
+2,"RM + VT (5%)",9,"Sibling GWAS",0.0495625
+3,"RM + VT (5%)",9,"Sibling GWAS",0.04725
+4,"RM + VT (5%)",9,"Sibling GWAS",0.0508125
+5,"RM + VT (5%)",9,"Sibling GWAS",0.0516875
+0,"5xAM",9,"Sibling GWAS",0.050875
+1,"5xAM",9,"Sibling GWAS",0.048375
+2,"5xAM",9,"Sibling GWAS",0.0516875
+3,"5xAM",9,"Sibling GWAS",0.0485
+4,"5xAM",9,"Sibling GWAS",0.0516875
+5,"5xAM",9,"Sibling GWAS",0.0518125
+0,"5xAM + VT (5%)",9,"Sibling GWAS",0.0481875
+1,"5xAM + VT (5%)",9,"Sibling GWAS",0.0490625
+2,"5xAM + VT (5%)",9,"Sibling GWAS",0.0491875
+3,"5xAM + VT (5%)",9,"Sibling GWAS",0.047625
+4,"5xAM + VT (5%)",9,"Sibling GWAS",0.0516875
+5,"5xAM + VT (5%)",9,"Sibling GWAS",0.0521875
