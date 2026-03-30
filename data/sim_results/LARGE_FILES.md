@@ -42,3 +42,10 @@ cp ~/Dropbox/ftsim/manu/impmice_full_xcor.Rdata data/cca/
 cp ~/Dropbox/ftsim/manu/pcs_cca.Rdata data/cca/
 cp ~/Dropbox/ftsim/manu/pcs_imp_cca.Rdata data/cca/
 ```
+
+| `full_ak_res121925.csv` | 97MB | `ftsim/ak_resp/full_ak_res121925.csv` |
+
+Add to quick setup:
+```bash
+cp ~/Dropbox/ftsim/ak_resp/full_ak_res121925.csv data/sim_results/
+```

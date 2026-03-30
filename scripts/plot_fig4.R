@@ -1,8 +1,12 @@
 #!/usr/bin/env Rscript
 # plot_fig4.R -- Generate Figure 4 (education/height/wealth simulation)
 #
-# This script is a verbatim concatenation of code cells from
-# manu/figure_nb/mFigEdu.ipynb with ONLY file path substitutions.
+# This script is a verbatim port of code cells from
+# manu/figure_nb/mFigEdu.ipynb with ONLY the following changes:
+#   1. Data path: '~/data/edu_no_CD_LS.01/' -> file.path(BASE_DIR, 'data/edu_sims')
+#   2. Image path: 'figures/edu_cdiag_redux.png' -> file.path(BASE_DIR, 'data/cdiags/edu_cdiag_redux.png')
+#   3. BASE_DIR setup at top
+#   4. ggsave at end
 #
 # NOTE: The data in data/edu_sims/ comes from a DIFFERENT simulation
 # (h2_edu=0) than the manuscript notebook (h2_edu=0.01 from
@@ -340,13 +344,7 @@ fig4 <- plot_grid(hjust=0,plot_diag_edu,NA, r1, nrow=3, rel_heights = c(3.5,.15,
 })
 
 # ---- Save ----
-outfile_pdf <- file.path(outdir, "fig4_edu_sims.pdf")
-outfile_png <- file.path(outdir, "fig4_edu_sims.png")
-
-ggsave(outfile_pdf, fig4, width = 9, height = 10, dpi = 300)
-cat("Saved:", outfile_pdf, "\n")
-
-ggsave(outfile_png, fig4, width = 9, height = 10, dpi = 300, bg = "white")
-cat("Saved:", outfile_png, "\n")
-
+outfile <- file.path(outdir, "fig4_edu_sims.png")
+ggsave(outfile, fig4, width = 9, height = 10, dpi = 300, bg = "white")
+cat("Saved:", outfile, "\n")
 cat("Done.\n")

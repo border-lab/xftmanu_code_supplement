@@ -1,129 +1,124 @@
 ## plot_sfig_sensitivity.R
-## Generates supplementary figures S5 and S6 from processed data ONLY.
-##   S5: rg under xAM with r=0.1 vs r=0.2
+## Generates supplementary figures S5 and S6 from simulation data.
+##   S5: rg under xAM with r=0.1 vs r=0.2 (faceted)
 ##   S6: rg under unidimensional xAM with fixed latent correlation
+##
+## Verbatim port of:
+##   - mergeall_120925.ipynb cells 19, 24, 26 (S5)
+##   - FigSX_reconstruction.R  p_a (S6), p_b (S5 aesthetics), combined
+##
+## Data: full_ak_res121925.csv (pre-merged rr object from mergeall_120925.ipynb)
 
+library(repr)
 library(ggplot2)
+library(reshape2)
 library(cowplot)
-library(splines)
+library(stringr)
 
 BASE_DIR <- "/home/rsb/Dropbox/ftsim/round4"
-PROC_DIR <- file.path(BASE_DIR, "processed")
 FIG_DIR  <- file.path(BASE_DIR, "figures_output")
 dir.create(FIG_DIR, showWarnings = FALSE, recursive = TRUE)
 
 default_theme <- theme_bw() + theme(text = element_text(size = 14))
-PAL <- RColorBrewer::brewer.pal(8, "Set1")
 
-## ── S5: rg under 5xAM with r=0.1 vs r=0.2 ────────────────────────────────────
+## ── Load data ─────────────────────────────────────────────────────────────────
+## rr is the pre-merged data written by mergeall_120925.ipynb cell 14
+rr <- read.csv(file.path(BASE_DIR, "data/sim_results/full_ak_res121925.csv"))
 
-s5 <- read.csv(file.path(PROC_DIR, "sfig_s5_rg_sensitivity.csv"))
+## ── S6: Fixed Latent Correlation Experiments (FigSXa) ─────────────────────────
 
-## Separate r=0.1 and r=0.2 panels
-s5$rmate_label <- paste0("r = ", s5$rmate)
+# from mergeall_120925.ipynb cell 19
+rr$nxAM_expr <- rr$scenario %in% c('2xAM.1','2xAM.25','3xAM.167','4xAM.125','5xAM.1')
 
-## Keep only 5xAM scenarios (plus 2xAM baseline)
-s5_5x <- s5[s5$scenario %in% c("2xAM", "5xAM", "5xAM + VT",
-                                 "5xAM + GxE", "5xAM + VT + GxE"), ]
+# Create custom labels with latent r values
+rr$scenario_label_a <- factor(rr$scenario,
+    levels = c("2xAM.1", "2xAM.25", "3xAM.167", "4xAM.125", "5xAM.1"),
+    labels = c("2xAM.1 (latent r = 0.2)",
+               "2xAM.25 (latent r = 0.5)",
+               "3xAM.167 (latent r = 0.5)",
+               "4xAM.125 (latent r = 0.5)",
+               "5xAM.1 (latent r = 0.5)"))
 
-## Set factor order
-s5_5x$scenario <- factor(s5_5x$scenario,
-                          levels = c("2xAM", "5xAM", "5xAM + VT",
-                                     "5xAM + GxE", "5xAM + VT + GxE"))
-
-plot_s5 <- ggplot(s5_5x, aes(gen, he_rg, color = scenario,
-                               linetype = scenario, shape = scenario)) +
-  stat_summary(geom = "linerange", position = position_dodge(width = 0.3),
-               fun.max = function(x) quantile(x, 0.9),
-               fun.min = function(x) quantile(x, 0.1),
-               fun = function(x) quantile(x, 0.5)) +
-  stat_summary(geom = "point", position = position_dodge(width = 0.3),
-               fun = function(x) quantile(x, 0.5), size = 2.5) +
-  stat_smooth(method = "gam",
-              formula = y ~ bs(x, knots = 0:5, degree = 1), se = FALSE) +
-  facet_wrap(~ rmate_label) +
-  scale_color_manual(values = c("2xAM" = PAL[1],
-                                 "5xAM" = PAL[1],
-                                 "5xAM + VT" = PAL[2],
-                                 "5xAM + GxE" = PAL[3],
-                                 "5xAM + VT + GxE" = PAL[4])) +
-  scale_linetype_manual(values = c("2xAM" = "dashed",
-                                    "5xAM" = "solid",
-                                    "5xAM + VT" = "solid",
-                                    "5xAM + GxE" = "solid",
-                                    "5xAM + VT + GxE" = "dashed")) +
-  scale_shape_manual(values = c("2xAM" = 1, "5xAM" = 16,
-                                 "5xAM + VT" = 16, "5xAM + GxE" = 17,
-                                 "5xAM + VT + GxE" = 15)) +
-  labs(x = "Generations of xAM",
-       y = expression(Estimated ~ r[g]),
-       color = NULL, linetype = NULL, shape = NULL) +
-  default_theme +
-  theme(legend.position = "bottom",
-        legend.box = "horizontal",
-        strip.text = element_text(size = 12)) +
-  guides(color = guide_legend(nrow = 1))
-
-ggsave(file.path(FIG_DIR, "sfig_s5_rg_sensitivity.pdf"),
-       plot_s5, width = 12, height = 6)
-cat("Saved sfig_s5_rg_sensitivity.pdf\n")
-
-## ── S6: rg under xAM with fixed latent correlation ─────────────────────────────
-
-s6 <- read.csv(file.path(PROC_DIR, "sfig_s6_fixed_latent.csv"))
-
-## Color by scenario label
-s6$scenario_label <- factor(s6$scenario_label)
-
-## Use distinct colors for each kphen
-n_scen <- length(unique(s6$scenario_label))
-scen_colors <- PAL[seq_len(n_scen)]
-names(scen_colors) <- levels(s6$scenario_label)
-
-## Use distinct linetypes
-scen_lty <- c("solid", "dashed", "dotted", "dotdash", "longdash")[seq_len(n_scen)]
-names(scen_lty) <- levels(s6$scenario_label)
-
-scen_shapes <- c(16, 17, 15, 18, 8)[seq_len(n_scen)]
-names(scen_shapes) <- levels(s6$scenario_label)
-
-plot_s6 <- ggplot(s6, aes(gen, he_rg, color = scenario_label,
-                            linetype = scenario_label,
-                            shape = scenario_label)) +
-  stat_summary(geom = "linerange",
-               fun.max = function(x) quantile(x, 0.9),
-               fun.min = function(x) quantile(x, 0.1),
-               fun = function(x) quantile(x, 0.5)) +
-  stat_summary(geom = "line", fun = mean) +
-  stat_summary(geom = "point", size = 2.5, fun = mean) +
-  scale_color_manual(values = scen_colors) +
-  scale_linetype_manual(values = scen_lty) +
-  scale_shape_manual(values = scen_shapes) +
-  labs(x = "Generations of xAM",
-       y = expression(Estimated ~ r[g]),
-       color = NULL, linetype = NULL, shape = NULL) +
-  default_theme +
-  theme(legend.position = "bottom",
-        legend.box = "horizontal") +
-  guides(color = guide_legend(nrow = 2))
+p_a <- ggplot(rr[rr$nxAM_expr, ],
+              aes(gen, he_rg, color = scenario_label_a,
+                  linetype = scenario_label_a, shape = scenario_label_a)) +
+    stat_summary(geom = 'linerange') +
+    stat_summary(geom = 'line') +
+    stat_summary(geom = 'point', size = 2.5) +
+    scale_color_manual(values = c("2xAM.1 (latent r = 0.2)" = "#E41A1C",
+                                  "2xAM.25 (latent r = 0.5)" = "#377EB8",
+                                  "3xAM.167 (latent r = 0.5)" = "#4DAF4A",
+                                  "4xAM.125 (latent r = 0.5)" = "#984EA3",
+                                  "5xAM.1 (latent r = 0.5)" = "#A65628")) +
+    scale_linetype_manual(values = c("2xAM.1 (latent r = 0.2)" = "solid",
+                                     "2xAM.25 (latent r = 0.5)" = "dashed",
+                                     "3xAM.167 (latent r = 0.5)" = "dotted",
+                                     "4xAM.125 (latent r = 0.5)" = "dotdash",
+                                     "5xAM.1 (latent r = 0.5)" = "longdash")) +
+    scale_shape_manual(values = c("2xAM.1 (latent r = 0.2)" = 16,
+                                  "2xAM.25 (latent r = 0.5)" = 17,
+                                  "3xAM.167 (latent r = 0.5)" = 16,
+                                  "4xAM.125 (latent r = 0.5)" = 18,
+                                  "5xAM.1 (latent r = 0.5)" = 8)) +
+    labs(x = "Generations of xAM",
+         y = expression(Estimated~r[g]),
+         color = NULL, linetype = NULL, shape = NULL) +
+    default_theme +
+    theme(legend.position = "bottom",
+          legend.box = "horizontal") +
+    guides(color = guide_legend(nrow = 2))
 
 ggsave(file.path(FIG_DIR, "sfig_s6_fixed_latent.pdf"),
-       plot_s6, width = 9, height = 5.5)
+       p_a, width = 9, height = 5.5, bg = "white", dpi = 300)
 cat("Saved sfig_s6_fixed_latent.pdf\n")
 
-## ── Combined S5 + S6 ───────────────────────────────────────────────────────────
+## ── S5: r = 0.1 vs r = 0.2 (FigSXb) ─────────────────────────────────────────
 
-combined <- plot_grid(
-  plot_s5 + theme(legend.position = "bottom"),
-  plot_s6 + theme(legend.position = "bottom"),
-  ncol = 1,
-  labels = c("A", "B"),
-  label_size = 14,
-  rel_heights = c(1, 1)
+# from mergeall_120925.ipynb cell 26
+# Filter for r = 0.1 and r = 0.2 scenarios
+rr$xAM.1_r01_expr <- (rr$args_rmate == 0.1 | rr$args_rmate == 0.2) &
+    ((rr$args_kphen == 5 & rr$args_phi != .2 & rr$args_theta != .2) |
+     (rr$args_kphen == 2 & rr$args_phi == 0 & rr$args_theta == 0)) &
+    rr$args_cnoise == 0
+
+# Scenarios to include
+scenarios_b <- c("2xAM.1", "5xAM.1", "5xAM.1 + VT.05", "5xAM.1 + GxE.05", "5xAM.1 + VT.05 + GxE.05",
+                "2xAM.2", "5xAM.2", "5xAM.2 + VT.05", "5xAM.2 + GxE.05", "5xAM.2 + VT.05 + GxE.05")
+rr$in_plot_b <- rr$xAM.1_r01_expr & rr$scenario %in% scenarios_b
+zdat <- rr[rr$in_plot_b, ]
+
+zdat$scenario <- gsub('xAM..','xAM',zdat$scenario)
+p_b <- ggplot(zdat,
+              aes(gen, he_rg, color = scenario, linetype = scenario, shape = scenario)) +
+    stat_summary(geom = 'linerange') +
+    stat_summary(geom = 'line') +
+    stat_summary(geom = 'point', size = 2.5) +
+    labs(x = "Generations of xAM",
+         y = expression(Estimated~r[g]),
+         color = NULL, linetype = NULL, shape = NULL) +
+    default_theme + facet_wrap(~args_rmate) +
+    theme(legend.position = "bottom",
+          legend.box = "horizontal",
+          legend.key.width = unit(1.5, 'cm')) +
+    guides(color = guide_legend(nrow = 1))
+
+ggsave(file.path(FIG_DIR, "sfig_s5_rg_sensitivity.pdf"),
+       p_b, width = 12, height = 7, bg = "white", dpi = 300)
+cat("Saved sfig_s5_rg_sensitivity.pdf\n")
+
+## ── Combined S5 + S6 ──────────────────────────────────────────────────────────
+
+p_combined <- plot_grid(
+    p_a + theme(legend.position = "bottom"),
+    p_b + theme(legend.position = "bottom"),
+    ncol = 1,
+    labels = c("A", "B"),
+    label_size = 14,
+    rel_heights = c(1, 1)
 )
 
 ggsave(file.path(FIG_DIR, "sfig_s5s6_sensitivity_combined.pdf"),
-       combined, width = 12, height = 12)
+       p_combined, width = 12, height = 12, bg = "white", dpi = 300)
 cat("Saved sfig_s5s6_sensitivity_combined.pdf\n")
 
 cat("Done: plot_sfig_sensitivity.R\n")
