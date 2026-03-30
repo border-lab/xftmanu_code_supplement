@@ -67,7 +67,7 @@ tmpd <- mdat #within(mdat[mdat$GWAS=='Population',], {
 # tmpd$novm <- factor(tmpd$novm, levels = levels(as.factor(tmpd$novm))[c(2,1,3)])
 # tmpd$xAM <-'2-variate'
 # tmpd$xAM[tmpd$args_kmate==5] <-'5-variate'
-tmpd$power = paste(tmpd$power, 'power at \u03b1=0.05')
+tmpd$power = paste(tmpd$power, 'power at \U1D6FC=0.05')
 
 ## ── Cell 51: plot_sib1 (panel a) ───────────────────────────────────────────────
 
@@ -186,7 +186,7 @@ ppd$scenario <- factor(ppd$scenario, levels=c("RM + VT", "2xAM",
     facet_wrap(~scenario,ncol=2)+ #, labeller = label_parsed) +
     # scale_color_manual(values=PAL) +
     # scale_y_continuous(breaks = seq(1,6,.25)) +
-    ylab(expression(italic(r[hat('\u03b2')]))) +
+    ylab(expression(italic(r[hat('\U1D6FD')]))) +
 
     scale_color_manual(values = RColorBrewer::brewer.pal(8,'Set1')[-(5:6)]
 
