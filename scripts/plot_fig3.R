@@ -1,249 +1,469 @@
 ## plot_fig3.R
-## Reads ONLY from processed/ and data/cdiags/ to generate Figure 3.
-## 4-panel figure: (a) schematics, (b) h2, (c) rg, (d) GWAS FP
+## Direct port of manu/figure_nb/mFigComplexity.ipynb
+## Only changes: file paths adjusted for round4 layout, ggsave at end.
 ##
-## Source notebook: manu/figure_nb/mFigComplexity.ipynb (cells 41, 39, 53, 63-72)
-
-library(ggplot2)
-library(cowplot)
-library(splines)
-library(magick)
+## Cells used: 3, 20, 25, 38, 39, 41, 49, 53, 61, 63, 65, 72
 
 BASE_DIR <- "/home/rsb/Dropbox/ftsim/round4"
-PROC_DIR <- file.path(BASE_DIR, "processed")
-DIAG_DIR <- file.path(BASE_DIR, "data", "cdiags")
 FIG_DIR  <- file.path(BASE_DIR, "figures_output")
 dir.create(FIG_DIR, showWarnings = FALSE, recursive = TRUE)
 
-## ── Theme ───────────────────────────────────────────────────────────────────
+###############################################################################
+## Cell 3
+###############################################################################
+# library(yacca)
+library(repr)
+library(ggplot2)
+library(reshape2)
+library(cowplot)
+library(stringr)
+library(splines)
 
-default_theme  <- theme_bw() + theme(text = element_text(size = 14))
-default_theme2 <- theme_minimal() + theme(text = element_text(size = 14))
 
-PAL <- RColorBrewer::brewer.pal(8, "Set1")[-(5:7)]  # 4 colours for 4 scenarios
+res <- read.csv(file.path(BASE_DIR, 'data/sim_results/merged_tabla_redux_results_011024.csv')) ## from cleanAllGeneralSims2024
+table(res$scenario)
+# res <- res[res$scenario %in% c('2xAM', '5xAM'),]#,'RM'),]
 
-## ── Load processed data ─────────────────────────────────────────────────────
+res$v_tot <- res$h2_true/(1-res$h2_true) * .5 + .5
+res$vbeta <- res$vbeta_true*res$v_tot
 
-h2_raw <- read.csv(file.path(PROC_DIR, "fig3_h2_raw.csv"))
-rg_raw <- read.csv(file.path(PROC_DIR, "fig3_rg_raw.csv"))
-fp_raw <- read.csv(file.path(PROC_DIR, "fig3_fp_raw.csv"))
+mvars_uni = c(#'pgwas_PGS_hat_R2_49',#'sgwas_PGS_hat_R2_49',
+              #'pgwas_PGS_hat_R2_29','sgwas_PGS_hat_R2_29',
+              # 'pgwas_PGS_hat_R2_39',#'sgwas                                                                                                                                                                                                                                                                       _PGS_hat_R2_39',
+              'h2_true','he_h2')#,'vbeta')
 
-## ── Load SVG schematics ─────────────────────────────────────────────────────
+mvars_biv = c(#'pgwas_PGS_hat_corr_49',#'sgwas_PGS_hat_corr_49',
+              #'pgwas_PGS_hat_corr_29','sgwas_PGS_hat_corr_29',
+              # 'pgwas_PGS_hat_corr_39',#'sgwas_PGS_hat_corr_39',
+              # 'rbeta_true',
+    'rg_true','he_rg')#,'rbeta_hat_pgwas','rbeta_hat_sgwas')
+grep('^arg',names(res), val=T)
+idvars = c('seed','gen','args_kmate','args_rmate', 'args_theta', 'args_phi', 'args_m_causal','power','scenario')
 
-s5xAM      <- image_read_svg(file.path(DIAG_DIR, "cropped_diag5xAM.svg"),
-                              width = 2000)
-s5xAMgXe   <- image_read_svg(file.path(DIAG_DIR, "cropped_diag5xAMgXE.svg"),
-                              width = 2000)
-s5xAMpVT   <- image_read_svg(file.path(DIAG_DIR, "cropped_diag5xAMpVT.svg"),
-                              width = 2000)
-s5xAMpVTgXe <- image_read_svg(file.path(DIAG_DIR, "cropped_diag5xAMgXEpVT.svg"),
-                               width = 2000)
 
-## ── Panel a: Schematics with per-scenario legends ───────────────────────────
-## (notebook cells 61, 63-65)
+default_theme <- theme_bw() + theme(text=element_text(size=14))
+default_theme2 <- theme_minimal() + theme(text=element_text(size=14))
 
-schem1 <- ggdraw() + draw_image(s5xAM, clip = TRUE)
-schem2 <- ggdraw() + draw_image(s5xAMgXe)
-schem3 <- ggdraw() + draw_image(s5xAMpVT)
-schem4 <- ggdraw() + draw_image(s5xAMpVTgXe)
+###############################################################################
+## Cell 20
+###############################################################################
+gdat <- res
+gdat$h2_he <- gdat$he_h2
 
-## Build mini legend plots for each scenario (notebook cell 61)
-## Use a dummy data approach to generate legends matching notebook style
+molt <-
+reshape2::melt(gdat, id.vars = c('gen','X','seed','args_m_causal','scenario'),
+               measure.vars = c("h2_he", "h2_true"))
+# gdat
 
-make_legend_plot <- function(scenario_name, color_idx, lty_val, label_text) {
-  dd <- data.frame(x = 1, y = 1, scenario = scenario_name)
-  p <- ggplot(dd, aes(x, y, color = scenario, lty = scenario)) +
-    geom_line() + default_theme +
-    scale_color_manual(values = PAL[color_idx], labels = label_text) +
-    scale_linetype_manual(values = lty_val, labels = label_text)
-  p
-}
+###############################################################################
+## Cell 25
+###############################################################################
+gdat$rg_hat_pgwas <- gdat$pgwas_rPRS_hat
+gdat$rg_hat_sgwas <- gdat$sgwas_rPRS_hat
+molt <-
+reshape2::melt(gdat, id.vars = c('gen','seed','args_m_causal','scenario','power'),
+               measure.vars = c("h2_he", "h2_true"))
 
-p5xAM       <- make_legend_plot("5xAM",             1, 2, "5xAM")
-p5xAMgxe    <- make_legend_plot("5xAM + GxE",       2, 3, expression("5xAM + G" * phantom() * times() * phantom() * "E"))
-p5xAMpVT    <- make_legend_plot("5xAM + VT",        3, 4, "5xAM + VT")
-p5xAMpVTgxe <- make_legend_plot("5xAM + VT + GxE",  4, 5, expression("5xAM + G" * phantom() * times() * phantom() * "E + VT"))
+gdat2 <- molt#[molt$gen %in% c(0,1,3,5),]
+# molt
+# pdat <- dcast(molt, scenario+gen+seed+args_m_causal+power~variable)
+# pdat
+# pdat <- pdat[pdat$gen %in% c(0,1,3,5),]
 
-lsize <- 12
-lkh <- 0.75
-lkw <- 2
+# molt$scenario <- factor(molt$scenario, levels= c("2xAM","5xAM","5xAM + gXe", "5xAM + eVT", "5xAM + eVT + gXe",  "5xAM + pVT",
+# "5xAM + pVT + gXe"))
+# molt <- molt[molt$scenario!='2xAM',]
+# gdat
+# gdat2
 
-legend_theme <- theme(
-  legend.justification = 0.5,
-  legend.position = "left",
-  legend.title = element_blank(),
-  legend.key.width = unit(lkw, "cm"),
-  legend.key.height = unit(lkh, "cm"),
-  text = element_text(size = lsize)
-)
+###############################################################################
+## Cell 38
+###############################################################################
+gdat$rbeta_HE <- gdat$he_rg
+gdat$rg_hat_pgwas <- gdat$pgwas_rPRS_hat
+gdat$rg_hat_sgwas <- gdat$sgwas_rPRS_hat
+molt <-
+reshape2::melt(gdat, id.vars = c('gen','X','seed','args_m','scenario'),
+               measure.vars = c("h2_he", "rg_true", "rbeta_HE",
+                                "h2_true"))
 
-leg_guide <- guides(
-  color = guide_legend(label.position = "top"),
-  linetype = guide_legend(label.position = "top")
-)
+molt <- molt#[molt$gen %in% c(0,1,3,5),]
+pdat <- dcast(molt, scenario+gen+X+seed+args_m~variable)
+pdat <- pdat[pdat$gen %in% c(0,1,3,5),]
+# molt$variable <- factor(molt$variable,
+                       # levels=rev(c("rbeta_true",  "rbeta_HE", "rbeta_hat_sgwas", "rbeta_hat_pgwas", "rg_true",
+                                    # "rg_hat_sgwas", "rg_hat_pgwas")))
+# molt$scenario <- factor(molt$scenario, levels= c("2xAM","5xAM","5xAM + gXe", "5xAM + eVT", "5xAM + eVT + gXe",  "5xAM + pVT",
+# "5xAM + pVT + gXe"))
+# molt <- molt[molt$scenario!='2xAM',]
 
-leg1 <- get_legend(p5xAM       + leg_guide + legend_theme)
-leg2 <- get_legend(p5xAMgxe    + leg_guide + legend_theme)
-leg3 <- get_legend(p5xAMpVT    + leg_guide + legend_theme)
-leg4 <- get_legend(p5xAMpVTgxe + leg_guide + legend_theme)
+###############################################################################
+## Cell 39
+###############################################################################
+PAL = RColorBrewer::brewer.pal(8,'Set1')
 
-## Composite panel a: schematics stacked vertically with legends
-## (notebook cell 72: schem1..schem4 + leg1..leg4 in 2-column byrow=F)
-panel_a <- plot_grid(schem1, schem2, schem3, schem4,
-                     leg1, leg2, leg3, leg4,
-                     rel_widths = c(9, 2), byrow = FALSE, ncol = 2,
-                     labels = c("a", rep("", 7)))
+options(repr.plot.height=5)
+options(repr.plot.width=8)
+pdat<-pdat2 <- molt[molt$variable %in% c('rbeta_HE','rg_true','h2_he','h2_true'),]
+pdat$variable <- as.character(pdat$variable)
+pdat$variable[pdat2$variable=='rbeta_HE'] <- 'hat(italic(r))[𝛽]'
+pdat$variable[pdat2$variable=='rg_true'] <- 'italic(r)[score]'
+pdat$variable[pdat2$variable=='h2_he'] <- 'hat(italic(h))^2'
+pdat$variable[pdat2$variable=='h2_true'] <- 'italic(h)^2'
+pdat$int <- 0
+pdat$int[pdat2$variable=='h2_he' | pdat2$variable=='h2_true'] <- .5
+    # expression(italic(r)[score])
 
-## ── Panel b: h2 true vs estimated (plot_uni_multi) ──────────────────────────
-## (notebook cells 41, 45)
-
-## Filter to h2 variables only
-h2_dat <- h2_raw[h2_raw$variable %in% c("h2_he", "h2_true"), ]
-
-(plot_uni_multi <- ggplot(
-  h2_dat,
-  aes(gen, value, color = scenario, linetype = scenario)) +
-    default_theme2 +
-    geom_hline(aes(yintercept = intercept), color = "#FF7F00", lty = 1,
-               data = data.frame(intercept = 0.5)) +
-    stat_summary(
-      geom = "linerange", position = position_dodge(width = 0.3),
-      fun.max = function(x) quantile(x, 0.9),
-      fun.min = function(x) quantile(x, 0.1),
-      fun     = function(x) quantile(x, 0.5)
-    ) +
-    stat_smooth(
-      method = "gam",
-      formula = y ~ bs(x, knots = 0:5, degree = 1),
-      se = FALSE
-    ) +
-    ylab(expression(italic(h)^2)) +
-    xlab("Generations of xAM") +
-    scale_color_manual(values = PAL) +
-    scale_linetype_manual(values = c(2:6)) +
-    facet_wrap(~ var_label, drop = TRUE, labeller = label_parsed)
-)
-
-## ── Panel c: rg true vs estimated (plot_biv_multi) ──────────────────────────
-## (notebook cell 39)
-
-rg_dat <- rg_raw[rg_raw$variable %in% c("rbeta_HE", "rg_true"), ]
-
-(plot_biv_multi <- ggplot(
-  rg_dat,
-  aes(gen, value, color = scenario, linetype = scenario)) +
-    default_theme2 +
-    geom_hline(aes(yintercept = intercept), color = "#FF7F00", lty = 1,
-               data = data.frame(intercept = 0)) +
-    stat_summary(
-      geom = "linerange", position = position_dodge(width = 0.3),
-      fun.max = function(x) quantile(x, 0.9),
-      fun.min = function(x) quantile(x, 0.1),
-      fun     = function(x) quantile(x, 0.5)
-    ) +
-    stat_smooth(
-      method = "gam",
-      formula = y ~ bs(x, knots = 0:5, degree = 1),
-      se = FALSE
-    ) +
+pdat$variable <- as.factor(pdat$variable)
+pdat$variable <- factor(pdat$variable, levels=rev(levels(pdat$variable)))
+pdat$f1 <- pdat$f2 <- as.character(pdat$variable)
+pdat$f1[pdat2$variable=='h2_he' | pdat2$variable=='h2_true'] <- NA
+# pdat$f2[!pdat2$variable=='h2_he' & !pdat2$variable=='h2_true'] <- NA
+(plot_biv_multi <- ggplot(pdat[pdat$scenario %in% c(#"RM + VT",
+                                                          "5xAM",
+                                                          "5xAM + GxE",
+                                                          "5xAM + VT",
+                                                          "5xAM + VT + GxE") & !is.na(pdat$f1),],
+                                aes(gen,value, color=scenario, linetype=scenario)) + default_theme2 +
+    geom_hline(aes(yintercept = int), color=PAL[5], lty=1) +
+    stat_summary(geom = 'linerange',position=position_dodge(width=.3),
+                 fun.max = function(x) quantile(x,.9),
+                 fun.min = function(x) quantile(x,.1),
+                 fun = function(x) quantile(x,.5)) +
+    # stat_summary(data=utmp2,
+                 # geom = 'point',position=position_dodge(width=.3),
+                 # fun = function(x) quantile(x,.5)) +
+    stat_smooth(method='gam', formula = y~bs(x, knots=0:5, degree = 1), se=F) +
     ylab(expression(italic(r)[g])) +
-    xlab("Generations of xAM") +
-    scale_color_manual(values = PAL) +
-    scale_linetype_manual(values = c(2:6)) +
-    facet_wrap(~ var_label, drop = TRUE, labeller = label_parsed)
+    xlab('Generations of xAM')       +
+   scale_color_manual(values = PAL <- RColorBrewer::brewer.pal(8,'Set1')[-(5:7)]#,
+                       # labels =c('xAM',
+                       #           'xAM + G×E',
+                       #           'xAM + VT',
+                       #           'xAM + G×E + VT')
+                     ) +
+ facet_wrap(~variable,drop = T, label='label_parsed') +
+    scale_linetype_manual(values = c(2:6)#,
+                       # labels =c('xAM',
+                       #           'xAM + G×E',
+                       #           'xAM + VT',
+                       #           'xAM + G×E + VT')
+                         )
+                )
+
+###############################################################################
+## Cell 41
+###############################################################################
+PAL = RColorBrewer::brewer.pal(8,'Set1')
+
+options(repr.plot.height=5)
+options(repr.plot.width=8)
+pdat<-pdat2 <- molt[molt$variable %in% c('rbeta_HE','rg_true','h2_he','h2_true'),]
+pdat$variable <- as.character(pdat$variable)
+pdat$variable[pdat2$variable=='rbeta_HE'] <- 'hat(italic(r))[𝛽]'
+pdat$variable[pdat2$variable=='rg_true'] <- 'italic(r)[score]'
+pdat$variable[pdat2$variable=='h2_he'] <- 'hat(italic(h))^2'
+pdat$variable[pdat2$variable=='h2_true'] <- 'italic(h)^2'
+pdat$int <- 0
+pdat$int[pdat2$variable=='h2_he' | pdat2$variable=='h2_true'] <- .5
+    # expression(italic(r)[score])
+
+pdat$variable <- as.factor(pdat$variable)
+pdat$variable <- factor(pdat$variable, levels=rev(levels(pdat$variable)))
+pdat$f1 <- pdat$f2 <- as.character(pdat$variable)
+pdat$f1[pdat2$variable!='h2_he' & pdat2$variable!='h2_true'] <- NA
+# pdat$f2[!pdat2$variable=='h2_he' & !pdat2$variable=='h2_true'] <- NA
+(plot_uni_multi <- ggplot(pdat[pdat$scenario %in% c(#"RM + VT",
+                                                          "5xAM",
+                                                          "5xAM + GxE",
+                                                          "5xAM + VT",
+                                                          "5xAM + VT + GxE") & !is.na(pdat$f1),],
+                                aes(gen,value, color=scenario, linetype=scenario)) + default_theme2 +
+    geom_hline(aes(yintercept = int), color=PAL[5], lty=1) +
+    stat_summary(geom = 'linerange',position=position_dodge(width=.3),
+                 fun.max = function(x) quantile(x,.9),
+                 fun.min = function(x) quantile(x,.1),
+                 fun = function(x) quantile(x,.5)) +
+    # stat_summary(data=utmp2,
+                 # geom = 'point',position=position_dodge(width=.3),
+                 # fun = function(x) quantile(x,.5)) +
+    stat_smooth(method='gam', formula = y~bs(x, knots=0:5, degree = 1), se=F) +
+    ylab(expression(italic(h)^2)) +
+    # ylab(expression(italic(r)[g])) +
+    xlab('Generations of xAM')       +
+   scale_color_manual(values = PAL <- RColorBrewer::brewer.pal(8,'Set1')[-(5:7)]#,
+                       # labels =c('xAM',
+                       #           'xAM + G×E',
+                       #           'xAM + VT',
+                       #           'xAM + G×E + VT')
+                     ) +
+ facet_wrap(~variable,drop = T, label='label_parsed') +
+    scale_linetype_manual(values = c(2:6)#,
+                       # labels =c('xAM',
+                       #           'xAM + G×E',
+                       #           'xAM + VT',
+                       #           'xAM + G×E + VT')
+                         )
+                )
+
+###############################################################################
+## Cell 49
+###############################################################################
+mvars_uni = c(#'pgwas_PGS_hat_R2_49',#'sgwas_PGS_hat_R2_49',
+              #'pgwas_PGS_hat_R2_29','sgwas_PGS_hat_R2_29',
+              # 'pgwas_PGS_hat_R2_39',#'sgwas                                                                                                                                                                                                                                                                       _PGS_hat_R2_39',
+              'sgwas_false_positives_0.05','pgwas_false_positives_0.05')#,'vbeta')
+
+
+idvars = c('seed','gen','args_kmate','args_rmate', 'args_theta', 'args_phi', 'args_m_causal','power','scenario')
+mdat <- reshape2::melt(res, id.vars = idvars, measure.vars = mvars_uni)
+mdat$relative_T1R<-mdat$value/0.05
+mdat$GWAS <- 'Population'
+mdat$GWAS[grep('^s',mdat$variable)] <- 'Sibship'
+mdat$alpha=0.05
+# # udat
+# ggplot(udat, aes(as.factor(gen), value,
+#                 col=as.factor(scenario), shape=variable)) + facet_wrap(~power)+
+#     stat_summary()
+
+tmpd <- mdat #within(mdat[mdat$GWAS=='Population',], {
+#                # T1R[T1R==0] <- (5e-8)*2
+#                relative_T1R <- T1R/alpha_bonferoni})
+# tmpd$`over(n,m)` = as.factor(1/.8*tmpd$args_n/tmpd$args_m)
+# tmpd$novm = paste0('italic(n)/italic(m) == ',tmpd$`over(n,m)`)
+# tmpd$novm <- factor(tmpd$novm, levels = levels(as.factor(tmpd$novm))[c(2,1,3)])
+# tmpd$xAM <-'2-variate'
+# tmpd$xAM[tmpd$args_kmate==5] <-'5-variate'
+tmpd$power = paste(tmpd$power, 'power at 𝛼=0.05')
+
+###############################################################################
+## Cell 53
+###############################################################################
+# mdat <- reshape2::dcast(molten,seed+gen+args_m+args_n+args_kmate +alpha +GWAS+alpha_bonferoni~ quantity)
+
+# mdat$T1R <- mdat$FalsePositive/(.8)
+# mdat$hits <- (mdat$FalsePositive + mdat$TruePositive)
+options(repr.plot.width=8)
+options(repr.plot.height=6)
+unique(tmpd$scenario)
+(plot_gwas2x5_alt <-
+ ggplot(tmpd[tmpd$GWAS=='Population'&tmpd$scenario %in% c(#"RM + VT",
+                                                          "5xAM",
+                                                          "5xAM + GxE",
+                                                          "5xAM + VT",
+                                                          "5xAM + VT + GxE"),],
+       aes(gen,relative_T1R, color=scenario, lty=scenario,shape=scenario)) + default_theme+
+    # geom_alpha_bonferoni*2))+
+    # geom_jitter(height = 1)+
+     stat_summary(geom='point',  position=position_dodge(width=.1),
+                 fun.data = function(x) mean_se(x,mult=1.96)
+                 ) +
+     stat_summary(geom='linerange',  position=position_dodge(width=.1),
+                 fun.data =  function(x) mean_se(x,mult=1.96)
+                 ) +
+    geom_smooth(formula=y~ns(x,df =3),method='gam', aes(gen, color=scenario, lty=scenario), se=F ) +
+    # geom_smooth(formula=y~bs(x,degree =3),method='gam', aes(gen, color=GWAS, lty=xAM), se=F ) +
+    # stat_summary(geom='line', aes(gen,  color=GWAS, lty=xAM), fun = mean ) +
+    facet_grid(~power)+ #, labeller = label_parsed) +
+    geom_hline(color='grey', lty=3,yintercept = 1) +
+    # scale_color_manual(values=PAL) +
+    # scale_y_continuous(breaks = seq(1,6,.25)) +
+    geom_hline(color='grey', lty=3,yintercept = 1) +
+    scale_color_manual(values = RColorBrewer::brewer.pal(8,'Set1')[-(5:7)]#,
+                       # labels =c('xAM',
+                       #           'xAM + G×E',
+                       #           'xAM + VT',
+                       #           'xAM + G×E + VT')
+                     ) +
+    scale_linetype_manual(values = c(2:6))+
+
+    ylab(expression(over('Empirical Type-I Error Rate','Theoretical Type-I Error Rate'))) +
+    #theme(axis.text.y.right = element_text(color=PAL[3]),
+    #     axis.ticks.y.right=element_line(color=PAL[3])) +
+    xlab('Generations of xAM') +
+     theme(axis.title.x=element_blank())+
+     theme(legend.position=c(.5,.9), legend.direction='horizontal', legend.key.width=unit(1,'cm'))
+ )
+
+###############################################################################
+## Cell 61
+###############################################################################
+#### legends
+utmp <- gdat2[gdat2$scenario%in%c("5xAM", "5xAM + GxE", "5xAM + VT", "5xAM + VT + GxE"),]
+
+PAL <- RColorBrewer::brewer.pal(8,'Set1')
+p5xAM <-
+ggplot(uu <- utmp[utmp$scenario=='5xAM',],aes(gen,value, color=scenario, lty=scenario)) + default_theme +
+    geom_hline(col=PAL[5], yintercept = 0) +
+    stat_summary(geom = 'linerange',position=position_dodge(width=.3))+
+    stat_summary(data=uu,geom = 'point',position=position_dodge(width=.3), fun = function(x) quantile(x,.5)) +
+    stat_smooth(method='gam', formula = y~bs(x, knots=0:5, degree = 1), se=F) +
+    scale_color_manual(values = PAL,
+                       labels =c('5xAM'))+
+    scale_linetype_manual(values = c(2:6),
+                       labels =c('5xAM'))
+
+p5xAMgxe <-
+ggplot(uu <- utmp[utmp$scenario=='5xAM + GxE',],aes(gen,value, color=scenario, lty=scenario)) + default_theme +
+    stat_summary(geom = 'linerange',position=position_dodge(width=.3))+
+    stat_summary(data=uu,geom = 'point',position=position_dodge(width=.3), fun = function(x) quantile(x,.5)) +
+    stat_smooth(method='gam', formula = y~bs(x, knots=0:5, degree = 1), se=F) +
+    scale_color_manual(values = PAL[2:5],
+                       labels =c('5xAM + G×E'))+
+    scale_linetype_manual(values = c(3:6),
+                       labels =c('5xAM + G×E'))
+
+p5xAMpVTgxe <-
+ggplot(uu <- utmp[utmp$scenario=='5xAM + VT + GxE',],aes(gen,value, color=scenario, lty=scenario)) + default_theme +
+    stat_summary(geom = 'linerange',position=position_dodge(width=.3))+
+    stat_summary(data=uu,geom = 'point',position=position_dodge(width=.3), fun = function(x) quantile(x,.5)) +
+    stat_smooth(method='gam', formula = y~bs(x, knots=0:5, degree = 1), se=F) +
+    scale_color_manual(values = PAL[4:5],
+                       labels =c('5xAM + G×E + VT'))+
+    scale_linetype_manual(values = c(5:6),
+                       labels =c('5xAM + G×E + VT'))
+p5xAMpVT <-
+ggplot(uu <- utmp[utmp$scenario=='5xAM + VT',],aes(gen,value, color=scenario, lty=scenario)) + default_theme +
+    stat_summary(geom = 'linerange',position=position_dodge(width=.3))+
+    stat_summary(data=uu,geom = 'point',position=position_dodge(width=.3), fun = function(x) quantile(x,.5)) +
+    stat_smooth(method='gam', formula = y~bs(x, knots=0:5, degree = 1), se=F) +
+    scale_color_manual(values = PAL[3:5],
+                       labels =c('5xAM + VT',
+                                 '5xAM + G×E + VT'))+
+    scale_linetype_manual(values = c(4:6),
+                       labels =c('5xAM + VT',
+                                 '5xAM + G×E + VT'))
+
+###############################################################################
+## Cell 63
+###############################################################################
+options(repr.plot.res=500)
+s2xAM <- magick::image_read_svg(file.path(BASE_DIR, 'data/cdiags/cropped_diag2xAM.svg'))
+s5xAM <- magick::image_read_svg(file.path(BASE_DIR, 'data/cdiags/cropped_diag5xAM.svg'),width = 2000)
+s5xAMgXe <- magick::image_read_svg(file.path(BASE_DIR, 'data/cdiags/cropped_diag5xAMgXE.svg'),width = 2000)
+# s5xAMeVT <- magick::image_read_svg('cdiags/diag5xAMeVT.svg',width = 2000)
+# s5xAMeVTgXe <- magick::image_read_svg('cdiags/diag5xAMgXEeVT.svg',width = 2000)
+s5xAMpVT <- magick::image_read_svg(file.path(BASE_DIR, 'data/cdiags/cropped_diag5xAMpVT.svg'),width = 2000)
+s5xAMpVTgXe <- magick::image_read_svg(file.path(BASE_DIR, 'data/cdiags/cropped_diag5xAMgXEpVT.svg'),width = 2000)
+# (plot_schematics_multiverse  <- plot_grid(#ggdraw() + draw_image(s2xAM),
+#                                           ggdraw() + draw_image(s5xAM),
+#                                           ggdraw() + draw_image(s5xAMgXe),
+#                                           # ggdraw() + draw_image(s5xAMeVT),
+#                                           # ggdraw() + draw_image(s5xAMeVTgXe),
+#                                           ggdraw() + draw_image(s5xAMpVT),
+#                                           ggdraw() + draw_image(s5xAMpVTgXe),
+#          ncol=1)
+# )
+(plot_schematics_multiverse_row  <- plot_grid(#ggdraw() + draw_image(s2xAM,),
+                                          ggdraw() + draw_image(s5xAM),
+                                          ggdraw() + draw_image(s5xAMgXe),
+                                          # ggdraw() + draw_image(s5xAMeVT),
+                                          # ggdraw() + draw_image(s5xAMeVTgXe),
+                                          ggdraw() + draw_image(s5xAMpVT),
+                                          ggdraw() + draw_image(s5xAMpVTgXe),
+         nrow=1)
 )
 
-## ── Panel d: GWAS FP inflation (plot_gwas2x5_alt) ──────────────────────────
-## (notebook cell 53)
-## Population GWAS only, faceted by power
 
-fp_pop <- fp_raw[fp_raw$GWAS == "Population", ]
-fp_pop$power_label <- paste(fp_pop$power, "power at \u03B1=0.05")
+###############################################################################
+## Cell 65
+###############################################################################
+lsize=12
+lkh=.75
+lkw=2
+rh=1
+sp=.01
 
-(plot_gwas_fp <- ggplot(
-  fp_pop,
-  aes(gen, relative_T1R, color = scenario, lty = scenario, shape = scenario)) +
-    default_theme +
-    stat_summary(
-      geom = "point", position = position_dodge(width = 0.1),
-      fun.data = function(x) mean_se(x, mult = 1.96)
-    ) +
-    stat_summary(
-      geom = "linerange", position = position_dodge(width = 0.1),
-      fun.data = function(x) mean_se(x, mult = 1.96)
-    ) +
-    geom_smooth(
-      formula = y ~ ns(x, df = 3), method = "gam",
-      aes(gen, color = scenario, lty = scenario), se = FALSE
-    ) +
-    facet_grid(~ power) +
-    geom_hline(color = "grey", lty = 3, yintercept = 1) +
-    scale_color_manual(values = PAL) +
-    scale_linetype_manual(values = c(2:6)) +
-    ylab(expression(over("Empirical Type-I Error Rate",
-                         "Theoretical Type-I Error Rate"))) +
-    xlab("Generations of xAM") +
-    theme(axis.title.x = element_blank()) +
-    theme(legend.position = c(0.5, 0.9),
-          legend.direction = "horizontal",
-          legend.key.width = unit(1, "cm"))
-)
+options(repr.plot.width=5,
+        repr.plot.height=2)
+l1 = plot_grid( schem1 <- ggdraw() + draw_image(s5xAM,clip = T), NULL,
+          leg1 <- get_legend(p5xAM+guides(color=guide_legend(label.position='top'),
+                                          linetype=guide_legend(label.position='top'))+
+                             theme(legend.justification = .5,legend.position='left',legend.title = element_blank(), legend.key.width = unit(lkw,'cm'),legend.key.height = unit(lkh,'cm'),text=element_text(size=lsize))),
+          ncol=2, rel_widths=c(5,sp,rh), nrow=1)
+l2 = plot_grid(hjust = 0, schem2 <- ggdraw() + draw_image(s5xAMgXe), NULL,
+          leg2 <- get_legend(p5xAMgxe+guides(color=guide_legend(label.position='top'),
+                                             linetype=guide_legend(label.position='top'))+
+                             theme(legend.justification = .5,legend.position='left',legend.title = element_blank(), legend.key.width = unit(lkw,'cm'),legend.key.height = unit(lkh,'cm'),text=element_text(size=lsize))),
+          ncol=2, rel_widths=c(5,sp,rh), nrow=1)
+l3 = plot_grid(hjust = 0, schem3 <- ggdraw() + draw_image(s5xAMpVT), NULL,
+          leg3 <- get_legend(p5xAMpVT+guides(color=guide_legend(label.position='top'),
+                                             linetype=guide_legend(label.position='top'))+
+                             theme(legend.justification = .5,legend.position='left',legend.title = element_blank(), legend.key.width = unit(lkw,'cm'),legend.key.height = unit(lkh,'cm'),text=element_text(size=lsize))),
+          ncol=2, rel_widths=c(5,sp,rh), nrow=1)
+l4 = plot_grid(hjust = 0, schem4 <- ggdraw() + draw_image(s5xAMpVTgXe), NULL,
+          leg4 <- get_legend(p5xAMpVTgxe+guides(color=guide_legend(label.position='top'),
+                                                linetype=guide_legend(label.position='top'))+
+                             theme(legend.justification = .5,legend.position='left',legend.title = element_blank(), legend.key.width = unit(lkw,'cm'),legend.key.height = unit(lkh,'cm'),text=element_text(size=lsize))),
+          ncol=2, rel_widths=c(5,sp,rh), nrow=1)
+# plot_grid(l1,l2,l3,l4, ncol=1)
+# plot_grid(l1,l2,l3,l4, ncol=1,rel_widths = c(3,.5))
+# plot_grid(schem1,leg1, rel_widths=c(9,2))
+plot_grid(schem1,schem2,schem3,schem4,leg1,leg2,leg3,leg4, rel_widths=c(9,2), byrow = F, ncol=2)
 
-## ── Composite figure (notebook cell 72) ─────────────────────────────────────
-## Layout: left = panel a (schematics), right = panels b/c stacked + d below
+###############################################################################
+## Cell 72
+###############################################################################
+options(repr.plot.width=12,
+        repr.plot.height=12)
 
 suppressWarnings({
-  plts <- align_plots(
-    plot_uni_multi + guides(color = guide_none(), linetype = guide_none()) +
-      theme(axis.title.x.bottom = element_blank()),
-    plot_biv_multi + guides(color = guide_none(), linetype = guide_none()),
-    align = "v", axis = "rl"
-  )
-})
+    plts <- align_plots(plot_uni_multi + guides(color=guide_none(),
+                        linetype=guide_none()) +
+                            theme(axis.title.x.bottom = element_blank()),
+                        plot_biv_multi + guides(color=guide_none(),
+                        linetype=guide_none()),align = 'v',axis = 'rl')
+    # plot_grid(rel_heights = c(2,8,8),
+    #           ggdraw(get_legend(plot_uni_multi +
+    #                             theme(legend.title = element_blank(),
+    #                                   legend.key.width = unit(1.5,'cm'),
+    #                                   legend.position = 'top'))),
+    #           plts[[1]],plts[[2]], ncol=1
+    #         )
 
-## Stack b and c, then add d below
-st1 <- plot_grid(
-  plts[[1]], plts[[2]],
-  ncol = 1, rel_heights = c(1, 1),
-  labels = c("b", "c")
-)
 
-right_col <- plot_grid(
-  st1,
-  plot_gwas_fp +
-    theme(legend.direction = "vertical",
-          text = element_text(size = 13),
-          legend.position = c(0.18, 0.7)) +
-    guides(shape = guide_none(), linetype = guide_none(),
-           color = guide_none()),
-  ncol = 1,
-  rel_heights = c(6, 3),
-  labels = c("", "d")
-)
 
-## Full figure
-fig3 <- plot_grid(
-  panel_a, NULL, right_col,
-  nrow = 1,
-  rel_widths = c(0.85, 0.05, 1.1)
-)
+# plot_biv_multi
 
-## ── Save ────────────────────────────────────────────────────────────────────
 
+# plot_schematics_multiverse
+# plot_gwas2x5 + default_theme2
+st1 <- plot_grid(rel_heights =c(1,1),# c(2,8,8),
+              # ggdraw(get_legend(plot_uni_multi +
+              #                   theme(legend.title = element_blank(),
+              #                         legend.key.width = unit(1.5,'cm'),
+              #                         legend.position = 'top'))),
+              plts[[1]],plts[[2]], ncol=1, labels=c('b','c')
+            )
+st2 <- plot_grid(rel_heights = c(8,8),
+
+              plts[[1]],plts[[2]], ncol=1
+            )
+options(repr.plot.width=13)
+options(repr.plot.height=8)
+fig3 <- plot_grid(#plot_grid(hjust = 0, l1,l2,l3,l4, ncol=1,rel_widths = c(4,.5), labels=c('a','','','')),nrow=1, NULL,
+          plot_grid(schem1,schem2,schem3,schem4,leg1,leg2,leg3,leg4, rel_widths=c(9,2), byrow = F, ncol=2, labels=c('a',rep('',7))), nrow=1, NULL,
+          plot_grid(hjust = 0,rel_heights=c(6,3),labels=c('','d'),st1,plot_gwas2x5_alt+ theme(legend.direction = 'vertical',text=element_text(size=13),
+                                                                                              legend.position = c(.18,.7)) +
+                        guides(shape=guide_none(), linetype=guide_none(),
+                                                 color=guide_none()),nrow=2), rel_widths = c(.85,.05,1.1))
+# plot_grid(plot_grid(l1,l2,l3,l4, nrow=1),
+#         # ggdraw(get_legend(plot_uni_multi +
+#         #         theme(legend.spacing.x = unit(1,'cm'),
+#         #               legend.title = element_blank(),
+#         #               legend.key.width = unit(1.5,'cm'),
+#         #               legend.position = 'top'))),
+#           plot_grid(st2,plot_gwas2x5, nrow=1), ncol=1,
+#         rel_heights=c(4,4))
+    })
+
+###############################################################################
+## Save outputs (dimensions from Cell 72: repr.plot.width=13, repr.plot.height=8)
+###############################################################################
 ggsave(file.path(FIG_DIR, "fig3_complexity.pdf"),
-       fig3, width = 14, height = 8)
+       fig3, width = 13, height = 8)
 ggsave(file.path(FIG_DIR, "fig3_complexity.png"),
-       fig3, width = 14, height = 8, dpi = 300)
+       fig3, width = 13, height = 8, dpi = 300, bg = "white")
 
 cat("Saved fig3_complexity.pdf and fig3_complexity.png to", FIG_DIR, "\n")
-
-## Also save individual panels
-ggsave(file.path(FIG_DIR, "fig3b_h2.pdf"),
-       plot_uni_multi, width = 8, height = 5)
-ggsave(file.path(FIG_DIR, "fig3c_rg.pdf"),
-       plot_biv_multi, width = 8, height = 5)
-ggsave(file.path(FIG_DIR, "fig3d_gwas_fp.pdf"),
-       plot_gwas_fp, width = 8, height = 6)
-
-cat("Saved individual panels to", FIG_DIR, "\n")
 cat("\n=== plot_fig3.R complete ===\n")
