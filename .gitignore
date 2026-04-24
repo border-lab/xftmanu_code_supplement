@@ -1,0 +1,16 @@
+# Large data files (see data/sim_results/LARGE_FILES.md)
+data/sim_results/merged_tabla_redux_results_*.csv
+data/sim_results/merged_res_redux_*.csv
+data/sim_results/corrnoise*_res_*.csv
+data/cca/*.Rdata
+data/cca/*.rdata
+
+# Generated outputs (reproducible from scripts + data)
+figures_output/
+manuscript_figures/*.png
+
+# OS
+.DS_Store
+Thumbs.db
+Rplots.pdf
+data/sim_results/full_ak_res121925.csv

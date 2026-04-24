@@ -1,7 +1,34 @@
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
 import xftsim as xft
 import numpy as np
 import pandas as pd
 import scipy.stats as stats
+
+
+class ConsecutivePairFilter(xft.filters.SampleFilter):
+    """Select nsub random consecutive pairs (replicates old Sib_GWAS sampling)."""
+    def __init__(self, nsub=0):
+        self.nsub = nsub
+    def filter(self, phenotypes):
+        n_pair = phenotypes.shape[0] // 2
+        nsub = min(self.nsub, n_pair) if self.nsub > 0 else n_pair
+        subinds = np.sort(np.random.permutation(n_pair)[:nsub])
+        return np.concatenate([np.array(x) for x in zip(2*subinds, 2*subinds+1)])
+
+
+class ConsecutiveUnrelatedFilter(xft.filters.SampleFilter):
+    """Select one random individual from nsub consecutive pairs (replicates old Pop_GWAS sampling)."""
+    def __init__(self, nsub=0):
+        self.nsub = nsub
+    def filter(self, phenotypes):
+        n_pair = phenotypes.shape[0] // 2
+        nsub = min(self.nsub, n_pair) if self.nsub > 0 else n_pair
+        subinds = np.sort(np.random.permutation(n_pair)[:nsub])
+        return 2*subinds + np.random.choice([0, 1], nsub)
+
+
 TIMELIMIT=360
 MATEBATCH=1000
 THREADS=12 
@@ -76,13 +103,12 @@ for SEED in range(1,51):
     reg_batched = xft.mate.BatchedMatingRegime(regime=reg_asrt,
                                                max_batch_size = mate_batch_size)
     
-    sample_stats =[xft.stats.SampleStatistics(), 
-        xft.stats.HasemanElstonEstimator(filter_sample=True,
-                                         component_index = pheno_ind.merge(dx_ind)),
+    sample_stats =[xft.stats.SampleStatistics(),
+        xft.stats.HasemanElstonEstimator(component_index = pheno_ind.merge(dx_ind)),
         xft.stats.MatingStatistics(),]
     estimators = [
-        xft.stats.Sib_GWAS_Estimator(n_sub=SUBSIZE),
-        xft.stats.Pop_GWAS_Estimator(n_sub=SUBSIZE),
+        xft.stats.Sib_GWAS_Estimator(n_sub=SUBSIZE, sample_filter=ConsecutivePairFilter(nsub=SUBSIZE)),
+        xft.stats.Pop_GWAS_Estimator(n_sub=SUBSIZE, sample_filter=ConsecutiveUnrelatedFilter(nsub=SUBSIZE)),
     ]
 
     sim = xft.sim.Simulation(architecture=arch,
@@ -171,13 +197,12 @@ for SEED in range(1,51):
         reg_batched = xft.mate.BatchedMatingRegime(regime=reg_asrt,
                                                    max_batch_size = mate_batch_size)
 
-        sample_stats =[xft.stats.SampleStatistics(), 
-            xft.stats.HasemanElstonEstimator(filter_sample=True,
-                                             component_index = pheno_ind.merge(dx_ind)),
+        sample_stats =[xft.stats.SampleStatistics(),
+            xft.stats.HasemanElstonEstimator(component_index = pheno_ind.merge(dx_ind)),
             xft.stats.MatingStatistics(),]
         estimators = [
-            xft.stats.Sib_GWAS_Estimator(n_sub=SUBSIZE),
-            xft.stats.Pop_GWAS_Estimator(n_sub=SUBSIZE),
+            xft.stats.Sib_GWAS_Estimator(n_sub=SUBSIZE, sample_filter=ConsecutivePairFilter(nsub=SUBSIZE)),
+            xft.stats.Pop_GWAS_Estimator(n_sub=SUBSIZE, sample_filter=ConsecutiveUnrelatedFilter(nsub=SUBSIZE)),
         ]
 
         sim = xft.sim.Simulation(architecture=arch,

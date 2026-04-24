@@ -1,19 +1,44 @@
 import os
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
 NUMTHREAD = '16'
 NUMTHREAD_NUMBA = '1'
 NUMTHREAD_LS = '8'
 os.environ["OMP_NUM_THREADS"] = NUMTHREAD
-os.environ["OPENBLAS_NUM_THREADS"] = NUMTHREAD 
+os.environ["OPENBLAS_NUM_THREADS"] = NUMTHREAD
 os.environ["MKL_NUM_THREADS"] = NUMTHREAD
-os.environ["VECLIB_MAXIMUM_THREADS"] = NUMTHREAD 
-os.environ["NUMEXPR_NUM_THREADS"] = NUMTHREAD 
-os.environ["NUMBA_NUM_THREADS"] = NUMTHREAD_NUMBA
+os.environ["VECLIB_MAXIMUM_THREADS"] = NUMTHREAD
+os.environ["NUMEXPR_NUM_THREADS"] = NUMTHREAD_NUMBA
 
 import xftsim as xft
 import numpy as np
 import pandas as pd
 import scipy.stats as stats
+
+
+class ConsecutivePairFilter(xft.filters.SampleFilter):
+    """Select nsub random consecutive pairs (replicates old Sib_GWAS sampling)."""
+    def __init__(self, nsub=0):
+        self.nsub = nsub
+    def filter(self, phenotypes):
+        n_pair = phenotypes.shape[0] // 2
+        nsub = min(self.nsub, n_pair) if self.nsub > 0 else n_pair
+        subinds = np.sort(np.random.permutation(n_pair)[:nsub])
+        return np.concatenate([np.array(x) for x in zip(2*subinds, 2*subinds+1)])
+
+
+class ConsecutiveUnrelatedFilter(xft.filters.SampleFilter):
+    """Select one random individual from nsub consecutive pairs (replicates old Pop_GWAS sampling)."""
+    def __init__(self, nsub=0):
+        self.nsub = nsub
+    def filter(self, phenotypes):
+        n_pair = phenotypes.shape[0] // 2
+        nsub = min(self.nsub, n_pair) if self.nsub > 0 else n_pair
+        subinds = np.sort(np.random.permutation(n_pair)[:nsub])
+        return 2*subinds + np.random.choice([0, 1], nsub)
+
+
 TIMELIMIT=60
 MATEBATCH=500
 THREADS=2 
@@ -140,18 +165,17 @@ arch = xft.arch.Architecture([gen_comp, noise_comp, vtcomp, inter_comp])
 
 
 
-sample_stats =[xft.stats.SampleStatistics(), 
-    xft.stats.HasemanElstonEstimator(filter_sample=False,
-                                     component_index = pheno_ind),
+sample_stats =[xft.stats.SampleStatistics(),
+    xft.stats.HasemanElstonEstimator(component_index = pheno_ind),
     xft.stats.MatingStatistics(),]
 estimators = [
-    xft.stats.HasemanElstonEstimatorSibship(filter_sample=False),
-    xft.stats.Sib_GWAS_Estimator(n_sub=SUBSIZE, PGS=False, training_fraction=1.0),
-    xft.stats.Pop_GWAS_Estimator(n_sub=SUBSIZE, PGS=False, training_fraction=1.0),
-    xft.stats.Sib_GWAS_Estimator(n_sub=SUBSIZE//2, PGS=False, name='sgwas2', training_fraction=1.0),
-    xft.stats.Pop_GWAS_Estimator(n_sub=SUBSIZE//2, PGS=False, name='pgwas2', training_fraction=1.0),
-    xft.stats.Sib_GWAS_Estimator(n_sub=SUBSIZE//4, PGS=False, name='sgwas4', training_fraction=1.0),
-    xft.stats.Pop_GWAS_Estimator(n_sub=SUBSIZE//4, PGS=False, name='pgwas4', training_fraction=1.0),
+    xft.stats.HasemanElstonEstimatorSibship(sample_filter=xft.filters.PassFilter()),
+    xft.stats.Sib_GWAS_Estimator(n_sub=SUBSIZE, PGS=False, training_fraction=1.0, sample_filter=ConsecutivePairFilter(nsub=SUBSIZE)),
+    xft.stats.Pop_GWAS_Estimator(n_sub=SUBSIZE, PGS=False, training_fraction=1.0, sample_filter=ConsecutiveUnrelatedFilter(nsub=SUBSIZE)),
+    xft.stats.Sib_GWAS_Estimator(n_sub=SUBSIZE//2, PGS=False, name='sgwas2', training_fraction=1.0, sample_filter=ConsecutivePairFilter(nsub=SUBSIZE//2)),
+    xft.stats.Pop_GWAS_Estimator(n_sub=SUBSIZE//2, PGS=False, name='pgwas2', training_fraction=1.0, sample_filter=ConsecutiveUnrelatedFilter(nsub=SUBSIZE//2)),
+    xft.stats.Sib_GWAS_Estimator(n_sub=SUBSIZE//4, PGS=False, name='sgwas4', training_fraction=1.0, sample_filter=ConsecutivePairFilter(nsub=SUBSIZE//4)),
+    xft.stats.Pop_GWAS_Estimator(n_sub=SUBSIZE//4, PGS=False, name='pgwas4', training_fraction=1.0, sample_filter=ConsecutiveUnrelatedFilter(nsub=SUBSIZE//4)),
 ]
 
 sim = xft.sim.Simulation(architecture=arch,
@@ -292,8 +316,8 @@ def parse_gen(GEN=4):
     OUTPUT.update(cov2dict2(res['results_store'][GEN]['HE_regression']['corr_HE'],'rgHE', diag=False, vorigin=True))
     he_h2 = np.diag(res['results_store'][GEN]['HE_regression']['cov_HE'])
     OUTPUT.update({f'h2HE_{x}':y for x,y in zip(phenos,he_h2)})
-    OUTPUT.update(cov2dict2(res['results_store'][GEN]['HE_regression_sibship']['corr_HEsib'],'rgHEsib', diag=False, vorigin=True))
-    he_h2 = np.diag(res['results_store'][GEN]['HE_regression_sibship']['cov_HEsib'])
+    OUTPUT.update(cov2dict2(res['results_store'][GEN]['HE_regression_sibship']['corr_HE'],'rgHEsib', diag=False, vorigin=True))
+    he_h2 = np.diag(res['results_store'][GEN]['HE_regression_sibship']['cov_HE'])
     OUTPUT.update({f'h2HEsib_{x}':y for x,y in zip(phenos,he_h2)})
       
     ## GWAS 

@@ -1,0 +1,7 @@
+"gen","traits","corr","rgHE"
+0,"edu / height",0.00235,0.00526
+0,"edu / wealth",NA,0
+0,"height / wealth",NA,0
+5,"edu / height",0.0152,0.863
+5,"edu / wealth",NA,0.933
+5,"height / wealth",NA,0.941
