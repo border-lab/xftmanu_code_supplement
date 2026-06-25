@@ -1,265 +1,123 @@
-## process_fig3.R
-## Loads BOTH merged simulation CSVs and produces:
-##   - Figure panels b-e data from 011024 (4 basic scenarios, VT 5% only)
-##   - Verification data from 0524 (matches manuscript P46/P48 numbers)
-##   - Expanded P48 data from 0524 (VT 20%, GxE 20% scenarios)
+#!/usr/bin/env Rscript
+## process_fig3_vdecomp_r5.R   (ROUND 5 — non-destructive copy of scripts/process_fig3_vdecomp.R)
+## Only substantive change vs the round-4 original:
+##   * the middle decomposition tier is now the EXACT apparent (BLP) quantity
+##     (Cᵀ G⁻¹ C) instead of predictive R²_g (h²) / r_cross r× (rg);
+##   * "Population h²" tier relabelled "Direct h²"; "rscore" relabelled "Direct r_g".
+## Reads the SAME round-4 per-seed data; writes only to round5/fig3_r5/ (originals untouched).
 ##
-## Datasets:
-##   011024 (~750 seeds): 5xAM, 5xAM + GxE, 5xAM + VT, 5xAM + VT + GxE
-##   0524   (~950 seeds): above + VT(20%), GxE(20%) combos; VT(5%) numbers
-##                        match the manuscript
-##
-## Source notebook: manu/figure_nb/mFigComplexity.ipynb
+## Output: round5/fig3_r5/fig3_vdecomp_r5_h2_long.csv
+##         round5/fig3_r5/fig3_vdecomp_r5_rg_long.csv
+##         round5/fig3_r5/fig3_vdecomp_r5_fp.csv
+##         round5/fig3_r5/fig3_vdecomp_r5_summary.csv
 
 library(reshape2)
-library(stringr)
 
-BASE_DIR <- "/home/rsb/Dropbox/ftsim/round4"
-DATA_DIR <- file.path(BASE_DIR, "data", "sim_results")
-OUT_DIR  <- file.path(BASE_DIR, "processed")
+BASE_DIR <- "/home/rsb/Dropbox/ftsim/round4"          # inputs (round-4 data)
+OUT_DIR  <- "/home/rsb/Dropbox/ftsim/round4/round5/fig3_r5"   # outputs (round-5, new)
 dir.create(OUT_DIR, showWarnings = FALSE, recursive = TRUE)
 
-## ── 1. Load BOTH datasets ──────────────────────────────────────────────────
-
-res_011024 <- read.csv(file.path(DATA_DIR, "merged_tabla_redux_results_011024.csv"))
-cat("Loaded 011024:", nrow(res_011024), "rows,", ncol(res_011024), "columns\n")
-cat("  Scenarios:", paste(unique(res_011024$scenario), collapse = ", "), "\n")
-
-res_0524 <- read.csv(file.path(DATA_DIR, "merged_tabla_redux_results_0524.csv"))
-cat("Loaded 0524:", nrow(res_0524), "rows,", ncol(res_0524), "columns\n")
-cat("  Scenarios:", paste(unique(res_0524$scenario), collapse = ", "), "\n")
-
-## ── 2. Derived columns for 011024 (figure panels) ──────────────────────────
-
-add_derived <- function(df) {
-  df$v_tot    <- df$h2_true / (1 - df$h2_true) * 0.5 + 0.5
-  df$vbeta    <- df$vbeta_true * df$v_tot
-  df$h2_he    <- df$he_h2
-  df$rbeta_HE <- df$he_rg
-  df$h2_bias  <- df$h2_he - df$h2_true
-  df$rg_bias  <- df$he_rg - df$rg_true
-  df$sim      <- apply(str_split_fixed(df$X, "_", 5)[, -2], 1,
-                       paste, collapse = "_")
-  df
+## ── exact apparent (BLP) heritability / genetic correlation ────────────────
+## Compound-symmetric reconstruction, identical to round5/compute_apparent.py.
+## a = h2_true (Var(direct PGI) scale), b = rg_true*h2_true (off-diag of G),
+## c = cov_g_y (diag of C), d = cov_g_y_cross (off-diag of C).
+exact_app <- function(K, h2, rg, cgy, cgyx) {
+  tryCatch({
+    a <- h2; b <- rg * h2; cc <- cgy; d <- cgyx
+    G <- matrix(b, K, K); diag(G) <- a
+    C <- matrix(d, K, K); diag(C) <- cc
+    M  <- crossprod(C, solve(G, C))          # t(C) %*% G^{-1} %*% C
+    dg <- diag(M)
+    Rm <- M / sqrt(outer(dg, dg))
+    c(mean(dg), mean(Rm[upper.tri(Rm)]))
+  }, error = function(e) c(NA_real_, NA_real_))
 }
 
-res_011024 <- add_derived(res_011024)
-
-## Derived columns for 0524 (verification + expanded scenarios)
-add_derived_0524 <- function(df) {
-  df$h2_he    <- df$he_h2
-  df$rbeta_HE <- df$he_rg
-  df$h2_bias  <- df$h2_he - df$h2_true
-  df$rg_bias  <- df$he_rg - df$rg_true
-  df
+## ── 1. Load and merge per-seed CSVs (unchanged) ────────────────────────────
+load_vdecomp <- function(data_dir, h2_label) {
+  files <- list.files(data_dir, pattern = "_parsed\\.csv$", full.names = TRUE)
+  cat("Loading", length(files), "files from", basename(data_dir), "\n")
+  dfs <- lapply(files, function(f) { d <- read.csv(f); d$h2_param <- h2_label; d })
+  common_cols <- Reduce(intersect, lapply(dfs, names))
+  dfs <- lapply(dfs, function(d) d[, common_cols])
+  do.call(rbind, dfs)
 }
 
-res_0524 <- add_derived_0524(res_0524)
+d05  <- load_vdecomp(file.path(BASE_DIR, "data/vdecomp_lane"),     0.5)
+d025 <- load_vdecomp(file.path(BASE_DIR, "data/vdecomp_h2_0_25"), 0.25)
+common <- intersect(names(d05), names(d025))
+dat <- rbind(d05[, common], d025[, common])
+cat("Total rows:", nrow(dat), "\n")
 
-## ── 3. Figure panel data from 011024 (4 basic scenarios) ────────────────────
+## ── 2. Scenario labels (unchanged) ─────────────────────────────────────────
+dat$scenario <- NA_character_
+dat$scenario[dat$args_rmate == 0   & dat$args_theta == 0    & dat$args_kphen == 5] <- "RM"
+dat$scenario[dat$args_rmate == 0   & dat$args_theta == 0.05 & dat$args_kphen == 5] <- "RM + VT"
+dat$scenario[dat$args_rmate == 0.2 & dat$args_theta == 0    & dat$args_kphen == 2] <- "2xAM"
+dat$scenario[dat$args_rmate == 0.2 & dat$args_theta == 0.05 & dat$args_kphen == 2] <- "2xAM + VT"
+dat$scenario[dat$args_rmate == 0.2 & dat$args_theta == 0    & dat$args_kphen == 5] <- "5xAM"
+dat$scenario[dat$args_rmate == 0.2 & dat$args_theta == 0.05 & dat$args_kphen == 5] <- "5xAM + VT"
+stopifnot(!any(is.na(dat$scenario)))
+dat$scenario <- factor(dat$scenario,
+  levels = c("RM", "RM + VT", "2xAM", "2xAM + VT", "5xAM", "5xAM + VT"))
 
-target_scenarios_011024 <- c("5xAM", "5xAM + GxE", "5xAM + VT",
-                             "5xAM + VT + GxE")
-gdat <- res_011024[res_011024$scenario %in% target_scenarios_011024, ]
-cat("011024 figure data:", nrow(gdat), "rows\n")
+## ── 3. Derived columns + EXACT APPARENT (new) ──────────────────────────────
+dat$h2_he    <- dat$he_h2
+dat$rbeta_HE <- dat$he_rg
+app <- mapply(exact_app, dat$args_kphen, dat$h2_true, dat$rg_true,
+              dat$cov_g_y, dat$cov_g_y_cross)
+dat$apparent_h2_exact <- app[1, ]
+dat$apparent_rg_exact <- app[2, ]
 
-## ── 4. Summary table of h2/rg by gen and scenario (for figure) ──────────────
+## sanity check vs known values (5xAM+VT, h2=0.5, gen 5): apparent h2≈0.613, rg≈0.405
+chk <- dat[dat$scenario == "5xAM + VT" & dat$h2_param == 0.5 & dat$gen == 5, ]
+cat(sprintf("CHECK 5xAM+VT gen5: apparent h2 = %.3f (exp 0.613), apparent rg = %.3f (exp 0.405)\n",
+            mean(chk$apparent_h2_exact), mean(chk$apparent_rg_exact)))
 
-summary_stats <- aggregate(
-  gdat[, c("h2_true", "h2_he", "rg_true", "he_rg", "h2_bias", "rg_bias")],
-  gdat[, c("gen", "scenario")],
-  mean
-)
+## ── 4. h² decomposition long (Direct, Apparent, LDSC) ──────────────────────
+h2_vars <- c("h2_true", "apparent_h2_exact", "h2_he")
+h2_long <- melt(dat[, c("gen", "seed", "scenario", "h2_param", h2_vars)],
+                id.vars = c("gen", "seed", "scenario", "h2_param"),
+                variable.name = "quantity", value.name = "h2")
+h2_long$quantity <- factor(h2_long$quantity,
+  levels = c("h2_true", "apparent_h2_exact", "h2_he"),
+  labels = c("Direct h²", "Apparent h²", "LDSC h²"))
+write.csv(h2_long, file.path(OUT_DIR, "fig3_vdecomp_r5_h2_long.csv"), row.names = FALSE)
+cat("Saved fig3_vdecomp_r5_h2_long.csv:", nrow(h2_long), "rows\n")
 
-summary_medians <- aggregate(
-  gdat[, c("h2_bias", "rg_bias")],
-  gdat[, c("gen", "scenario")],
-  median
-)
-names(summary_medians)[3:4] <- c("h2_bias_median", "rg_bias_median")
+## ── 5. rg decomposition long (Direct, Apparent, LDSC) ──────────────────────
+rg_vars <- c("rg_true", "apparent_rg_exact", "rbeta_HE")
+rg_long <- melt(dat[, c("gen", "seed", "scenario", "h2_param", rg_vars)],
+                id.vars = c("gen", "seed", "scenario", "h2_param"),
+                variable.name = "quantity", value.name = "rg")
+rg_long$quantity <- factor(rg_long$quantity,
+  levels = c("rg_true", "apparent_rg_exact", "rbeta_HE"),
+  labels = c("Direct r_g", "Apparent r_g", "LDSC r_g"))
+write.csv(rg_long, file.path(OUT_DIR, "fig3_vdecomp_r5_rg_long.csv"), row.names = FALSE)
+cat("Saved fig3_vdecomp_r5_rg_long.csv:", nrow(rg_long), "rows\n")
 
-summary_all <- merge(summary_stats, summary_medians, by = c("gen", "scenario"))
-
-write.csv(summary_all, file.path(OUT_DIR, "fig3_summary.csv"), row.names = FALSE)
-cat("Saved fig3_summary.csv:", nrow(summary_all), "rows\n")
-
-## ── 5. Panel b data: h2 true vs estimated ───────────────────────────────────
-
-h2_long <- melt(gdat,
-                id.vars = c("gen", "X", "seed", "args_m", "scenario"),
-                measure.vars = c("h2_he", "h2_true"))
-
-h2_long$var_label <- as.character(h2_long$variable)
-h2_long$var_label[h2_long$variable == "h2_he"]   <- "hat(italic(h))^2"
-h2_long$var_label[h2_long$variable == "h2_true"] <- "italic(h)^2"
-h2_long$intercept <- 0.5
-
-h2_plot <- aggregate(
-  h2_long["value"],
-  h2_long[c("gen", "scenario", "variable", "var_label")],
-  function(x) c(median = quantile(x, 0.5),
-                q10 = quantile(x, 0.1),
-                q90 = quantile(x, 0.9),
-                mean = mean(x),
-                se = sd(x) / sqrt(length(x)))
-)
-h2_plot <- do.call(data.frame, h2_plot)
-names(h2_plot) <- gsub("value\\.", "", names(h2_plot))
-
-write.csv(h2_plot, file.path(OUT_DIR, "fig3_h2_plot.csv"), row.names = FALSE)
-cat("Saved fig3_h2_plot.csv:", nrow(h2_plot), "rows\n")
-
-h2_raw <- h2_long[, c("gen", "seed", "scenario", "variable", "var_label",
-                       "value", "intercept")]
-write.csv(h2_raw, file.path(OUT_DIR, "fig3_h2_raw.csv"), row.names = FALSE)
-cat("Saved fig3_h2_raw.csv:", nrow(h2_raw), "rows\n")
-
-## ── 6. Panel c data: rg true vs estimated ───────────────────────────────────
-
-rg_long <- melt(gdat,
-                id.vars = c("gen", "X", "seed", "args_m", "scenario"),
-                measure.vars = c("rbeta_HE", "rg_true"))
-
-rg_long$var_label <- as.character(rg_long$variable)
-rg_long$var_label[rg_long$variable == "rbeta_HE"] <- "hat(italic(r))[beta]"
-rg_long$var_label[rg_long$variable == "rg_true"]  <- "italic(r)[score]"
-rg_long$intercept <- 0
-
-rg_plot <- aggregate(
-  rg_long["value"],
-  rg_long[c("gen", "scenario", "variable", "var_label")],
-  function(x) c(median = quantile(x, 0.5),
-                q10 = quantile(x, 0.1),
-                q90 = quantile(x, 0.9),
-                mean = mean(x),
-                se = sd(x) / sqrt(length(x)))
-)
-rg_plot <- do.call(data.frame, rg_plot)
-names(rg_plot) <- gsub("value\\.", "", names(rg_plot))
-
-write.csv(rg_plot, file.path(OUT_DIR, "fig3_rg_plot.csv"), row.names = FALSE)
-cat("Saved fig3_rg_plot.csv:", nrow(rg_plot), "rows\n")
-
-rg_raw <- rg_long[, c("gen", "seed", "scenario", "variable", "var_label",
-                       "value", "intercept")]
-write.csv(rg_raw, file.path(OUT_DIR, "fig3_rg_raw.csv"), row.names = FALSE)
-cat("Saved fig3_rg_raw.csv:", nrow(rg_raw), "rows\n")
-
-## ── 7. Panel d data: GWAS false positive inflation (from 011024) ────────────
-
+## ── 6. GWAS FP data (unchanged copy) ───────────────────────────────────────
+orig <- read.csv(file.path(BASE_DIR, "data/sim_results/merged_tabla_redux_results_011024.csv"))
+fig3_fp_scens <- c("RM", "RM + VT", "5xAM", "5xAM + VT")
+orig_fp <- orig[orig$scenario %in% fig3_fp_scens, ]
 fp_vars <- c("sgwas_false_positives_0.05", "pgwas_false_positives_0.05")
-idvars  <- c("seed", "gen", "args_kmate", "args_rmate", "args_theta",
-             "args_phi", "args_gamma", "args_m_causal", "power", "scenario")
-
-fp_melt <- melt(res_011024[res_011024$scenario %in% target_scenarios_011024, ],
-                id.vars = idvars, measure.vars = fp_vars)
+idvars_fp <- c("seed", "gen", "args_kmate", "args_rmate", "args_theta",
+               "args_phi", "args_m_causal", "power", "scenario")
+fp_melt <- melt(orig_fp, id.vars = idvars_fp, measure.vars = fp_vars)
 fp_melt$relative_T1R <- fp_melt$value / 0.05
 fp_melt$GWAS <- ifelse(grepl("^sgwas", fp_melt$variable), "Sibship", "Population")
+write.csv(fp_melt[, c("gen", "seed", "scenario", "power", "GWAS", "relative_T1R")],
+          file.path(OUT_DIR, "fig3_vdecomp_r5_fp.csv"), row.names = FALSE)
+cat("Saved fig3_vdecomp_r5_fp.csv:", nrow(fp_melt), "rows\n")
 
-fp_melt$power_label <- paste(fp_melt$power, "power at alpha=0.05")
+## ── 7. Gen-5 summary (Direct / Apparent / LDSC) ────────────────────────────
+gen5 <- dat[dat$gen == 5, ]
+summ <- aggregate(
+  gen5[, c("h2_true", "apparent_h2_exact", "h2_he",
+           "rg_true", "apparent_rg_exact", "rbeta_HE")],
+  gen5[, c("scenario", "h2_param")], function(x) c(mean = mean(x), sd = sd(x)))
+summ <- do.call(data.frame, summ)
+write.csv(summ, file.path(OUT_DIR, "fig3_vdecomp_r5_summary.csv"), row.names = FALSE)
+cat("Saved fig3_vdecomp_r5_summary.csv:", nrow(summ), "rows\n")
 
-fp_summary <- aggregate(
-  fp_melt["relative_T1R"],
-  fp_melt[c("gen", "scenario", "power", "GWAS")],
-  function(x) c(mean = mean(x),
-                se = sd(x) / sqrt(length(x)),
-                se_1.96 = 1.96 * sd(x) / sqrt(length(x)),
-                median = median(x))
-)
-fp_summary <- do.call(data.frame, fp_summary)
-names(fp_summary) <- gsub("relative_T1R\\.", "", names(fp_summary))
-
-write.csv(fp_summary, file.path(OUT_DIR, "fig3_fp_summary.csv"), row.names = FALSE)
-cat("Saved fig3_fp_summary.csv:", nrow(fp_summary), "rows\n")
-
-fp_raw <- fp_melt[, c("gen", "seed", "scenario", "power", "GWAS",
-                       "relative_T1R")]
-write.csv(fp_raw, file.path(OUT_DIR, "fig3_fp_raw.csv"), row.names = FALSE)
-cat("Saved fig3_fp_raw.csv:", nrow(fp_raw), "rows\n")
-
-## ── 8. Cross-scenario FP averages at gen 5 (for in-text numbers) ────────────
-
-fp_gen5 <- fp_melt[fp_melt$gen == 5 & fp_melt$GWAS == "Population", ]
-
-fp_gen5_all <- aggregate(relative_T1R ~ scenario, data = fp_gen5, FUN = mean)
-names(fp_gen5_all)[2] <- "fp_rate_all_power"
-
-fp_gen5_bypower <- dcast(fp_gen5, scenario ~ power,
-                         value.var = "relative_T1R", fun.aggregate = mean)
-
-fp_gen5_merged <- merge(fp_gen5_all, fp_gen5_bypower, by = "scenario")
-
-write.csv(fp_gen5_merged, file.path(OUT_DIR, "fig3_fp_gen5.csv"), row.names = FALSE)
-cat("Saved fig3_fp_gen5.csv:", nrow(fp_gen5_merged), "rows\n")
-
-## ── 9. Verification data from 0524 (ALL manuscript numbers) ─────────────────
-## The 0524 dataset has scenario names like "5xAM + VT (5%)" etc.
-
-## Scenarios needed for verification (P46 + P48)
-verify_scenarios_0524 <- c("5xAM", "5xAM + VT (5%)", "5xAM + VT (5%) + GxE (5%)",
-                           "5xAM + GxE (5%)",
-                           "5xAM + VT (20%)", "5xAM + VT (20%) + GxE (5%)",
-                           "5xAM + VT (20%) + GxE (20%)",
-                           "5xAM + VT (5%) + GxE (20%)",
-                           "5xAM + GxE (20%)")
-vdat <- res_0524[res_0524$scenario %in% verify_scenarios_0524, ]
-cat("0524 verify data:", nrow(vdat), "rows across",
-    length(unique(vdat$scenario)), "scenarios\n")
-
-## Gen 5 summary for verification
-vgen5 <- vdat[vdat$gen == 5, ]
-verify_data <- aggregate(
-  vgen5[, c("h2_true", "h2_he", "rg_true", "he_rg", "h2_bias", "rg_bias")],
-  vgen5[, "scenario", drop = FALSE],
-  function(x) c(mean = mean(x), median = median(x))
-)
-verify_data <- do.call(data.frame, verify_data)
-names(verify_data) <- gsub("\\.mean", "_mean", gsub("\\.median", "_median", names(verify_data)))
-
-## Gen 0 for initial conditions
-vgen0 <- vdat[vdat$gen == 0, ]
-verify_gen0 <- aggregate(
-  vgen0[, c("h2_true", "h2_he")],
-  vgen0[, "scenario", drop = FALSE],
-  mean
-)
-names(verify_gen0)[2:3] <- c("h2_true_gen0", "h2_he_gen0")
-
-verify_merged <- merge(verify_data, verify_gen0, by = "scenario")
-
-write.csv(verify_merged, file.path(OUT_DIR, "fig3_verify_0524.csv"), row.names = FALSE)
-cat("Saved fig3_verify_0524.csv:", nrow(verify_merged), "rows\n")
-
-## ── 10. P48 expanded scenarios from 0524 ────────────────────────────────────
-## VT(20%) and GxE(20%) scenarios for the expanded comparison table
-
-p48_scenarios <- c("5xAM",
-                   "5xAM + VT (5%)", "5xAM + VT (20%)",
-                   "5xAM + GxE (5%)", "5xAM + GxE (20%)",
-                   "5xAM + VT (5%) + GxE (5%)",
-                   "5xAM + VT (5%) + GxE (20%)",
-                   "5xAM + VT (20%) + GxE (5%)",
-                   "5xAM + VT (20%) + GxE (20%)")
-
-p48dat <- res_0524[res_0524$scenario %in% p48_scenarios, ]
-
-## Summary by gen and scenario
-p48_stats <- aggregate(
-  p48dat[, c("h2_true", "h2_he", "rg_true", "he_rg", "h2_bias", "rg_bias")],
-  p48dat[, c("gen", "scenario")],
-  mean
-)
-
-p48_medians <- aggregate(
-  p48dat[, c("h2_bias", "rg_bias")],
-  p48dat[, c("gen", "scenario")],
-  median
-)
-names(p48_medians)[3:4] <- c("h2_bias_median", "rg_bias_median")
-
-p48_all <- merge(p48_stats, p48_medians, by = c("gen", "scenario"))
-
-write.csv(p48_all, file.path(OUT_DIR, "fig3_p48_expanded.csv"), row.names = FALSE)
-cat("Saved fig3_p48_expanded.csv:", nrow(p48_all), "rows\n")
-
-cat("\n=== process_fig3.R complete ===\n")
+cat("\n=== process_fig3_vdecomp_r5.R complete ===\n")

@@ -1,175 +1,91 @@
-# Complete Figure & Analysis Inventory
+# Figure & Table → Code Inventory
 
-## Data Availability Summary
+Every figure and table in the manuscript "Simple models of non-random mating and
+environmental transmission bias standard human genetics statistical methods"
+(Border et al.) mapped to the script that produces it.
 
-### Available Locally (Dropbox)
-| File | Location | Used By |
-|------|----------|---------|
-| merged_tabla_redux_results_011024.csv | ftsim/manu/ | Fig 1 (mFigComplexity), Fig 3 (mFigHDxAM), S5-S16 (sFigComplexityExtra), S17 (mFigSibComp) |
-| merged_res_redux_120725.csv | ftsim/ak_resp/ | Revision figs: fig_cn_updated.R, fig_variance_decomp.R |
-| corrnoise_res_120925.csv | ftsim/ak_resp/ | fig_cn_updated.R (CN=0.2) |
-| corrnoise1_res_120925.csv | ftsim/ak_resp/ | fig_cn_updated.R (CN=0.1) |
-| psychHEres.csv | ftsim/manu/simulations/ | Fig 2 (mFigPsych) |
-| psychHEres2way.csv | ftsim/manu/simulations/ | Fig 2 |
-| psychHEres6way.csv | ftsim/manu/simulations/ | Fig 2 |
-| psych2way_gwas.csv | ftsim/manu/simulations/ | Fig 2 |
-| psych6way_gwas.csv | ftsim/manu/simulations/ | Fig 2 |
-| psych6coloc.csv | ftsim/manu/simulations/ | Fig 2 |
-| psych6coloc_trait_wise.csv | ftsim/manu/simulations/ | Fig 2 |
-| edu_res/*_parsed.csv (100 files) | ftsim/manu/simulations/edu_res/ | Fig 4 (mFigEdu) |
-| cca_table_dat.rdata | ftsim/manu/ | Fig 1a (CCA loadings heatmap) |
-| imp_cca.Rdata | ftsim/manu/ | sFig_cca (S3-S4 CCA scree) |
-| taiwan_mate_r.csv | ftsim/manu/figure_nb/ | Fig 1b (Taiwan NHIRD CCA) |
-| taiwan_mate_se.csv | ftsim/manu/figure_nb/ | Fig 1b |
-| taiwan_mate_r_nonan.csv | ftsim/manu/figure_nb/ | Fig 1b |
-| danish_xmate.csv | Dropbox/rhog_am/ | Fig 1b (Danish comparison) |
-| nhird_cors.csv | round4/xftmanu_code_supplement/ | NHIRD CCA analysis |
-| psych_cors.csv | round4/xftmanu_code_supplement/ | Psychiatric sim parameters |
-| mathematica_sim.csv | ftsim/manu/ | S8 (theoretical validation) |
-| mathematica_sim_prec.csv | ftsim/manu/ | S9-S12 (theoretical predictions) |
-| gwas_fp.csv | ftsim/manu/ | S8 (observed GWAS FP rates) |
-| gen_sims_gwas_auc.csv | ftsim/manu/ | Supplementary GWAS AUC |
-| cdiags/*.svg, *.pdf | ftsim/manu/cdiags/ | Fig 1a, Fig 3a schematic diagrams |
-| edu_cdiag_redux.png | ftsim/manu/figures/ | Fig 4a schematic |
-| psych_parsed/*.csv | ftsim/manu/psych_parsed/ | Psychiatric parsing intermediate |
-| impmice_av_xcor.Rdata | ftsim/manu/ | CCA supplementary |
-| impmice_full_xcor.Rdata | ftsim/manu/ | CCA supplementary |
-| pcs_cca.Rdata | ftsim/manu/ | CCA supplementary |
-| pcs_imp_cca.Rdata | ftsim/manu/ | CCA supplementary |
-| xmate_correlations.csv | ftsim/manu/tables/ | Table S3 |
+Pipeline convention: `process_*` loads raw simulation/data and writes intermediate
+CSVs to `processed/`; `verify_*` prints the in-text numbers for comparison; `plot_*`
+reads `processed/` and writes the figure. Simulation **data** are distributed
+separately and are not stored in this repository (see `REPRODUCTION_README.md` → Data).
 
-### Recovered from coyote (now in data/)
-| File | Local Path | Used By |
-|------|-----------|---------|
-| corrnoise CN=0.4, 0.8 CSVs (200 files) | data/corrnoise/ | fig_cn_updated.R |
-| timing_*.json benchmarks (55 files) | data/benchmarks/ | fig_benchmarks.R |
-| timing_all_clean.jsonl | data/timing_all_clean.jsonl | fig_benchmarks_v2.R |
-| h2_025 CSVs (200 files) | data/h2_025/ | fig_h2_025.R |
-| merged_tabla_redux_results_0524.csv | data/sim_results/ | P46/P48 numbers, S13-S16, Table S5 |
+## Main figures
 
-### Not currently accessible (user has location)
-| File | Figures | Notes |
-|------|---------|-------|
-| CDEF ascertainment estimators (testing_CDEF_072724/) | S18-S20 | User knows location |
-| CDEF sib-diff estimators (testing_CDEF_080524/) | S23-S24 | User knows location |
-| edu_no_CD_LS.01/ raw simulation output | Fig 4 full reproduction | Notebook cache used as reference |
+| Figure | Content | Script(s) |
+|--------|---------|-----------|
+| Fig 1 | Dimensionality of cross-mate correlations (CCA) and its simulation consequences: heritability, genetic correlation, and type-I error under 2× vs 5× xAM; analytic on/off-target associations | `process_fig1.R`, `verify_fig1.R`, `plot_fig1.R` |
+| Fig 2 | Psychiatric-disorder simulations: genetic-correlation inflation under multivariate xAM | `process_fig2.R`, `verify_fig2.R`, `plot_fig2.R` |
+| Fig 3 | Variance decomposition — direct, apparent, and estimated (LDSC) heritability and genetic correlation across RM / RM+VT / 5×AM / 5×AM+VT, with GWAS false-positive inflation | `process_fig3.R`, `plot_fig3.R` |
+| Fig 4 | Education/height/wealth: joint architecture, heritability and PGI R², genetic correlations, GWAS effect correlations | `process_fig4.R`, `verify_fig4.R`, `plot_fig4.R` |
 
----
+## Extended Data figures
 
-## Figure-to-Code Mapping
+| Figure | Content | Script(s) |
+|--------|---------|-----------|
+| ED 1 | Genetic-correlation estimates under xAM at cross-mate correlations 0.1 vs 0.2 | `plot_sfig_sensitivity.R` |
+| ED 2 | Genetic-correlation estimates under unidimensional xAM, fixed latent correlation | `plot_sfig_sensitivity.R` |
+| ED 3 | Theoretical vs observed type-I error rates at off-target loci | `plot_sfig_theory_gxe.R` |
+| ED 4 | Variance decomposition at h² = 0.25 (mirrors Fig 3b–c) | `plot_edfig4.R` (data from `process_fig3.R`) |
+| ED 5 | Sensitivity of the decomposition to vertical-transmission structure (h² = 0.5) | `process_continuum.R`, `plot_continuum.R` |
+| ED 6 | Direct and estimated heritability across successive generations of 5-variate xAM | `process_sfig_theory_gxe.R`, `plot_sfig_theory_gxe.R` |
+| ED 7 | Direct-PGI correlation and estimated effect correlation across generations | `process_sfig_theory_gxe.R`, `plot_sfig_theory_gxe.R` |
+| ED 8 | Population vs within-sibship GWAS | `process_sfig_sibcomp.R`, `verify_sfig_sibcomp.R`, `plot_sfig_sibcomp.R` |
+| ED 9 | Relative difference between LATE and ATE, single variant (linear scale) | `sibdiff.nb` (Mathematica symbolic) |
+| ED 10 | Sensitivity of genetic-correlation estimates to within-person (correlated) noise | `process_cn.R`, `verify_cn.R`, `plot_cn.R` |
 
-### Main Figures
+## Supplementary figures
 
-#### Figure 1: Dimensionality of cross-mate correlations + simulation consequences
-| Panel | Content | Source Notebook | Data Files |
-|-------|---------|-----------------|------------|
-| a | CCA cross-loadings heatmap (UKB) | mFigComplexity.ipynb → mFigHDxAM.ipynb | cca_table_dat.rdata |
-| b | CCA scree plot (UKB + Taiwan NHIRD) | mFigHDxAM.ipynb + taiwan cca.ipynb | cca_table_dat.rdata, taiwan_mate_r.csv, nhird_cors.csv |
-| c | True vs estimated h2, 2xAM vs 5xAM | mFigHDxAM.ipynb | merged_tabla_redux_results_011024.csv |
-| d | True vs estimated rg, 2xAM vs 5xAM | mFigHDxAM.ipynb | merged_tabla_redux_results_011024.csv |
-| e | GWAS type-I error inflation | mFigHDxAM.ipynb | merged_tabla_redux_results_011024.csv |
-| f | On-target vs off-target associations (analytic) | mFigNewComplexity.ipynb | mathematica_sim_prec.csv |
-**STATUS: ALL DATA AVAILABLE**
+| Figure | Content | Script(s) |
+|--------|---------|-----------|
+| S1 | Multivariate vs multidimensional linear mating (synthetic CCA) | `plot_sfig_cca.R` |
+| S2 | Canonical correlation analysis of univariate nonlinear mating (synthetic) | `plot_sfig_cca.R` |
+| S3 | Cross-mate CCA scree, predictive-mean-matching multiple imputation | `plot_sfig_cca.R` |
+| S4 | Cross-mate CCA scree, alternative (random-forest) imputation | `plot_sfig_cca.R` |
+| S5 | Incremental on- vs off-target associations as a function of sample size | `plot_sfig_analytic.R` |
+| S6 | Type-I error inflation as a function of sample size (off-target, multivariate xAM) | `plot_sfig_analytic.R` |
+| S7 | On- vs off-target associations vs sample size after five generations | `plot_sfig_analytic.R` |
+| S8 | Expected false-positive rate by off-target effect magnitude and sample size | `plot_sfig_analytic.R` |
+| S9 | Direct and estimated heritability across generations (alternative presentation of ED 6) | `process_sfig_theory_gxe.R`, `plot_sfig_theory_gxe.R` |
+| S10 | Direct-PGI / estimated-effect correlation across generations (alternative presentation of ED 7) | `process_sfig_theory_gxe.R`, `plot_sfig_theory_gxe.R` |
+| S11 | Relative type-I error inflation, within-sibship vs population GWAS | `plot_sfig_sibcomp.R` |
+| S12 | Within-sibship vs population GWAS slope correlation, representative vs ascertained samples | ascertainment estimators — data not yet accessible |
+| S13 | Bias in within-sibship vs population GWAS slopes, representative vs ascertained samples | ascertainment estimators — data not yet accessible |
+| S14 | VT / G×E-induced bias of sibling-difference GWAS-derived PGI | sib-difference estimators — data not yet accessible |
+| S15 | True ATE PGI vs true individual-specific PGI | `test_sib_diff` (sib-difference estimators — data not yet accessible) |
+| S16 | Computational performance of xftsim (runtime and memory scaling) | `process_benchmarks.R`, `verify_benchmarks.R`, `plot_benchmarks.R` |
+| S17 | Decomposition sensitivity to VT structure at h² = 0.25 (companion to ED 5) | `process_continuum.R`, `plot_continuum.R` |
+| S18 | Relative difference between LATE and ATE, single variant (log scale) | `sibdiff.nb` (Mathematica symbolic) |
 
-#### Figure 2: Psychiatric disorder simulations
-| Panel | Content | Source Notebook | Data Files |
-|-------|---------|-----------------|------------|
-| a | Genetic correlation heatmaps (2way vs 6way) | mFigPsych.ipynb | psychHEres.csv, psychHEres2way.csv, psychHEres6way.csv |
-| b | Gamma ratio (rg_xAM / rg_empirical) | mFigPsych.ipynb | same |
-| c | Prevalence trajectories | mFigPsych.ipynb | same |
-**STATUS: ALL DATA AVAILABLE**
+## Tables
 
-#### Figure 3: xAM + VT + GxE
-| Panel | Content | Source Notebook | Data Files |
-|-------|---------|-----------------|------------|
-| a | Generative model schematic | mFigComplexity.ipynb | cdiags/*.svg |
-| b | True vs estimated h2 across scenarios | mFigComplexity.ipynb | merged_tabla_redux_results_011024.csv |
-| c | True vs estimated rg across scenarios | mFigComplexity.ipynb | merged_tabla_redux_results_011024.csv |
-| d | GWAS false positive inflation | mFigComplexity.ipynb | merged_tabla_redux_results_011024.csv |
-**STATUS: ALL DATA AVAILABLE**
+| Table | Content | Script(s) |
+|-------|---------|-----------|
+| Table 1 | xftsim capabilities | static text |
+| S1 | Phenotype definitions | `pheno_defn_supplement.r` |
+| S2 | Cross-mate canonical correlation analysis results | `process_tables.R`, `verify_tables.R` |
+| S3 | Cross-mate correlations (UK Biobank) | `process_tables.R`, `verify_tables.R` |
+| S4 | Cross-mate correlations (Taiwan NHIRD) | `nhird_cca.r` |
+| S5 | Median true and estimated variance components (generation 0 vs 5) | `process_tables.R`, `verify_tables.R` |
+| S6 | Phenotype-agnostic simulation model parameters | static text |
+| S7 | VT-structure continuum: variance decomposition at generation 5 | `make_supp_tables.py` |
+| S8 | Main-scenario variance decomposition at generation 5 | `make_supp_tables.py` |
 
-#### Figure 4: Education/height/wealth
-| Panel | Content | Source Notebook | Data Files |
-|-------|---------|-----------------|------------|
-| a | Joint architecture schematic | mFigEdu.ipynb | figures/edu_cdiag_redux.png |
-| b | h2 and PGI R2 across generations | mFigEdu.ipynb | edu_res/*_parsed.csv (in manu/simulations/edu_res/) |
-| c | True vs estimated genetic correlations | mFigEdu.ipynb | same |
-| d | GWAS beta correlations | mFigEdu.ipynb | same |
-**STATUS: Raw data (edu_no_CD_LS.01) not accessible. Notebook cached outputs used as reference tables. edu_sims/ contains a DIFFERENT model (h2_edu=0) and cannot reproduce manuscript numbers.**
+## Simulation drivers (Python)
 
----
+| Script | Produces |
+|--------|----------|
+| `general_simulations.py` | Core complex-architecture sims feeding Fig 1, Fig 3, and most Extended Data / Supplementary figures |
+| `vt_structure_sims.py` | Vertical-transmission-structure continuum sims (Fig 3, ED 5, S17, Tables S7/S8) |
+| `compute_apparent.py` | Best-linear-predictor ("apparent") decomposition from saved phenotypes |
+| `aggregate_vt.py` | Aggregation of continuum sim replicates across seeds |
+| `psychiatric_sims.py` | Psychiatric-disorder sims (Fig 2) |
+| `ascertainment_sims.py` | Ascertainment-design sims (Supp S12–S14) |
+| `ey_sim.py` | Education/height/wealth sims (Fig 4) |
 
-### Supplementary Figures
+## Notes
 
-| Figure | Content | Source | Data | Status |
-|--------|---------|--------|------|--------|
-| S1 | Multivariate vs multidimensional mating (synthetic) | sFig_cca.ipynb | Generated synthetically | COMPLETE (process/verify/plot_sfig_cca.R) |
-| S2 | Nonlinear mating CCA (synthetic) | sFig_cca.ipynb | Generated synthetically | COMPLETE |
-| S3 | CCA scree (PMM MICE imputed) | sFig_cca.ipynb | mice_imputed_cca_final.rdata | COMPLETE (place in data/cca/ or set CCA_DATA_DIR) |
-| S4 | CCA scree (RF miceRanger imputed) | sFig_cca.ipynb | mice_imputed_cca_final_rf.rdata | COMPLETE (place in data/cca/ or set CCA_DATA_DIR) |
-| S5 | rg under xAM r=0.1 | sFigComplexityExtra.ipynb | merged_tabla_redux_results_011024.csv | COMPLETE (process/verify/plot_sfig_sensitivity.R) |
-| S6 | rg under unidim xAM, fixed latent | sFigComplexityExtra.ipynb / FigSX_reconstruction.R | merged_res_redux_120725.csv | COMPLETE |
-| S7 | Sensitivity to correlated noise | fig_cn_updated.R | merged_res_redux_120725.csv + corrnoise CSVs | AVAILABLE (all CN levels recovered from coyote) |
-| S8 | Theory vs observed GWAS validation | sFigComplexityExtra.ipynb | gwas_fp.csv, mathematica_sim.csv | COMPLETE (process/verify/plot_sfig_theory_gxe.R) |
-| S9 | Incremental on/off-target associations | mFigNewComplexity.ipynb | newhits.rdata | COMPLETE (process/verify/plot_sfig_analytic.R) |
-| S10 | Type-I error vs sample size | mFigNewComplexity.ipynb | powerSims2.rdata | COMPLETE |
-| S11 | Cumulative on/off-target associations | mFigNewComplexity.ipynb | powerSims3.rdata | COMPLETE |
-| S12 | FP rate by effect magnitude | mFigNewComplexity.ipynb | merged_tabla + analytic computation | COMPLETE |
-| S13 | h2 under xAM + GxE + VT (GxE rows) | sFigComplexityExtra.ipynb | merged_tabla_redux_results_0524.csv | AVAILABLE (uses 0524 for full 3x3 grid) |
-| S14 | h2 under xAM + GxE + VT (VT rows) | sFigComplexityExtra.ipynb | merged_tabla_redux_results_0524.csv | AVAILABLE |
-| S15 | rg under xAM + GxE + VT (VT rows) | sFigComplexityExtra.ipynb | merged_tabla_redux_results_0524.csv | AVAILABLE |
-| S16 | PGI correlation under xAM + GxE + VT | sFigComplexityExtra.ipynb | merged_tabla_redux_results_0524.csv | AVAILABLE |
-| S17 | Population vs sibship GWAS | mFigSibComp.ipynb | merged_tabla_redux_results_011024.csv | COMPLETE (process/verify/plot_sfig_sibcomp.R) |
-| S18 | Sibship vs pop GWAS: ascertained (T1E) | sFig_ascertainment_sim_res.ipynb | testing_CDEF_072724/estimators* | PENDING ACCESS |
-| S19 | Sibship vs pop GWAS: ascertained (slope corr) | sFig_ascertainment_sim_res.ipynb | testing_CDEF_072724/* | PENDING ACCESS |
-| S20 | Sibship vs pop GWAS: ascertained (bias) | sFig_ascertainment_sim_res.ipynb | testing_CDEF_072724/* | PENDING ACCESS |
-| S21 | LATE vs ATE single variant (linear) | test_sib_diff.ipynb / sibdiff.nb | Mathematica symbolic computation | AVAILABLE (analytic) |
-| S22 | LATE vs ATE single variant (log scale) | test_sib_diff.ipynb / sibdiff.nb | Mathematica symbolic computation | AVAILABLE (analytic) |
-| S23 | VT+GxE bias of sib-GWAS PGI | test_sib_diff.ipynb | testing_CDEF_080524/estimators* | PENDING ACCESS |
-| S24 | ATE-PGI vs individual-specific PGI | test_sib_diff.ipynb | testing_CDEF_080524/estimators* | PENDING ACCESS |
-
-### Revision-Specific Figures (new for round 4)
-| Figure | Content | Source | Data | Status |
-|--------|---------|--------|------|--------|
-| Variance decomp | h2 decomposition (3 quantities) | fig_variance_decomp.R | merged_res_redux_120725.csv | COMPLETE (*_figR_variance_decomp.R) |
-| Benchmarks | Computational scaling | fig_benchmarks_v2.R | timing_all_clean.jsonl | COMPLETE (*_figR_benchmarks.R) |
-| h2=0.25 | Low-h2 sensitivity | fig_h2_025.R | data/h2_025/*.csv | COMPLETE (*_figR_h2_025.R) |
-| CN updated | Correlated noise extended | fig_cn_updated.R | corrnoise CSVs | COMPLETE (*_figR_cn.R) |
-
----
-
-### Tables
-
-| Table | Content | Source | Data | Status |
-|-------|---------|--------|------|--------|
-| Table 1 | xftsim capabilities | Static text | N/A | N/A (text only) |
-| Table S1 | Phenotype definitions | pheno_defn_supplement.r | UK Biobank fields | N/A (documentation) |
-| Table S2 | CCA results | final_cca.R / cca_table_dat.rdata | cca_table_dat.rdata | AVAILABLE |
-| Table S3 | Cross-mate correlations (UKB) | final_cca.R | xmate_correlations.csv | AVAILABLE |
-| Table S4 | Cross-mate correlations (NHIRD) | nhird_cca.r | nhird_cors.csv | AVAILABLE |
-| Table S5 | Variance components summary | sFigComplexityExtra.ipynb | merged_tabla_redux_results_0524.csv | AVAILABLE (needs 0524 for VT 20% / GxE 20% rows) |
-| Table S6 | Simulation parameters | Static text | N/A | N/A (text only) |
-
----
-
-## Source Notebook to Script Mapping
-
-| Original Notebook | Location | Figures |
-|-------------------|----------|---------|
-| mFigComplexity.ipynb | ftsim/manu/figure_nb/ | Fig 3 (panels a-d) |
-| mFigHDxAM.ipynb | ftsim/manu/figure_nb/ | Fig 1 (panels a-e) |
-| mFigNewComplexity.ipynb | ftsim/manu/figure_nb/ | Fig 1f, S9-S12 |
-| mFigPsych.ipynb | ftsim/manu/figure_nb/ | Fig 2 (panels a-c) |
-| mFigEdu.ipynb | ftsim/manu/figure_nb/ | Fig 4 (panels a-d) |
-| sFig_cca.ipynb | ftsim/manu/figure_nb/ | S1-S4 |
-| sFigComplexityExtra.ipynb | ftsim/manu/figure_nb/ | S5-S6, S8, S13-S16 |
-| mFigSibComp.ipynb | ftsim/manu/figure_nb/ | S17 |
-| sFig_ascertainment_sim_res.ipynb | ftsim/manu/figure_nb/ | S18-S20 |
-| test_sib_diff.ipynb | ftsim/manu/figure_nb/ | S21-S24 |
-| taiwan cca.ipynb | ftsim/manu/figure_nb/ | Fig 1b (NHIRD part) |
-| FigSX_reconstruction.R | ftsim/ak_resp/ | S5-S7 (revision versions) |
-| fig_cn_updated.R | round4/revision_sims/figures/ | S7 (updated CN) |
-| fig_variance_decomp.R | round4/revision_sims/figures/ | Variance decomposition |
-| fig_benchmarks_v2.R | round4/revision_sims/figures/ | Benchmark scaling |
-| fig_h2_025.R | round4/revision_sims/figures/ | Low-h2 sensitivity |
-| sibdiff.nb | xftmanu_code_supplement/ | S21-S22 (symbolic math) |
+- **Data not yet accessible:** S12–S15 depend on CDEF ascertainment / sibling-difference
+  estimator outputs whose source the authors retain but which are not on current machines.
+- **Mathematica:** ED 9 / S18 are symbolic computations in `sibdiff.nb`.
+- **Fig 4 raw data** (`edu_no_CD_LS.01/`) is not accessible; the plot uses cached
+  reference tables from the analysis notebook (see `REPRODUCTION_README.md`).

@@ -1,6 +1,6 @@
 # Manuscript Figure Reproduction Suite
 
-Standalone scripts to reproduce every figure and in-text number in the manuscript
+Scripts to reproduce every figure, table, and in-text number in the manuscript
 "Simple models of non-random mating and environmental transmission bias standard
 human genetics statistical methods" (Border et al.).
 
@@ -45,7 +45,7 @@ and re-run plots without re-processing data.
 |------|------|-----------|----------|
 | `merged_tabla_redux_results_011024.csv` | 70MB | 2xAM, 5xAM, 5xAM+VT, 5xAM+GxE, 5xAM+VT+GxE, RM, RM+VT | Fig 1 (panels c-e), Fig 3 (panels b-d), S5-S6, S17 |
 | `merged_tabla_redux_results_0524.csv` | 198MB | Same + VT(20%), GxE(20%), all VT×GxE combos | P46/P48 in-text numbers, S13-S16, Table S5 |
-| `merged_res_redux_120725.csv` | 29MB | 5xAM.1, 5xAM.2, +VT, +GxE variants | Revision figs (variance decomp, CN baseline, S5-S6 sensitivity) |
+| `merged_res_redux_120725.csv` | 29MB | 5xAM.1, 5xAM.2, +VT, +GxE variants | ED 1/2 sensitivity, ED 10 correlated-noise baseline |
 
 **Key distinction:** The 011024 file has ~750 seeds per scenario with only VT(5%)/GxE(5%).
 The 0524 file has ~950 seeds and includes VT(20%)/GxE(20%). The manuscript body text
@@ -104,7 +104,7 @@ Script located at: `ftsim/manu/simulations/edu_experiment_no_CD_linear.py`
 
 Source: `/home/rsb/Dropbox/ftsim/manu/figure_nb/` (Rdata files) and `/home/rsb/Dropbox/ftsim/manu/` (CSVs)
 
-### Revision-Specific Data (from PSC via coyote)
+### Cluster-computed simulation outputs
 
 | Directory | Files | Content |
 |-----------|-------|---------|
@@ -112,69 +112,21 @@ Source: `/home/rsb/Dropbox/ftsim/manu/figure_nb/` (Rdata files) and `/home/rsb/D
 | `benchmarks/` | 55 JSONs | xftsim computational timing data |
 | `h2_025/` | 200 CSVs | h2=0.25 sensitivity analysis |
 | `timing_all_clean.jsonl` | 1 file | Consolidated timing (130 records) |
+| VT-structure decomposition sims | per-seed CSVs | Fig 3, ED 4/5, S17, Tables S7/S8 (from `vt_structure_sims.py`; distributed separately) |
 
 ## Script Inventory
 
-### Main Figures
+See **`FIGURE_INVENTORY.md`** for the complete, figure-by-figure map of every main,
+Extended Data, and Supplementary figure and table to its producing script(s).
 
-| Figure | Process | Verify | Plot | Status |
-|--------|---------|--------|------|--------|
-| Fig 1 (CCA + 2xAM vs 5xAM) | `process_fig1.R` | `verify_fig1.R` | `plot_fig1.R` | 15/15 numbers verified |
-| Fig 2 (psychiatric disorders) | `process_fig2.R` | `verify_fig2.R` | `plot_fig2.R` | 9/9 verified (2xAM/6xAM label swap noted) |
-| Fig 3 (xAM + VT + GxE) | `process_fig3.R` | `verify_fig3.R` | `plot_fig3.R` | All verified (uses both 011024 + 0524) |
-| Fig 4 (edu/height/wealth) | `process_fig4.R` | `verify_fig4.R` | `plot_fig4.R` | Verified against notebook cache |
+Each figure follows the `process_* -> verify_* -> plot_*` convention where applicable
+(`verify_*` prints the in-text numbers; some figures have only `process_*`/`plot_*`).
 
-### Supplementary Figures
-
-| Supp Fig | Description | Scripts | Output | Status |
-|----------|-------------|---------|--------|--------|
-| S1 | Multivariate vs multidimensional mating (synthetic) | `*_sfig_cca.R` | `sfig_s1_mating_cca.pdf` | Complete |
-| S2 | Nonlinear mating CCA (synthetic) | `*_sfig_cca.R` | `sfig_s2_nonlinear_cca.pdf` | Complete |
-| S3 | CCA scree (MICE PMM imputed) | `*_sfig_cca.R` | `sfig_s3_cca_scree.pdf` | Complete |
-| S4 | CCA scree (RF miceRanger imputed) | `*_sfig_cca.R` | `sfig_s4_cca_scree_rf.pdf` | Complete (place data in data/cca/ or set CCA_DATA_DIR) |
-| S5 | rg under xAM with r=0.1 vs r=0.2 | `*_sfig_sensitivity.R` | `sfig_s5_rg_sensitivity.pdf` | Complete |
-| S6 | rg under unidim xAM, fixed latent corr | `*_sfig_sensitivity.R` | `sfig_s6_fixed_latent.pdf` | Complete |
-| S7 | Sensitivity to correlated noise (updated) | `*_figR_cn.R` | `figR_cn.pdf` | Complete |
-| S8 | Theory vs observed GWAS validation | `*_sfig_theory_gxe.R` | `sfig_s8_theory_validation.pdf` | Complete |
-| S9 | Incremental on/off-target associations | `*_sfig_analytic.R` | `sfig_s9_incremental_hits.pdf` | Complete |
-| S10 | Type-I error vs sample size | `*_sfig_analytic.R` | `sfig_s10_t1e_inflation.pdf` | Complete |
-| S11 | Cumulative on/off-target associations | `*_sfig_analytic.R` | `sfig_s11_cumulative_hits.pdf` | Complete |
-| S12 | FP rate by effect magnitude | `*_sfig_analytic.R` | `sfig_s12_persnp_t1e.pdf` | Complete |
-| S13 | h2 under GxE×VT grid (GxE rows) | `*_sfig_theory_gxe.R` | `sfig_s13_h2_gxe_grid.pdf` | Complete (uses 0524 data) |
-| S14 | h2 under GxE×VT grid (VT rows) | `*_sfig_theory_gxe.R` | `sfig_s14_h2_vt_grid.pdf` | Complete |
-| S15 | rg under GxE×VT grid | `*_sfig_theory_gxe.R` | `sfig_s15_rg_gxe_grid.pdf` | Complete |
-| S16 | PGI corr under GxE×VT grid | `*_sfig_theory_gxe.R` | `sfig_s16_pgi_gxe_grid.pdf` | Complete |
-| S17 | Pop vs sibship GWAS | `*_sfig_sibcomp.R` | `sfig_s17_sibcomp_combined.pdf` | Complete |
-| S18 | Sib vs pop GWAS under ascertainment (T1E) | — | — | Data not accessible |
-| S19 | Sib vs pop GWAS under ascertainment (slope) | — | — | Data not accessible |
-| S20 | Sib vs pop GWAS under ascertainment (bias) | — | — | Data not accessible |
-| S21 | LATE vs ATE single variant (linear) | — | — | Mathematica symbolic computation (`sibdiff.nb`) |
-| S22 | LATE vs ATE single variant (log scale) | — | — | Same |
-| S23 | VT+GxE bias of sib-GWAS PGI | — | — | Data not accessible |
-| S24 | ATE-PGI vs individual-specific PGI | — | — | Data not accessible |
-
-`*_` prefix means `process_`, `verify_`, and `plot_` variants all exist.
-
-### Tables
-
-| Table | Description | Scripts | Status |
-|-------|-------------|---------|--------|
-| Table 1 | xftsim capabilities | — | Static text, no data |
-| Table S1 | Phenotype definitions | — | Static text, no data |
-| Table S2 | Cross-mate CCA results | `process_tables.R`, `verify_tables.R` | Complete |
-| Table S3 | Cross-mate correlations (UKB) | `process_tables.R`, `verify_tables.R` | Complete |
-| Table S4 | Cross-mate correlations (NHIRD) | `process_tables.R`, `verify_tables.R` | Complete |
-| Table S5 | Variance components summary | `process_tables.R`, `verify_tables.R` | Complete (uses 0524 data) |
-| Table S6 | Simulation parameters | — | Static text, no data |
-
-### Revision Figures (new for round 4 reviewer response)
-
-| Figure | Description | Scripts (`*_figR_...`) | Output | Status |
-|--------|-------------|----------------------|--------|--------|
-| Variance decomp | h2 decomposition: panmictic vs true vs estimated | `*_variance_decomp.R` | `figR_variance_decomp.pdf` | Complete |
-| S7 (updated) | Correlated noise sensitivity (5 CN levels) | `*_cn.R` | `figR_cn.pdf` | Complete |
-| Benchmarks | xftsim computational scaling | `*_benchmarks.R` | `figR_benchmarks.pdf` | Complete |
-| h2=0.25 | Low-heritability sensitivity (mirrors Fig 3b-d) | `*_h2_025.R` | `figR_h2_025.pdf` | Complete |
+Availability caveats:
+- **S12-S15** require CDEF ascertainment / sibling-difference estimator outputs not on
+  current machines (the authors retain the source locations).
+- **ED 9 / S18** are symbolic computations in `sibdiff.nb` (require Mathematica).
+- **Fig 4** raw simulation data is not accessible; cached notebook reference tables are used.
 
 ## Still Missing
 
