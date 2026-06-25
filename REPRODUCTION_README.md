@@ -134,17 +134,17 @@ Availability caveats:
 
 | Item | Figures | Location | Notes |
 |------|---------|----------|-------|
-| CDEF ascertainment estimators | S18-S20 | Not on local machines or coyote | User knows location; not currently accessible |
-| CDEF sib-diff estimators | S23-S24 | Same | Same |
+| CDEF ascertainment estimators | S12-S13 | Not on local machines or coyote | User knows location; not currently accessible |
+| CDEF sib-diff estimators | S14-S15 | Same | Same |
 | edu_no_CD_LS.01 raw data | Fig 4 (full reproduction) | Originally ~/data/edu_no_CD_LS.01/ | Notebook cache used instead |
 
 ### Figures without scripts yet
 
 | Figure | Blocking issue | What's needed |
 |--------|---------------|---------------|
-| S18-S20 | Data | Copy CDEF ascertainment estimators into `data/` once accessible |
-| S21-S22 | Tooling | Requires Mathematica to run `sibdiff.nb` symbolic computation |
-| S23-S24 | Data | Copy CDEF sib-diff estimators into `data/` once accessible |
+| S12-S13 | Data | Copy CDEF ascertainment estimators into `data/` once accessible |
+| ED 9 / S18 | Tooling | Requires Mathematica to run `sibdiff.nb` symbolic computation |
+| S14-S15 | Data | Copy CDEF sib-diff estimators into `data/` once accessible |
 
 ### Tables without scripts yet
 
