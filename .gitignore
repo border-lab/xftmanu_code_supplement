@@ -14,3 +14,6 @@ manuscript_figures/*.png
 Thumbs.db
 Rplots.pdf
 data/sim_results/full_ak_res121925.csv
+
+# regeneration backups
+scripts/.regen_backup/

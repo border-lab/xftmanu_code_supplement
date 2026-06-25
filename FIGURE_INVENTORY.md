@@ -52,7 +52,6 @@
 |------|---------|-------|
 | CDEF ascertainment estimators (testing_CDEF_072724/) | S18-S20 | User knows location |
 | CDEF sib-diff estimators (testing_CDEF_080524/) | S23-S24 | User knows location |
-| mice_imputed_cca_final_rf.rdata | S4 | On unmounted external drive |
 | edu_no_CD_LS.01/ raw simulation output | Fig 4 full reproduction | Notebook cache used as reference |
 
 ---
@@ -106,8 +105,8 @@
 |--------|---------|--------|------|--------|
 | S1 | Multivariate vs multidimensional mating (synthetic) | sFig_cca.ipynb | Generated synthetically | COMPLETE (process/verify/plot_sfig_cca.R) |
 | S2 | Nonlinear mating CCA (synthetic) | sFig_cca.ipynb | Generated synthetically | COMPLETE |
-| S3 | CCA scree (MICE imputed) | sFig_cca.ipynb | imp_cca.Rdata | COMPLETE |
-| S4 | CCA scree (RF imputed) | sFig_cca.ipynb | mice_imputed_cca_final_rf.rdata | **MISSING** (external drive) |
+| S3 | CCA scree (PMM MICE imputed) | sFig_cca.ipynb | mice_imputed_cca_final.rdata | COMPLETE (place in data/cca/ or set CCA_DATA_DIR) |
+| S4 | CCA scree (RF miceRanger imputed) | sFig_cca.ipynb | mice_imputed_cca_final_rf.rdata | COMPLETE (place in data/cca/ or set CCA_DATA_DIR) |
 | S5 | rg under xAM r=0.1 | sFigComplexityExtra.ipynb | merged_tabla_redux_results_011024.csv | COMPLETE (process/verify/plot_sfig_sensitivity.R) |
 | S6 | rg under unidim xAM, fixed latent | sFigComplexityExtra.ipynb / FigSX_reconstruction.R | merged_res_redux_120725.csv | COMPLETE |
 | S7 | Sensitivity to correlated noise | fig_cn_updated.R | merged_res_redux_120725.csv + corrnoise CSVs | AVAILABLE (all CN levels recovered from coyote) |

@@ -1,15 +1,23 @@
 ## plot_sfig_cca.R
-## Verbatim port of notebook code for supplementary figures S1, S2, S3.
+## Verbatim port of notebook code for supplementary figures S1, S2, S3, S4.
 ##   S1: Multivariate vs multidimensional mating regimes (synthetic pair plots + CCA)
 ##        from dimn_plot.ipynb cells 0-4
 ##   S2: Nonlinear mating CCA (piecewise linear, atan, quadratic)
 ##        from dimn_plot.ipynb cells 8, 10, 11, 12
-##   S3: CCA scree plot from MICE-imputed data
-##        from sFig_cca.ipynb cells 1, 2, 4, 6, 15-18
+##   S3: CCA scree plot from PMM-imputed data    (mice predictive mean matching)
+##   S4: CCA scree plot from RF-imputed data     (miceRanger random forests)
+##        both from sFig_cca.ipynb cells 1, 2, 4, 6, 15-18
 
 BASE_DIR <- "/home/rsb/Dropbox/ftsim/round4"
 FIG_DIR  <- file.path(BASE_DIR, "figures_output")
 dir.create(FIG_DIR, showWarnings = FALSE, recursive = TRUE)
+
+## CCA imputation .rdata files (mice_imputed_cca_final{,_rf}.rdata) are large
+## and not bundled with this code supplement; place them in data/cca/ or override
+## the path via the CCA_DATA_DIR environment variable:
+##   CCA_DATA_DIR=/path/to/cca Rscript scripts/plot_sfig_cca.R
+CCA_DATA_DIR <- Sys.getenv("CCA_DATA_DIR",
+                           unset = file.path(BASE_DIR, "data/cca"))
 
 ## ===================================================================
 ## S1: Multivariate vs multidimensional mating regimes
@@ -298,110 +306,85 @@ ggsave(file.path(FIG_DIR, "sfig_s2_nonlinear_cca.png"),
        sfig_s2, width = 10, height = 12, dpi = 300, bg = "white")
 
 ## ===================================================================
-## S3: CCA scree plot from MICE-imputed data
+## S3 / S4: CCA scree plots from MICE-imputed data
 ## sFig_cca.ipynb cells 4, 6, 15-18
+##
+## Same plotting logic, two different imputation schemes:
+##   S3 — mice_imputed_cca_final.rdata     (predictive mean matching MICE)
+##   S4 — mice_imputed_cca_final_rf.rdata  (Random Forest miceRanger)
 ## ===================================================================
 
-## -------------------------------------------------------------------
-## sFig_cca.ipynb cell 4: load CCA results
-## -------------------------------------------------------------------
-load(file.path(BASE_DIR, 'data/cca/mice_imputed_cca_final_rf.rdata'), verbose=T)
+plot_cca_scree <- function(rdata_path, output_basename) {
+    load(rdata_path, verbose = TRUE)
+    stopifnot(exists("lcca"))
 
-## -------------------------------------------------------------------
-## sFig_cca.ipynb cell 6: compute relative canonical redundancy
-## -------------------------------------------------------------------
-cca_vars <-
-apply(sapply(lcca,  function(out) {
-    tmp  = out$ycrosscorr
-tmp = rbind(tmp, rep(NA,ncol(tmp)))
-rownames(tmp)[nrow(tmp)] <- 'age_at_menarche_mean'
-tmp2 <- out$xcrosscorr
-    rownames(tmp2) <- rownames(tmp); colnames(tmp2) <- colnames(tmp)
+    ## sFig_cca.ipynb cell 6: relative canonical redundancy across imputations
+    cca_vars <- apply(sapply(lcca, function(out) {
+        tmp  <- out$ycrosscorr
+        tmp  <- rbind(tmp, rep(NA, ncol(tmp)))
+        rownames(tmp)[nrow(tmp)] <- 'age_at_menarche_mean'
+        tmp2 <- out$xcrosscorr
+        rownames(tmp2) <- rownames(tmp); colnames(tmp2) <- colnames(tmp)
+        xdat <- (tmp2 + tmp) / 2
+        xdat[is.na(xdat)] <- tmp2[is.na(xdat)]
+        (out$xvrd / out$xrd + out$yvrd / out$yrd) / 2
+    }), 1, min)
+    plot(cumsum(cca_vars))   ## diagnostic; harmless when run non-interactively
 
-xdat <- (tmp2 + tmp)/2
-xdat[is.na(xdat)] <- tmp2[is.na(xdat)]
-# xdat <- (xdat)
-cca_vars <- (out$xvrd/ out$xrd + out$yvrd/ out$yrd)/2
-    cca_vars
-}), 1, min)
-plot(cumsum(cca_vars))
+    ## sFig_cca.ipynb cell 15: build loadings + scree data across imputations
+    dat <- lapply(lcca, function(out) {
+        tmp  <- out$ycrosscorr
+        tmp  <- rbind(tmp, rep(NA, ncol(tmp)))
+        rownames(tmp)[nrow(tmp)] <- 'age_at_menarche_mean'
+        tmp2 <- out$xcrosscorr
+        xdat <- (tmp2 + tmp) / 2
+        xdat[is.na(xdat)] <- tmp2[is.na(xdat)]
+        cca_vars_local <- (out$xvrd / out$xrd + out$yvrd / out$yrd) / 2
+        KK <- 12; zz <- 0
+        xdat2 <- xdat[apply(abs(xdat), 1, function(x) any(x > .05)), ]
+        pdat <- melt(xdat2[, 1:KK],
+                     varnames  = c('Phenotype', 'CanonicalVariate'),
+                     value.name = 'Canonical cross-loadings')
+        pdat <- pdat[apply(pdat, 1, function(x) any(x > .5)), ]
+        pdat$Phenotype <- factor(pdat$Phenotype,
+            levels = names(sort(tapply(abs(pdat$`Canonical cross-loadings`),
+                                       pdat['Phenotype'], function(x) sum(abs(x))))))
+        pdat$CanonicalVariate <- factor(pdat$CanonicalVariate,
+                                        levels = c('', paste('CV', 1:KK)))
+        d2 <- data.frame(CanonicalVariate = factor(c('', paste('CV', 1:(KK - zz))),
+                                                   levels = c('', paste('CV', 1:(KK - zz)))))
+        d2$`Relative Canonical\nRedundancy` <- cumsum(c(0, cca_vars_local[1:(KK - zz)]))
+        list(pdat, d2)
+    })
 
-## -------------------------------------------------------------------
-## sFig_cca.ipynb cell 15: build loadings + scree data across imputations
-## -------------------------------------------------------------------
-# ?melt.array
-dat <- lapply(lcca, function(out) {
-tmp  = out$ycrosscorr
-tmp = rbind(tmp, rep(NA,ncol(tmp)))
+    ## cell 16: aggregate scree across imputations; cell 17: median
+    d2 <- do.call(rbind.data.frame,
+                  mapply(function(X, i) { X[[2]]$iterate <- i; X[[2]] },
+                         dat, 1:length(dat), SIMPLIFY = FALSE))
+    d2 <- aggregate(d2[2], d2[1], median)
 
-rownames(tmp)[nrow(tmp)] <- 'age_at_menarche_mean'
-tmp2 <- out$xcrosscorr
-# tmp2 <- tmp2[rownames(tmp), colnames(tmp)]
-tmp  = out$ycrosscorr
-tmp = rbind(tmp, rep(NA,ncol(tmp)))
-rownames(tmp)[nrow(tmp)] <- 'age_at_menarche_mean'
-tmp2 <- out$xcrosscorr
-    # rownames(tmp2) <- rownames(tmp); colnames(tmp2) <- colnames(tmp)
+    ## cell 18: scree plot
+    options(repr.plot.width = 8); options(repr.plot.height = 6); options(repr.plot.res = 300)
+    p <- ggplot(d2, aes(CanonicalVariate, `Relative Canonical\nRedundancy`)) +
+        scale_y_continuous(position = 'left', limits = 0:1) +
+        scale_x_discrete(position = 'bottom') +
+        geom_hline(col = 'purple',     lty = 3, yintercept = .9) +
+        geom_hline(col = 'darkorange', lty = 3, yintercept = .95) +
+        geom_point() + geom_line(group = 1) +
+        xlab('Canonical Variate') +
+        theme_bw() +
+        theme(text = element_text(size = 14), legend.position = 'bottom')
 
+    ggsave(file.path(FIG_DIR, paste0(output_basename, '.pdf')),
+           p, width = 8, height = 6, bg = 'white')
+    ggsave(file.path(FIG_DIR, paste0(output_basename, '.png')),
+           p, width = 8, height = 6, dpi = 300, bg = 'white')
 
+    rm(lcca, envir = environment())
+    invisible(p)
+}
 
-xdat <- (tmp2 + tmp)/2
-xdat[is.na(xdat)] <- tmp2[is.na(xdat)]
-# xdat
-xdat <- (xdat)
-cca_vars <- (out$xvrd/ out$xrd + out$yvrd/ out$yrd)/2
-
-
-KK=12
-zz=0
-xdat2 <- (xdat[apply(abs(xdat),1,function(x) any(x>.05)),])
-pdat <- melt(xdat2[,1:KK],varnames = c('Phenotype','CanonicalVariate'), value.name='Canonical cross-loadings')
-KK=12
-zz=0
-xdat2 <- (xdat[apply(abs(xdat),1,function(x) any(x>.05)),])
-pdat <- melt(xdat2[,1:KK],varnames = c('Phenotype','CanonicalVariate'), value.name='Canonical cross-loadings')
-
-
-
-pdat <- pdat[apply(pdat,1,function(x) any(x>.5)),]
-
-pdat$Phenotype <- factor(pdat$Phenotype,
-                         levels=names(sort(tapply(abs(pdat$`Canonical cross-loadings`),
-                                                  pdat['Phenotype'],function(x) sum(abs(x))))))
-pdat$CanonicalVariate = factor(pdat$CanonicalVariate, levels=c('',paste('CV', 1:KK)))
-d2 <- data.frame(CanonicalVariate=factor(c('',paste('CV', 1:(KK-zz))), levels=c('',paste('CV', 1:(KK-zz)))))
-d2$`Relative Canonical\nRedundancy`<-cumsum(c(0,cca_vars[1:(KK-zz)]))
-list(pdat,d2)})
-
-## -------------------------------------------------------------------
-## sFig_cca.ipynb cell 16: aggregate scree across imputations
-## -------------------------------------------------------------------
-d2 <- do.call(rbind.data.frame, mapply(function(X,i) {X[[2]]$iterate <- i;X[[2]]},
-                                         dat, 1:length(dat),SIMPLIFY = F))
-
-## -------------------------------------------------------------------
-## sFig_cca.ipynb cell 17: median across imputations
-## -------------------------------------------------------------------
-d2 <- aggregate(d2[2], d2[1], median)
-
-## -------------------------------------------------------------------
-## sFig_cca.ipynb cell 18: S3 scree plot
-## -------------------------------------------------------------------
-options(repr.plot.width=8)
-options(repr.plot.height=6)
-options(repr.plot.res=300)
-
-
-sfig_s3 <- ggplot(d2, aes(CanonicalVariate, `Relative Canonical\nRedundancy`)) +
-                                                  scale_y_continuous(position = 'left',limits = 0:1)+
-                                                  scale_x_discrete(position = 'bottom')+
-                                                  geom_hline(col='purple',lty=3,yintercept = .9)+
-                                                  geom_hline(col='darkorange',lty=3,yintercept = .95)+
-     geom_point() + geom_line(group=1) + xlab('Canonical Variate') +
-     theme_bw() + theme(#axis.title.y.left = element_blank(),axis.title.x = element_blank(),
-                       text=element_text(size=14), legend.position = 'bottom')
-
-ggsave(file.path(FIG_DIR, "sfig_s3_cca_scree.pdf"),
-       sfig_s3, width = 8, height = 6, bg = "white")
-ggsave(file.path(FIG_DIR, "sfig_s3_cca_scree.png"),
-       sfig_s3, width = 8, height = 6, dpi = 300, bg = "white")
+plot_cca_scree(file.path(CCA_DATA_DIR, 'mice_imputed_cca_final.rdata'),
+               'sfig_s3_cca_scree')
+plot_cca_scree(file.path(CCA_DATA_DIR, 'mice_imputed_cca_final_rf.rdata'),
+               'sfig_s4_cca_scree_rf')

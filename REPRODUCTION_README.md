@@ -131,7 +131,7 @@ Source: `/home/rsb/Dropbox/ftsim/manu/figure_nb/` (Rdata files) and `/home/rsb/D
 | S1 | Multivariate vs multidimensional mating (synthetic) | `*_sfig_cca.R` | `sfig_s1_mating_cca.pdf` | Complete |
 | S2 | Nonlinear mating CCA (synthetic) | `*_sfig_cca.R` | `sfig_s2_nonlinear_cca.pdf` | Complete |
 | S3 | CCA scree (MICE PMM imputed) | `*_sfig_cca.R` | `sfig_s3_cca_scree.pdf` | Complete |
-| S4 | CCA scree (RF imputed) | — | — | Data not accessible (external drive) |
+| S4 | CCA scree (RF miceRanger imputed) | `*_sfig_cca.R` | `sfig_s4_cca_scree_rf.pdf` | Complete (place data in data/cca/ or set CCA_DATA_DIR) |
 | S5 | rg under xAM with r=0.1 vs r=0.2 | `*_sfig_sensitivity.R` | `sfig_s5_rg_sensitivity.pdf` | Complete |
 | S6 | rg under unidim xAM, fixed latent corr | `*_sfig_sensitivity.R` | `sfig_s6_fixed_latent.pdf` | Complete |
 | S7 | Sensitivity to correlated noise (updated) | `*_figR_cn.R` | `figR_cn.pdf` | Complete |
@@ -184,14 +184,12 @@ Source: `/home/rsb/Dropbox/ftsim/manu/figure_nb/` (Rdata files) and `/home/rsb/D
 |------|---------|----------|-------|
 | CDEF ascertainment estimators | S18-S20 | Not on local machines or coyote | User knows location; not currently accessible |
 | CDEF sib-diff estimators | S23-S24 | Same | Same |
-| RF-imputed CCA Rdata | S4 | External drive (not mounted) | MICE version available for S3 |
 | edu_no_CD_LS.01 raw data | Fig 4 (full reproduction) | Originally ~/data/edu_no_CD_LS.01/ | Notebook cache used instead |
 
 ### Figures without scripts yet
 
 | Figure | Blocking issue | What's needed |
 |--------|---------------|---------------|
-| S4 | Data | Mount external drive, copy `mice_imputed_cca_final_rf.rdata` into `data/cca/` |
 | S18-S20 | Data | Copy CDEF ascertainment estimators into `data/` once accessible |
 | S21-S22 | Tooling | Requires Mathematica to run `sibdiff.nb` symbolic computation |
 | S23-S24 | Data | Copy CDEF sib-diff estimators into `data/` once accessible |
