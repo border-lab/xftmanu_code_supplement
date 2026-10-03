@@ -1,30 +1,30 @@
 {
-  "status": "published in border-lab/xftmanu_code_supplement, release v4.2, 2026-10-03",
+  "status": "Corrected release v4.3, 2026-10-03",
   "files": [
     {
       "path": "README.txt",
-      "bytes": 2794,
-      "sha256": "77f482528aee933f71dd56073a0db179326bd705e793a47b0523984986ff011c"
+      "bytes": 2796,
+      "sha256": "9ebe8e1b0b1a964c546261adcb24529a5a28e05fd030f1b951a2da114b9ae228"
     },
     {
       "path": "Source_Data_Decomposition.xlsx",
-      "bytes": 6688275,
-      "sha256": "76ff50f9eb44948e0814155b9599167f77280c62534aca762126c3b9c23fc6c2"
+      "bytes": 6795407,
+      "sha256": "f2a91dc7523b27c53c4cb50767c2cf8030b82669f524ed876954f9531615f8cc"
     },
     {
       "path": "Source_Data_Figure_5.xlsx",
-      "bytes": 3929794,
-      "sha256": "79ff276de4c1ec70f1467661872c347acbb7284c462a4da08f5777a56947515b"
+      "bytes": 3961705,
+      "sha256": "9dfdfc2045d7190ddf5bfb454a3a8d4f840eb0f3af79edeb8592c3b8555e6f71"
     },
     {
       "path": "Source_Data_Legacy_VT.xlsx",
-      "bytes": 1300422,
-      "sha256": "242b0df4bc24dd415272d609dc87a4a78720ab89bb5631125a5f77734aced034"
+      "bytes": 1304443,
+      "sha256": "e3a85a7ecfec6f2a2a8e5be89e99ec3336e389bf1fcb56d2a68a2d5e71a4506f"
     },
     {
       "path": "Supplementary_Tables.xlsx",
-      "bytes": 618260,
-      "sha256": "3d2b683309de406a5a879e8f0a04f35c6d2040bb6e23b3b3f00c431676e12332"
+      "bytes": 627273,
+      "sha256": "181e39ad8c2e2c60106f98c7beb046f6aa990e8a92f5ef8aef036d87ad85cb9f"
     },
     {
       "path": "artwork_sources/figure5/Fig_5_schematic_editable.pdf",
@@ -43,13 +43,13 @@
     },
     {
       "path": "decomposition_source_data.zip",
-      "bytes": 7114807,
-      "sha256": "44836273e7765dce1b8e006ef0bf7be3249e11e798340048a8337fd73424cd38"
+      "bytes": 7114049,
+      "sha256": "6d1e8e857eb49646e13d31d92793db4853b77131295d1b374af3a5722559eedd"
     },
     {
       "path": "figure5_source_data.zip",
-      "bytes": 4119017,
-      "sha256": "4ad701b634f747d49654dd2ea194f07d4dd73bf3911299f8c2f598c574e2540d"
+      "bytes": 4138325,
+      "sha256": "e23fe3b13732219b1f2af91db86656ec189a848bbf4ecd0f3cd33d14ae81c03d"
     },
     {
       "path": "figure_layout_snapshot.zip",
@@ -173,8 +173,8 @@
     },
     {
       "path": "legacy_vt_source_data.zip",
-      "bytes": 5913790,
-      "sha256": "87052a8915b7ba2dc39cecba73cd6900c0b661e7fbc0e621e6ba0e08b4f8656d"
+      "bytes": 5945908,
+      "sha256": "b0ced0907494997eb04f89ffe7294d539a607452d2de66ebf41fe816544ccffb"
     }
   ]
 }

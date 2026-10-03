@@ -1,7 +1,7 @@
 FINAL-SUBMISSION NUMERICAL SUPPLEMENT
 
 Repository: https://github.com/border-lab/xftmanu_code_supplement
-Published 2026-10-03 (release v4.2); all versions: https://doi.org/10.5281/zenodo.13937591
+Corrected release v4.3 (2026-10-03); archive series: https://doi.org/10.5281/zenodo.13937591
 
 decomposition_source_data.zip: complete generation 0–5 fitted symmetric weights,
 ratios, apparent quantities, and plotting data for current Figure 4b–d,
