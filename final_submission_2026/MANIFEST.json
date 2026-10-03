@@ -1,10 +1,10 @@
 {
-  "status": "published in border-lab/xftmanu_code_supplement, release v4, 2026-10-02",
+  "status": "published in border-lab/xftmanu_code_supplement, release v4.2, 2026-10-03",
   "files": [
     {
       "path": "README.txt",
-      "bytes": 2792,
-      "sha256": "caf4b376f26cc8683da90e3d76cd2c1916de4b59ac4370c80dfc4cbbde961177"
+      "bytes": 2794,
+      "sha256": "77f482528aee933f71dd56073a0db179326bd705e793a47b0523984986ff011c"
     },
     {
       "path": "Source_Data_Decomposition.xlsx",
@@ -53,8 +53,8 @@
     },
     {
       "path": "figure_layout_snapshot.zip",
-      "bytes": 36415254,
-      "sha256": "5e09404ff15290373afb2ec7eb8378ae86bcc05e2392c2adebf7a17472b7c283"
+      "bytes": 36410950,
+      "sha256": "23809f5bbcb950659c47d1260e738ca63bf3f8e884fec94f8242a04a6a17fffd"
     },
     {
       "path": "figure_style_sources/cleanup_figure_fonts.py",
