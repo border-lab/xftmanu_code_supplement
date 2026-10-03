@@ -12,3 +12,6 @@
 - `psychiatric_sims.py`: simulations involving psychiatric disorders
 - `sibdiff.nb`: Mathematica notebook for computation of expected sibling-difference GWAS estimates
 
+
+#### Final-submission source data (2026)
+- `final_submission_2026/`: verified numerical source data, final artwork and figure-style sources for the final submission. See `final_submission_2026/README.txt`; `SHA256SUMS.txt` and `MANIFEST.json` there identify the exact files. The three `*_source_data.zip` archives each carry their own README, reproduction code and verification record.

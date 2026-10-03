@@ -1,0 +1,180 @@
+{
+  "status": "prepared locally; final clean reference split and native tracked comparison verified; Reader approval/save and final author review pending",
+  "files": [
+    {
+      "path": "README.txt",
+      "bytes": 2809,
+      "sha256": "a90d7be7af295f239b7f825d37ace90ae498f7d7b5db5d70410fe9e092f6b633"
+    },
+    {
+      "path": "Source_Data_Decomposition.xlsx",
+      "bytes": 6688275,
+      "sha256": "76ff50f9eb44948e0814155b9599167f77280c62534aca762126c3b9c23fc6c2"
+    },
+    {
+      "path": "Source_Data_Figure_5.xlsx",
+      "bytes": 3929794,
+      "sha256": "79ff276de4c1ec70f1467661872c347acbb7284c462a4da08f5777a56947515b"
+    },
+    {
+      "path": "Source_Data_Legacy_VT.xlsx",
+      "bytes": 1300422,
+      "sha256": "242b0df4bc24dd415272d609dc87a4a78720ab89bb5631125a5f77734aced034"
+    },
+    {
+      "path": "Supplementary_Tables.xlsx",
+      "bytes": 618260,
+      "sha256": "3d2b683309de406a5a879e8f0a04f35c6d2040bb6e23b3b3f00c431676e12332"
+    },
+    {
+      "path": "artwork_sources/figure5/Fig_5_schematic_editable.pdf",
+      "bytes": 31434,
+      "sha256": "cecb15d25e0d9faea54261080701789959d4132926efa76daf569fe86c204a39"
+    },
+    {
+      "path": "artwork_sources/figure5/Fig_5_schematic_editable.svg",
+      "bytes": 35601,
+      "sha256": "3fd5c094ab6778d0ddaabbffdb5ef88d7fcdf3f763e246681c114f044a955f28"
+    },
+    {
+      "path": "artwork_sources/figure5/edu_cdiag_redux_original.svg",
+      "bytes": 34860,
+      "sha256": "e032fff6d9ba02025f64dcb3902fc239f4cf8bf9ceef4684eca82a63fab0b0ab"
+    },
+    {
+      "path": "decomposition_source_data.zip",
+      "bytes": 7114807,
+      "sha256": "44836273e7765dce1b8e006ef0bf7be3249e11e798340048a8337fd73424cd38"
+    },
+    {
+      "path": "figure5_source_data.zip",
+      "bytes": 4119017,
+      "sha256": "4ad701b634f747d49654dd2ea194f07d4dd73bf3911299f8c2f598c574e2540d"
+    },
+    {
+      "path": "figure_layout_snapshot.zip",
+      "bytes": 36415254,
+      "sha256": "5e09404ff15290373afb2ec7eb8378ae86bcc05e2392c2adebf7a17472b7c283"
+    },
+    {
+      "path": "figure_style_sources/cleanup_figure_fonts.py",
+      "bytes": 16518,
+      "sha256": "17ff7f5229535905de09ad14505f1db6a2d87786cc4c8305668bb95a68d4e63e"
+    },
+    {
+      "path": "figure_style_sources/font_cleanup_verification.json",
+      "bytes": 163867,
+      "sha256": "803fcef2b842f7057a319936e315129d3e7353ef1375e37ed7254da4d7a0daed"
+    },
+    {
+      "path": "figure_style_sources/install_figure5_vector_schematic.py",
+      "bytes": 4747,
+      "sha256": "9d3d3c96b603eb006737c28026344af7707f1d8f9bb378722cf9aaf1a1d38216"
+    },
+    {
+      "path": "figure_style_sources/pre_font_cleanup_artwork.zip",
+      "bytes": 1012827,
+      "sha256": "7a254929b33fde550a821679ddce042bd77650caec7010c00e9d26059d44d05f"
+    },
+    {
+      "path": "figure_style_sources/recolour_artwork.py",
+      "bytes": 15979,
+      "sha256": "f3050c8f7c719b18b2e7f985e12dc6d3854738f7303e3dbf6c46accde95e0d4e"
+    },
+    {
+      "path": "figure_style_sources/refine_figure_style.py",
+      "bytes": 14195,
+      "sha256": "fab8d62429134f8a1cd01402dd596e19ee9a9ed33a168ea03a9480d43fd4370f"
+    },
+    {
+      "path": "figure_style_sources/split_main_figures.py",
+      "bytes": 14404,
+      "sha256": "f9ad23e8f1469db41318ff1ca37bfda66eefbd54cdc28508f3412cc3b1011913"
+    },
+    {
+      "path": "figure_style_sources/trim_figure3_caption_space.py",
+      "bytes": 3712,
+      "sha256": "056e669ee4f39445568b4ab5618608fb10c834e5f505762978981558c81f5119"
+    },
+    {
+      "path": "final_artwork/Extended_Data_Fig_1.pdf",
+      "bytes": 67950,
+      "sha256": "ab295fe4d68c057f6974816da239ab56d44a28c7d2fe40bcfcf87f73967ef5c7"
+    },
+    {
+      "path": "final_artwork/Extended_Data_Fig_10.pdf",
+      "bytes": 73643,
+      "sha256": "815df931bdb0a36bc37bbfbfabb71cd50f35030051eeaeab9ae6e2c4df5c8ee1"
+    },
+    {
+      "path": "final_artwork/Extended_Data_Fig_2.pdf",
+      "bytes": 68598,
+      "sha256": "ee8ec84a816ac87cfde22a15557e8d9d2a83ff627718ce23daed7356502179a7"
+    },
+    {
+      "path": "final_artwork/Extended_Data_Fig_3.pdf",
+      "bytes": 106496,
+      "sha256": "15806cde257b3e69d3c1dab55c170fca7fb7ed5894aaa22ec300f7cf6d10c067"
+    },
+    {
+      "path": "final_artwork/Extended_Data_Fig_4.pdf",
+      "bytes": 85468,
+      "sha256": "c305814557b0fb3e51201470b080c39f2b4672143a986d8f610342ff9775b63e"
+    },
+    {
+      "path": "final_artwork/Extended_Data_Fig_5.pdf",
+      "bytes": 91646,
+      "sha256": "630fa635c2c7e594734fbe1a7899312aa077422863f6e676435eaccf61be4e84"
+    },
+    {
+      "path": "final_artwork/Extended_Data_Fig_6.pdf",
+      "bytes": 42131,
+      "sha256": "06e6c3fb356728cb801e7e90b666f747e1175843b47b1c31e5b0ebf5d20edf32"
+    },
+    {
+      "path": "final_artwork/Extended_Data_Fig_7.pdf",
+      "bytes": 455268,
+      "sha256": "89519f213afcc289a635af051db1721c9a34cc10ce560950c5515baae5b6b6c8"
+    },
+    {
+      "path": "final_artwork/Extended_Data_Fig_8.pdf",
+      "bytes": 125732,
+      "sha256": "9d01ca6ff099f21ad8fac667fee091aeb9e5d9b01ec73bb8df052eeb9bdf97f0"
+    },
+    {
+      "path": "final_artwork/Extended_Data_Fig_9.png",
+      "bytes": 177213,
+      "sha256": "e73727a1a10486be8fc2665067440672f335e79d182283388c369323df237e44"
+    },
+    {
+      "path": "final_artwork/Fig_1.pdf",
+      "bytes": 68428,
+      "sha256": "019fa55036f321445936157634aca85c29dbf51a3edbfc0602e1a9388ed00d6e"
+    },
+    {
+      "path": "final_artwork/Fig_2.pdf",
+      "bytes": 111190,
+      "sha256": "e71801a644eeba4b57c040b52f1c6cad17409a2b6cc82f9e0a41c00108b17e18"
+    },
+    {
+      "path": "final_artwork/Fig_3.pdf",
+      "bytes": 144544,
+      "sha256": "388088cf530839c7b794001ac057deeb295dea90fdf45d86a009d41d16a16418"
+    },
+    {
+      "path": "final_artwork/Fig_4.pdf",
+      "bytes": 194564,
+      "sha256": "616d227564a51c8f62e44c272558cd7d2acc46d46eca55b1599b870ea2457fea"
+    },
+    {
+      "path": "final_artwork/Fig_5.pdf",
+      "bytes": 102273,
+      "sha256": "8785b932cbdeba0833fad33d2f2b72ff445ba8564e730f938dc85d35b9f7e130"
+    },
+    {
+      "path": "legacy_vt_source_data.zip",
+      "bytes": 5913790,
+      "sha256": "87052a8915b7ba2dc39cecba73cd6900c0b661e7fbc0e621e6ba0e08b4f8656d"
+    }
+  ]
+}
