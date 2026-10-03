@@ -1,10 +1,10 @@
 {
-  "status": "prepared locally; final clean reference split and native tracked comparison verified; Reader approval/save and final author review pending",
+  "status": "published in border-lab/xftmanu_code_supplement, release v4, 2026-10-02",
   "files": [
     {
       "path": "README.txt",
-      "bytes": 2809,
-      "sha256": "a90d7be7af295f239b7f825d37ace90ae498f7d7b5db5d70410fe9e092f6b633"
+      "bytes": 2795,
+      "sha256": "a9c310b4563c3278c43046a560f95847566e3f8d39590cd94f13f3e86d75a625"
     },
     {
       "path": "Source_Data_Decomposition.xlsx",
