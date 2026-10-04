@@ -16,4 +16,4 @@
 #### Final-submission source data (2026)
 - `final_submission_2026/`: verified numerical source data, final artwork and figure-style sources for the final submission. See `final_submission_2026/README.txt`; `SHA256SUMS.txt` and `MANIFEST.json` there identify the exact files. The three `*_source_data.zip` archives each carry their own README, reproduction code and verification record.
 
-Release v4.3 corrects source-data documentation, phenotype field mappings and portable paths. Extended Data Figure 10 now uses the original four-scenario processed export matching the submitted figure; see [the source correction note](ED10_source_correction.txt). Submitted workbook numerical values and figure artwork are unchanged.
+Release v4.3 corrects source-data documentation, phenotype field mappings and portable paths. Extended Data Figure 10 now uses the original four-scenario processed export matching the submitted figure; see [the source correction note](ED10_source_correction.txt).
